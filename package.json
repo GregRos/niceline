@@ -1,28 +1,7 @@
 {
-  "name": "pretty-it",
-  "exports": {
-    ".": {
-      "require": "./dist/lib/index.js",
-      "import": "./dist/lib/index.js",
-      "default": "./dist/lib/index.js",
-      "types": "./dist/lib/index.d.ts"
-    }
-  },
-  "typings": "dist/lib/index",
-  "description": "Pretty print everything!",
+  "name": "niceline",
   "version": "0.1.0",
-  "main": "dist/lib/index.js",
-  "repository": "github:gregros/pretty-it",
-  "scripts": {
-    "build": "tsc -b .",
-    "clean": "shx rm -rf dist",
-    "rebuild": "run-s clean build",
-    "prepare": "husky install",
-    "watch": "tsc -b . --watch",
-    "lint:fix": "prettier --write src/**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts,ctsx,mtsx,html,htm,yaml,yml,json,scss,css} && eslint --fix src/**/*.{ts,mts,cts,js,mjs,cjs} ",
-    "lint:check": "prettier --check src/**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts,ctsx,mtsx,html,htm,yaml,yml,json,scss,css} && eslint src/**/*.{ts,mts,cts,js,mjs,cjs}",
-    "test": "jest --coverage"
-  },
+  "description": "Pretty print everything!",
   "keywords": [
     "pretty",
     "human",
@@ -51,13 +30,38 @@
     "random",
     "date"
   ],
-  "author": "GregRos",
+  "repository": "github:gregros/niceline",
   "license": "MIT",
+  "author": "GregRos",
+  "exports": {
+    ".": {
+      "require": "./dist/lib/index.js",
+      "import": "./dist/lib/index.js",
+      "default": "./dist/lib/index.js",
+      "types": "./dist/lib/index.d.ts"
+    }
+  },
+  "main": "dist/lib/index.js",
+  "typings": "dist/lib/index",
+  "scripts": {
+    "build": "tsc -b .",
+    "clean": "shx rm -rf dist",
+    "rebuild": "run-s clean build",
+    "prepare": "husky install",
+    "watch": "tsc -b . --watch",
+    "lint:fix": "prettier --write src/**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts,ctsx,mtsx,html,htm,yaml,yml,json,scss,css} && eslint --fix src/**/*.{ts,mts,cts,js,mjs,cjs} ",
+    "lint:check": "prettier --check src/**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts,ctsx,mtsx,html,htm,yaml,yml,json,scss,css} && eslint src/**/*.{ts,mts,cts,js,mjs,cjs}",
+    "test": "jest --coverage"
+  },
   "lint-staged": {
     "*.{ts,mts,cts,js,mjs,cjs}": "node_modules/.bin/eslint --cache --fix",
     "src/**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts,ctsx,mtsx,html,htm,yaml,yml,json,scss,css}": "node_modules/.bin/prettier --write"
   },
-  "packageManager": "yarn@4.2.2",
+  "dependencies": {
+    "pretty-bytes": "^6.1.1",
+    "pretty-ms": "^9.0.0",
+    "shrink-path": "^0.3.1"
+  },
   "devDependencies": {
     "@gregros/eslint-config": "^0.6.0",
     "@swc/core": "^1.5.25",
@@ -80,5 +84,6 @@
     "shx": "^0.3.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
-  }
+  },
+  "packageManager": "yarn@4.2.2"
 }
