@@ -16,7 +16,9 @@
                 "file": "stuff/quote style.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "quote style"
             }
           },
           {
@@ -25,10 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "stuff/fractions.md",
+                "file": "stuff/font styles.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "font styles"
             }
           },
           {
@@ -37,10 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "stuff/baked ligatures.md",
+                "file": "stuff/ASCII encoding.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "ASCII encoding"
             }
           },
           {
@@ -52,7 +58,9 @@
                 "file": "stuff/quote style.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "quote style"
             }
           },
           {
@@ -61,14 +69,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "stuff/baked ligatures.md",
+                "file": "stuff/ASCII encoding.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "ASCII encoding"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -88,7 +98,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -103,7 +115,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -111,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -134,7 +150,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "stuff/baked ligatures.md",
+                "file": "stuff/font styles.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +158,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for font styles"
             }
           },
           {
@@ -151,10 +169,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "stuff/baked ligatures.md",
+                "file": "stuff/font styles.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from font styles"
             }
           },
           {
@@ -165,7 +185,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -174,8 +196,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "stuff/baked ligatures.md"
-              }
+                "file": "stuff/font styles.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of font styles"
             }
           }
         ],
@@ -197,21 +221,21 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "168622c71a499094",
+  "active": "c99c271f86dab4b3",
   "lastOpenFiles": [
-    "stuff/font styles.md",
-    "stuff/spinners.md",
-    "stuff/quote style.md",
-    "stuff/Named entities.md",
-    "stuff/baked ligatures.md",
     "stuff/durations.md",
-    "stuff/fractions.md",
-    "stuff/units.md",
+    "stuff/ASCII encoding.md",
+    "Start.md",
+    "stuff/spinners.md",
     "stuff/Uniformity.md",
+    "stuff/quote style.md",
+    "stuff/font styles.md",
+    "stuff/fractions.md",
+    "stuff/Named entities.md",
+    "stuff/units.md",
     "Excalidraw/Drawing 2024-06-24 14.39.18.excalidraw.md",
     "Excalidraw/Tagged template.md",
     "resources/kilobyte (kB).svg",
-    "Start.md",
     "Unicode formatting.md",
     "Humanize.md",
     "tokens.md",
