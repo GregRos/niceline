@@ -13,22 +13,8 @@ function _typeset_prettyline(strs: string[], args: string[]) {
 }
 
 export function prettyline(strs: TemplateStringsArray, ...args: any[]) {
-    for (let i = 0; i < args.length; i++) {
-        if (typeof args[i] === "string") {
-            args[i] = `"${args[i]}"`
-        }
-    }
-}
-
-export function prettyline(arr: TemplateStringsArray, ...args: any[]) {
-    const bits = [] as string[]
-    for (let i = 0; i < arr.length; i++) {
-        bits.push(arr[i])
-        if (i < args.length) {
-            bits.push(textRecord(args[i]))
-        }
-    }
-    return bits.join("")
+    args = args.map(arg => `${arg}`)
+    return _typeset_prettyline(Array.from(strs), args as string[])
 }
 
 const spaceBeforeAfter = /^[ \t]*|[ \t]*$/gm

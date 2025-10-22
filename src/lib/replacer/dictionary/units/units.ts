@@ -1,12 +1,10 @@
-import { ascii, namespace } from "../../registered"
+import { ascii, named, namespace } from "../../registered"
 
 export const units = namespace("unit", [
-    ascii("ohm", "Ω", ["ohm"]),
-    ascii("deg", "°", ["deg", "degree"]),
-    ascii("celsius", "℃", ["celsius"]),
-    ascii("fahrenheit", "℉", ["fahrenheit"]),
-    ascii("percent", "%", ["percent", "percentage"]),
-    ascii("percent3", "‰", ["percent3", "permille"]),
-    ascii("percent4", "‱", ["percent4", "permyriad"]),
-    ascii("angle", "∠", ["angle"])
+    named("Ω", ["ohm"]),
+    named("°", ["deg", "degree"]),
+    named("℃", ["celsius"]),
+    named("℉", ["fahrenheit"]),
+    ascii("o/oo", "‰", ["percent:2", "per:thousand", "permille"]),
+    ascii("o/ooo", "‱", ["percent:4", "per:myriad", "permyriad"])
 ])

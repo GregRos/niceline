@@ -1,6 +1,4 @@
-/* eslint-disable no-multi-spaces */
-import { ascii, namespace } from "../replacer/registered"
-import type { Arrows } from "./baked-ligatures"
+import { ascii, named, namespace } from "../replacer/registered"
 
 
 
@@ -12,176 +10,146 @@ export const marks = namespace("mark", [
     ascii("(p)", "℗", ["p", "record"]),
 ])
 
-export const people = namespace("people", [
-    ascii("", "♂", ["male", "masc"]),
-    ascii("", "♀", ["female", "femme"]),
-    ascii("", "⚲", ["nonbinary", "nb", "enby", "neuter", "neutral"]),
-    ascii("", "⚥", ["intersex", "intersex"]),
-    namespace("rel", [
-    ascii("", "⚤", ["mf", "fm", "het", "heterosexual"]),
-    ascii("", "⚣", ["mm", "m", "homosexual", "hom"]),
-    ascii("", "⚢", ["ff", "f", "lesbian", "les"]),
 
-    ascii("", "⚭", ["marriage"]),
-    ascii("", "⚮", ["divorce"]),
-    ascii("", "⚯", ["partnership"]),
-    ])
-
-])
-
-export const signs = namespace("sign", [
-    ascii("", "☮", ["peace"]),
-    ascii("", "☢", ["radioactive"]),
-    ascii("", "☣", ["biohazard"]),
-    ascii("", "⚕", ["caduceus", "medical"]),
-    ascii("", "☠", ["skull", "death", "poison"]),
-    ascii("", "☮", ["peace"]),
-
-])
 
 export const chess = namespace("chess", [
     namespace(["white", "w"], [
-        ascii("", "♔", ["king", "k"]),
-        ascii("", "♕", ["queen", "q"]),
-        ascii("", "♖", ["rook", "r"]),
-        ascii("", "♗", ["bishop", "b"]),
-        ascii("", "♘", ["knight", "n"]),
-        ascii("", "♙", ["pawn", "p"]),
+        named( "♔", ["king", "k"]),
+        named( "♕", ["queen", "q"]),
+        named( "♖", ["rook", "r"]),
+        named( "♗", ["bishop", "b"]),
+        named( "♘", ["knight", "n"]),
+        named( "♙", ["pawn", "p"]),
     ]),
     namespace(["black", "b"], [
-        ascii("", "♚", ["king", "k"]),
-        ascii("", "♛", ["queen", "q"]),
-        ascii("", "♜", ["rook", "r"]),
-        ascii("", "♝", ["bishop", "b"]),
-        ascii("", "♞", ["knight", "n"]),
-        ascii("", "♟", ["pawn", "p"]),
+        named( "♚", ["king", "k"]),
+        named( "♛", ["queen", "q"]),
+        named( "♜", ["rook", "r"]),
+        named( "♝", ["bishop", "b"]),
+        named( "♞", ["knight", "n"]),
+        named( "♟", ["pawn", "p"]),
+    ])
+])
+
+export const ideograms = namespace("idea", [
+    named( "♂", ["male", "masc"]),
+    named( "♀", ["female", "femme"]),
+    named( "⚲", ["nonbinary", "nb", "enby", "neuter", "neutral"]),
+    named( "⚥", ["intersex", "intersex"]),
+    named( "⚤", ["mf", "fm", "het", "heterosexual"]),
+    named( "⚣", ["mm", "m", "homosexual", "hom"]),
+    named( "⚢", ["ff", "f", "lesbian", "les"]),
+
+    named( "⚭", ["marriage"]),
+    named( "⚮", ["divorce"]),
+    named( "⚯", ["partnership"]),
+
+    named( "☮", ["peace"]),
+    named( "☢", ["radioactive"]),
+    named( "☣", ["biohazard"]),
+    named( "⚕", ["caduceus", "medical"]),
+    named( "☠", ["skull", "death", "poison"]),
+
+    // ideological
+    named( "☯", ["yin-yang", "taijitu"]),
+    named( "✞", ["cross"]),
+    named("☦", ["cross:orthodox"]),
+    named("☨", ["cross:lorraine"]),
+
+    named( "✡", ["star-of-david", "magen-david"]),
+    named( "☪", ["islam", "star-and-crescent"]),
+    named( "☸", ["buddhism", "dharmachakra"]),
+    named( "🕉", ["hinduism", "aum", "om"]),
+    named( "☯", ["taoism", "yin-yang"]),
+    named( "⛩", ["shinto", "torii"]),
+    named( "☸", ["jainism", "dharmachakra"]),
+    named( "☬", ["sikhism", "khanda"]),
+    named("☫", ["farsi"]),
+
+    named( "ﷲ", ["allah"]),
+    named( "Ⓐ", ["anarchy", "anarchism"]),
+    named( "☲", ["confucianism", "trigram-li"]),
+    named( "☭", ["communism", "hammer-and-sickle"]),
+    
+    named( "☥", ["ankh"]),
+    named( "⚜", ["fleur-de-lis", "fleur"]),
+    named( "☘", ["shamrock", "clover"]),
+])
+
+
+
+export const progress = namespace("progress", [
+    namespace("vblock", [
+        named("▁", ["1/8"]),
+        named("▂", ["2/8"]),
+        named("▃", ["3/8"]),
+        named("▄", ["4/8"]),
+        named("▅", ["5/8"]),
+        named("▆", ["6/8"]),
+        named("▇", ["7/8"]),
+        named("█", ["8/8"]),
+    ]),
+    namespace("hblock", [
+        named("▏", ["1/8"]),
+        named("▎", ["2/8"]),
+        named("▍", ["3/8"]),
+        named("▌", ["4/8"]),
+        named("▋", ["5/8"]),
+        named("▊", ["6/8"]),
+        named("▉", ["7/8"]),
+        named("█", ["8/8"]),
+    ]),
+    namespace("shade", [
+        named("░", ["1/4"]),
+        named("▒", ["2/4"]),
+        named("▓", ["3/4"]),
+        named("█", ["4/4"]),
+    ]),
+    namespace("quadrant", [
+        named("▖", ["bl", "1/4"]),
+        named("▗", ["br", "2/4"]),
+        named("▘", ["ul", "3/4"]),
+        named("▝", ["ur", "4/4"]),
     ])
 ])
 
 
-export const symbols = namespace("concept", [
-    ascii("male", "♂", ["male", "masc"]),
-    ascii("female", "♀", ["female", "femme"]),
-    ascii("nonbinary", "⚲", ["nonbinary", "nb", "enby"]),
-    ascii("intersex", "⚥", ["intersex", "intersex"]),
-    ascii("mf", "⚤", ["mf", "fm", "het", "heterosexual"]),
-    ascii("mm", "⚣", ["mm", "m", "homosexual", "hom"]),
-    ascii("ff", "⚢", ["ff", "f", "lesbian", "les"]),
+export const shapes = namespace("shape", [
+    named("circle", ["●", "circle"]),
+    named("square", ["■", "square"]),
+    named("diamond", ["◆", "diamond"]),
+    named("triangle:up", ["▲", "triangle:up"]),
+    named("triangle:down", ["▼", "triangle:down"]),
+    named("triangle:left", ["◀", "triangle:left"]),
+    named("triangle:right", ["▶", "triangle:right"]),
+    named("star:five", ["★", "star:five"]),
+    named("star:six", ["✶", "star:six"]),
+    named("star:eight", ["✸", "star:eight"]),
+    named("star:twelve", ["✹", "star:twelve"]),
+    named("rhombus", ["⯁", "rhombus"]),
+    named("pentagon", ["⬟", "pentagon"]),
+    named("hexagon", ["⬢", "hexagon"]),
+    named("octagon", ["⯃", "octagon"]),
 
-    ascii("marriage", "⚭", ["marriage"]),
-    ascii("divorce", "⚮", ["divorce"]),
-    ascii("partnership", "⚯", ["partnership"]),
+    named("ast", ["∗", "asterisk", "ast"]),
+    named("bullet", ["•", "bullet", "bullet"]),
+    named("star", ["⋆", "star", "star"]),
 
-    ascii("radioactive", "☢", ["radioactive"]),
-    ascii("biohazard", "☣", ["biohazard"]),
-    ascii("caduceus", "⚕", ["caduceus", "medical"]),
-    ascii("ankh", "☥", ["ankh"]),
-    ascii("skull", "☠", ["skull", "death"]),
-    // ethnic / religious symbols
-    ascii("yin-yang", "☯", ["yin-yang", "taijitu"]),
-    ascii("fleur-de-lis", "⚜", ["fleur-de-lis", "fleur"]),
-    ascii("shamrock", "☘", ["shamrock", "clover"]),
-    ascii("christ", "✞", ["christ", "cross"]),
-    ascii("judaism", "✡", ["star-of-david", "magen-david"]),
-    ascii("islam", "☪", ["islam", "star-and-crescent"]),
-    ascii("buddhism", "☸", ["buddhism", "dharmachakra"]),
-    ascii("hinduism", "🕉", ["hinduism", "aum", "om"]),
-    ascii("taoism", "☯", ["taoism", "yin-yang"]),
-    ascii("shinto", "⛩", ["shinto", "torii"]),
-    ascii("jainism", "☸", ["jainism", "dharmachakra"]),
-    ascii("sikhism", "☬", ["sikhism", "khanda"]),
-    ascii("allah", "ﷲ", ["allah"]),
-    ascii("communism", "☭", ["communism", "hammer-and-sickle"]),
-    ascii("anarchy", "Ⓐ", ["anarchy", "anarchism"]),
-    ascii("peace-sign", "☮", ["peace-sign", "peace"]),  
-    ascii("", "☲", ["confucianism", "trigram-li"]),
-    ascii("", "☥", ["ankh"]),
-
-])
-
-
-export const progress = replacers({
-    //▁ ▂ ▃ ▄ ▅ ▆ ▇ █
-    "{vblock:1/8}": ["▁",  "[shape:]vblock:1/8"],
-    "{vblock:2/8}": ["▂",  "[shape:]vblock:2/8"],
-    "{vblock:3/8}": ["▃",  "[shape:]vblock:3/8"],
-    "{vblock:4/8}": ["▄",  "[shape:]vblock:4/8"],
-    "{vblock:5/8}": ["▅",  "[shape:]vblock:5/8"],
-    "{vblock:6/8}": ["▆",  "[shape:]vblock:6/8"],
-    "{vblock:7/8}": ["▇",  "[shape:]vblock:7/8"],
-    "{vblock:8/8}": ["█",  "[shape:]vblock:8/8"],
-    "{hblock:1/8}": ["▏", "[shape:]hblock:1/8"],
-    "{hblock:2/8}": ["▎", "[shape:]hblock:2/8"],
-    "{hblock:3/8}": ["▍", "[shape:]hblock:3/8"],
-    "{hblock:4/8}": ["▌", "[shape:]hblock:4/8"],
-    "{hblock:5/8}": ["▋", "[shape:]hblock:5/8"],
-    "{hblock:6/8}": ["▊", "[shape:]hblock:6/8"],
-    "{hblock:7/8}": ["▉", "[shape:]hblock:7/8"],
-    "{hblock:8/8}": ["█", "[shape:]hblock:8/8"],
-    "{shade:1/4}": ["░", "[shape:]shade:1/4"],
-    "{shade:2/4}": ["▒", "[shape:]shade:2/4"],
-    "{shade:3/4}": ["▓", "[shape:]shade:3/4"],
-    "{shade:4/4}":  ["█",  "[shape:]shade:4/4"],
-    "quadrant:bl": ["▖", "[shape:]quadrant:bl"],
-    "quadrant:br": ["▗", "[shape:]quadrant:br"],
-    "quadrant:ul": ["▘", "[shape:]quadrant:ul"],
-    "quadrant:ur": ["▝", "[shape:]quadrant:ur"],
-})
-
-export const shapes = replacers({
-    "circle": ["●", "[shape:]circle"],
-    "square": ["■", "[shape:]square"],
-    "diamond": ["◆", "[shape:]diamond"],
-    "triangle:up": ["▲", "[shape:]triangle:up"],
-    "triangle:down": ["▼", "[shape:]triangle:down"],
-    "triangle:left": ["◀", "[shape:]triangle:left"],
-    "triangle:right": ["▶", "[shape:]triangle:right"],
-    "star:five": ["★", "[shape:]star:five"],
-    "star:six": ["✶", "[shape:]star:six"],
-    "star:eight": ["✸", "[shape:]star:eight"],
-    "star:twelve": ["✹", "[shape:]star:twelve"],
-    "rhombus": ["⯁", "[shape:]rhombus"],
-
-    "pentagon": ["⬟", "[shape:]pentagon"],
-    "hexagon": ["⬢", "[shape:]hexagon"],
-    "octagon": ["⯃", "[shape:]octagon"],
-
-     "ast":   ["∗",       "[op:]asterisk", "[op:]ast"],
-    "bullet":     ["•",       "[op:]bullet", "[op:]bullet"],
-    "star":       ["⋆",       "[op:]star", "[op:]star"],
-    "suit:clubs": ["♧", "[shape:]suit:clubs"],
-    "suit:diamonds": ["♢", "[shape:]suit:diamonds"],
-    "suit:hearts": ["♡", "[shape:]suit:hearts"],
-    "suit:spades": ["♤", "[shape:]suit:spades"],
-
-    "{suit:clubs!}": ["♣", "[shape:]suit:clubs:black"],
-    "{suit:diamonds!}": ["♦", "[shape:]suit:diamonds:black"],
-    "{suit:hearts!}": ["♥", "[shape:]suit:hearts:black"],
-    "{suit:spades!}": ["♠", "[shape:]suit:spades:black"],
-
-    "key:return": ["⏎", "key:return"],
-    "key:shift": ["⇧", "key:shift"],
-    "key:capslock": ["🄰", "key:capslock"],
-    "key:capslock:2": ["⇪", "key:capslock:bb"],
-    "key:backspace": ["⌫", "key:backspace", "key:delete:left"],
-    "key:delete:right": ["⌦", "key:delete:right"],
-    "key:tab": ["⭾", "key:tab"],
-    "key:eject": ["⏏", "key:eject"],
-    "key:mac:cmd": ["⌘", "key:mac:cmd"],
-    "key:mac:option": ["⌥", "key:mac:option"],
-   
 
     
 
-})
+])
 
-type Blah = typeof arrows
-type OneThingy<T extends string> = T extends `${string}${infer U extends keyof Blah}${string}` ? Blah[U] : never
+export const keys = namespace("key", [
+    named("⏎", ["return"]),
+    named("⇧", ["shift"]),
+    named("🄰", ["capslock"]),
+    named("⇪", ["capslock:bb"]),
+    named("⌫", ["backspace", "delete:left"]),
+    named("⌦", ["delete:right"]),
+    named("⭾", ["tab"]),
+    named("⏏", ["eject"]),
+    named("⌘", ["mac:cmd"]),
+    named("⌥", ["mac:option"]),
+])
 
-function doit<const T extends string>(x: T): OneThingy<T> {
-    return x as any
-}
-
-const a = doit("A\b{<==}")
-
-type ARB = OneThingy<"A<=|B">

@@ -1,4 +1,4 @@
-import { ascii } from "../../registered"
+import { ascii, namespace, not } from "../../registered"
 
 export const arrows2 = namespace("arrow", [
     ascii("<--", "←", ["left"]),
@@ -6,11 +6,10 @@ export const arrows2 = namespace("arrow", [
     ascii("--^", "↑", ["up"]),
     ascii("--v", "↓", ["down"]),
     ascii("<-->", "↔", ["left:right"]),
-
-    ascii("!<-", "↚", ["left:not"]),
-    ascii("!->", "↛", ["right:not"]),
-    ascii("!<-->", "↮", ["left:right:not"]),
-    ascii("v--^", "↕", ["down:up:not"]),
+    ascii("v--^", "↕", ["down:up"]),
+    ascii("!<-", "↚", not("left")),
+    ascii("!->", "↛", not("right")),
+    ascii("!<-->", "↮", not("left:right")),
 
     ascii("<~~", "↜", ["wavey:left"]),
     ascii("~~>", "↝", ["wavey:right"]),
@@ -23,9 +22,9 @@ export const arrows2 = namespace("arrow", [
     ascii("==v", "⇓", ["bb:down", "double:down", "v=="]),
     ascii("<==>", "⇔", ["bb:left:right", "double:left:right"]),
 
-    ascii("!<==", "⇍", ["bb:left:not", "double:left:not"]),
-    ascii("!==>", "⇏", ["bb:right:not", "double:right:not"]),
-    ascii("!<==>", "⇎", ["bb:left:right:not", "double:left:right:not"]),
+    ascii("!<==", "⇍", not("bb:left", "double:left")),
+    ascii("!==>", "⇏", not("bb:right", "double:right")),
+    ascii("!<==>", "⇎", not("bb:left:right", "double:left:right")),
 
     ascii("<-|", "↤", ["tailed:left"]),
     ascii("|->", "↦", ["tailed:right"]),

@@ -1,5 +1,3 @@
-import { ascii, namespace } from "../registered"
+import { named, namespace } from "../registered"
 
-export const ent = namespace("ent", [
-    ascii("infty", "∞", ["infinity", "infty"])
-])
+export const ent = namespace("ent", [named("∞", ["infinity", "infty"])])

@@ -1,16 +1,3 @@
-export function ascii(
-    input: string,
-    value: string,
-    names: string[]
-): ReplacementMacro {
-    const [name, ...aliases] = names
-    return {
-        name,
-        input,
-        value,
-        aliases
-    }
-}
 class _Aliased {
     constructor(readonly aliases: AtLeastOne<string>) {}
 }
@@ -60,6 +47,9 @@ export function named(value: string, names: AtLeastOne<string>): Named {
     return new Named(value, names)
 }
 
+export function not(...names: AtLeastOne<string>): AtLeastOne<string> {
+    return names.map(name => `${name}:not`) as AtLeastOne<string>
+}
 export function ref(
     targetName: string,
     aliases: AtLeastOne<string>
@@ -74,9 +64,10 @@ export function namespace(
     name = Array.isArray(name) ? name : [name]
     return new Namespace(entries, name)
 }
-
-export type ReplacerRecord = [symbol: string, ...names: string[]]
-
-export type Replacers = {
-    [x: `{${string}}`]: []
+export function ascii(
+    input: string,
+    value: string,
+    names: AtLeastOne<string>
+): Signed {
+    return new Signed(value, input, names)
 }

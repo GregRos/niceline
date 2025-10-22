@@ -1,7 +1,7 @@
+import { getNiceValueName, getSymbolDescription } from "what-are-you"
 import { getFunctionName } from "../utils/get-function-name"
 import { truncate } from "../utils/truncate"
 import { parseOptions } from "./parse-options"
-
 interface ValueTextOptions {
     /** The maximum length of the text to return. Defaults to 100. */
     readonly length: number
@@ -64,18 +64,10 @@ export function textMarker(value: unknown, ...options: TextMarkerOptions[]) {
             result = truncate(value, rOptions.length)
             return rOptions.compact ? result : `"${result}"`
         default:
-            return truncate(str(value), rOptions.length)
+            return truncate(getNiceValueName(value), rOptions.length)
     }
 }
 
 function getObjectTextMarker(value: object, compact: boolean) {
-    const isEmpty = isObjectEmpty(value)
-    if (value instanceof Error) {
-        const objectName = getErrorName(value)
-        return compact ? objectName : `‼${objectName}‼`
-    }
-    const objectDesc = isEmpty ? "{}" : `{…}`
-    let objectName = getClassName(value)
-    objectName = objectName === "Object" ? "" : objectName
-    return `${objectName}${objectDesc}`
+    return getNiceValueName(value)
 }

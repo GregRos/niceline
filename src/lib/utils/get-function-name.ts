@@ -1,4 +1,5 @@
-import { _prettyline } from "./prettyline"
+import { getNiceTypeOf } from "what-are-you"
+import { prettyline } from "./prettyline"
 
 /**
  * Returns the name of a function.
@@ -58,8 +59,8 @@ export function getSymbolDescription(symb: symbol): string {
 export function getErrorName(err: Error) {
     if (typeof err !== "object") {
         throw new TypeError(
-            _prettyline(`Expected an object, but got a ${typeof err}.`
+            prettyline`Expected an object, but got a ${typeof err}.`
         )
     }
-    return !err.name || err.name === "Error" ? getClassName(err) : err.name
+    return !err.name || err.name === "Error" ? getNiceTypeOf(err) : err.name
 }

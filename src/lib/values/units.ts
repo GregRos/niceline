@@ -8,7 +8,7 @@ export interface UnitTransform {
 export interface NiceUnit {
     get bytes(): string
     bytes_(transform: UnitTransform["byte"]): string
-    get meters(): stringc
+    get meters(): string
     meters_(transform: UnitTransform["meter"]): string
     get kilograms(): string
     kilograms_(transform: UnitTransform["kilogram"]): string
