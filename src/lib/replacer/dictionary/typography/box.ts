@@ -1,6 +1,6 @@
 import { ascii, namespace } from "../../registered"
 
-export const box = namespace("box", [
+export const box = namespace("xx", [
     ascii("[...]", "⬚", ["dashed"]),
     ascii("[x]", "⮽", ["crossed"]),
     ascii("[v]", "🗹", ["checked"]),

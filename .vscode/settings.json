@@ -2,6 +2,7 @@
   "editor.fontLigatures": false,
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "search.exclude": {
-    "**/*."
+    "**/node_modules": true,
+    "**/site": true
   }
 }

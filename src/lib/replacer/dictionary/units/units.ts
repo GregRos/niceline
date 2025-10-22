@@ -1,6 +1,6 @@
 import { ascii, named, namespace } from "../../registered"
 
-export const units = namespace("unit", [
+export const units = namespace("tech", [
     named("Ω", ["ohm"]),
     named("°", ["deg", "degree"]),
     named("℃", ["celsius"]),

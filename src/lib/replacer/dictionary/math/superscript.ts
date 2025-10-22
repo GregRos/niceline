@@ -1,4 +1,4 @@
-import { ascii, namespace } from "../../registered"
+import { ascii, named, namespace } from "../../registered"
 
 export const superscript = namespace("sup", [
     ascii("^0", "⁰", ["0"]),
@@ -72,4 +72,38 @@ export const superscript = namespace("sup", [
     ascii("^theta", "ᶿ", ["theta"]),
     ascii("^iota", "ᶥ", ["iota"]),
     ascii("^phi", "ᶲ", ["phi"])
+])
+export const subscripts = namespace("sub", [
+    named("₀", ["0"]),
+    named("₁", ["1"]),
+    named("₂", ["2"]),
+    named("₃", ["3"]),
+    named("₄", ["4"]),
+    named("₅", ["5"]),
+    named("₆", ["6"]),
+    named("₇", ["7"]),
+    named("₈", ["8"]),
+    named("₉", ["9"]),
+    ascii("_+", "₊", ["plus"]),
+    ascii("_-", "₋", ["minus"]),
+    ascii("_=", "₌", ["equal"]),
+    ascii("_(", "₍", ["paren:left"]),
+    ascii("_)", "₎", ["paren:right"]),
+    named("ₐ", ["a"]),
+    named("ₑ", ["e"]),
+    named("ₕ", ["h"]),
+    named("ᵢ", ["i"]),
+    named("ⱼ", ["j"]),
+    named("ₖ", ["k"]),
+    named("ₗ", ["l"]),
+    named("ₘ", ["m"]),
+    named("ₙ", ["n"]),
+    named("ₒ", ["o"]),
+    named("ₚ", ["p"]),
+    named("ᵣ", ["r"]),
+    named("ₛ", ["s"]),
+    named("ₜ", ["t"]),
+    named("ᵤ", ["u"]),
+    named("ᵥ", ["v"]),
+    named("ₓ", ["x"])
 ])
