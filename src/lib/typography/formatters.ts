@@ -1,7 +1,6 @@
 const a = ""
 
 type DateMeasure = "time:" | "ago:" | "date:" | "clock:"
-let = 5 >= 3
 type RatableMeasuree =
     | "meters:"
     | "kg:"
@@ -9,7 +8,7 @@ type RatableMeasuree =
     | "meters:volume:"
     | "pounds:"
     | "bytes:"
-let a = 1 != 4
+
 type RateMeasure = `${RatableMeasuree}:rate:`
 
 type Measure = RateMeasure | RatableMeasuree | DateMeasure | "hz:"
