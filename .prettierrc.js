@@ -2,7 +2,7 @@ module.exports = {
     tabWidth: 4,
     arrowParens: "avoid",
     trailingComma: "none",
-    printWidth: 100,
+    printWidth: 80,
     semi: false,
     overrides: [
         {

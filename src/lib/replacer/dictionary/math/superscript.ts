@@ -74,6 +74,7 @@ export const superscript = namespace("sup", [
     ascii("ᶲ", "{^phi}", ["phi"])
 ])
 export const subscripts = namespace("sub", [
+    ascii("⁎", "{_*}", ["asterisk"]),
     ascii("₀", "{_0}", ["0"]),
     ascii("₁", "{_1}", ["1"]),
     ascii("₂", "{_2}", ["2"]),

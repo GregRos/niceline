@@ -1,4 +1,4 @@
-import { ascii, namespace, not } from "../../registered"
+import { ascii, named, namespace, not } from "../../registered"
 
 export const arrows2 = namespace("arrow", [
     ascii("←", "{<--}", ["left"]),
@@ -10,24 +10,52 @@ export const arrows2 = namespace("arrow", [
     ascii("↚", "{!<--}", not("left")),
     ascii("↛", "{!-->}", not("right")),
     ascii("↮", "{!<-->}", not("left:right")),
+    namespace("long", [
+        ascii("\u27f5", "{<---}", ["left"]),
+        ascii("\u27f6", "{--->}", ["right"]),
+        ascii("\u27f7", "{<--->}", ["left:right"]),
+        namespace("double|bb", [
+            ascii("\u27f8", "{<===}", ["left"]),
+            ascii("\u27f9", "{===>}", ["right"]),
+            ascii("\u27fa", "{<===>}", ["left:right"])
+        ]),
+        namespace("from", [
+            ascii("\u27fb", "{<---|}", ["left"]),
+            ascii("\u27fc", "{|--->}", ["right"]),
+            namespace("double|bb", [
+                ascii("\u27fd", "{<===|}", ["left"]),
+                ascii("\u27fe", "{|===>}", ["right"])
+            ])
+        ])
+    ]),
+    namespace("wavey", [
+        ascii("↜", "{<~~}", ["left"]),
+        ascii("↝", "{~~>}", ["right"])
+    ]),
+    namespace("zigzag", [
+        ascii("⇜", "{<~-}", ["left"]),
+        ascii("⇝", "{-~>}", ["right"])
+    ]),
 
-    ascii("↜", "{<~~}", ["wavey:left"]),
-    ascii("↝", "{~~>}", ["wavey:right"]),
-    ascii("⇜", "{<~-}", ["zigzag:left"]),
-    ascii("⇝", "{-~>}", ["zigzag:right"]),
+    namespace("double|bb", [
+        ascii("⇐", "{<==}", ["left"]),
+        ascii("⇒", "{==>}", ["right", "right"]),
+        ascii("⇑", "{==^}", ["up", "double:up"]),
+        ascii("⇓", "{==v}", ["down", "double:down"]),
+        ascii("⇔", "{<==>}", ["left:right", "double:left:right"]),
 
-    ascii("⇐", "{<==}", ["bb:left", "double:left"]),
-    ascii("⇒", "{==>}", ["bb:right", "double:right"]),
-    ascii("⇑", "{==^}", ["bb:up", "double:up", "^=="]),
-    ascii("⇓", "{==v}", ["bb:down", "double:down", "v=="]),
-    ascii("⇔", "{<==>}", ["bb:left:right", "double:left:right"]),
-
-    ascii("⇍", "{!<==}", not("bb:left", "double:left")),
-    ascii("⇏", "{!==>}", not("bb:right", "double:right")),
-    ascii("⇎", "{!<==>}", not("bb:left:right", "double:left:right")),
-
-    ascii("↤", "{<--|}", ["tailed:left"]),
-    ascii("↦", "{|-->}", ["tailed:right"]),
+        ascii("⇍", "{!<==}", not("left", "double:left")),
+        ascii("⇏", "{!==>}", not("right", "double:right")),
+        ascii("⇎", "{!<==>}", not("left:right", "double:left:right"))
+    ]),
+    namespace("from", [
+        ascii("↤", "{<--|}", ["left"]),
+        ascii("↦", "{|-->}", ["right"]),
+        namespace("bb|double", [
+            ascii("⤆", "{<==|}", ["left"]),
+            ascii("⤇", "{|==>}", ["right"])
+        ])
+    ]),
 
     namespace("barbed", [
         ascii("🢀", "{<<==}", ["left"]),
@@ -45,6 +73,12 @@ export const arrows2 = namespace("arrow", [
             ascii("🡆", "{--||>}", ["right"]),
             ascii("🡅", "{--||^}", ["up"]),
             ascii("🡇", "{--||v}", ["down"])
+        ]),
+        namespace("to", [
+            ascii("⭰", "{|<|--}", ["down"]),
+            ascii("⭱", "{|--|^|}", ["up"]),
+            ascii("⭲", "{|--|>|}", ["down"]),
+            ascii("⭳", "{|--|v|}", ["down"])
         ])
     ]),
     namespace("2", [
@@ -66,7 +100,51 @@ export const arrows2 = namespace("arrow", [
         ascii("🠵", "{::^}", ["up"]),
         ascii("🠷", "{::v}", ["down"])
     ]),
-
-    ascii("⭮", "{^@}", ["clockwise", "cw"]),
-    ascii("⭯", "{@^}", ["counter:clockwise", "ccw"])
+    namespace("loop", [
+        ascii("↫", "{<--&}", ["left"]),
+        ascii("↬", "{&-->}", ["right"])
+    ]),
+    namespace("hook", [
+        ascii("⮌", "{<--@}", ["left"]),
+        ascii("⮎", "{@-->}", ["right"]),
+        ascii("⮏", "{v--@}", ["down"]),
+        ascii("⮍", "{@--^}", ["up"])
+    ]),
+    namespace("circle", [
+        named("⮔", ["fourcorner"]),
+        namespace("cw", [
+            ascii("⥁", "{@>@}", ["", "closed"]),
+            namespace("open", [
+                ascii("⟳", "{@v}", ["top"]),
+                ascii("⭮", "{^@}", ["bottom"])
+            ])
+        ]),
+        namespace("ccw", [
+            ascii("⥀", "{@<@}", [""]),
+            namespace("open", [
+                ascii("⮏", "{v--@}", ["down"]),
+                ascii("⮎", "{@-->}", ["right"]),
+                ascii("⮍", "{@--^}", ["up"]),
+                ascii("⮌", "{<--@}", ["left"])
+            ])
+        ])
+    ]),
+    namespace("to", [
+        ascii("⇤", "{|<--}", ["left"]),
+        ascii("⇥", "{|-->}", ["right"]),
+        ascii("⤒", "{--^|}", ["up"]),
+        ascii("⤓", "{--v|}", ["down"])
+    ]),
+    namespace("bbb|triple", [
+        ascii("⇚", "{<(===)}", ["left"]),
+        ascii("⇛", "{(===)>}", ["right"]),
+        ascii("⤊", "{(===)^}", ["left"]),
+        ascii("⤋", "{(===)^}", ["right"])
+    ]),
+    namespace("quad", [
+        ascii("⭅", "{<(====)}", ["left:quad"]),
+        ascii("⭆", "{(====)>}", ["right:quad"]),
+        ascii("⟰", "{(====)^}", ["up:quad"]),
+        ascii("⟱", "{(====)v}", ["down:quad"])
+    ])
 ])

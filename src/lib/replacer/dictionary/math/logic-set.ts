@@ -1,0 +1,46 @@
+import { ascii, named, namespace, not } from "../../registered"
+
+export const logicSet = namespace("set", [
+    ascii("∖", "{s-}", ["set:minus"]),
+    ascii("∩", "{s&}", ["cap", "intersection", "inter"]),
+    ascii("∪", "{s|}", ["union", "cup", "cup"]),
+    ascii("⋂", "{s&&}", ["cap:big", "intersection:big", "inter:big"]),
+    ascii("⋃", "{s||}", ["union:big", "cup:big"]),
+    ascii("∧", "{l&}", ["and", "land"]),
+    ascii("⋀", "{l&&}", ["and:big", "land:big"]),
+    ascii("∨", "{l|}", ["or", "lor"]),
+    ascii("⋁", "{l||}", ["or:big", "lor:big"]),
+    ascii("¬", "{l!}", ["not", "lnot"]),
+    ascii("∀", "{A:}", ["forall"]),
+    ascii("∃", "{E:}", ["exists"]),
+    ascii("∄", "{!E:}", ["exists:not", "nexists"]),
+    ascii("∈", "{e:}", ["in"]),
+    ascii("∉", "{!e:}", ["in:not", "nin"]),
+    ascii("⊂", "{s<:}", ["subset", "sub"]),
+    ascii("⊃", "{s>:}", ["superset", "sup"]),
+    ascii("⊆", "{s<=:}", ["subset:equal", "subeq"]),
+    ascii("⊇", "{s>=:}", ["superset:equal", "supeq"]),
+    ascii("⊄", "{!s<:}", not("subset", "sub")),
+    ascii("⊅", "{!s>:}", not("superset", "sup")),
+    ascii("⊈", "{!s<=:}", not("subset:equal", "subeq")),
+    ascii("⊉", "{!s>=:}", not("superset:equal", "supeq")),
+    named("⊊", ["subset:proper", "psub"]),
+    named("⊋", ["superset:proper", "psup"]),
+    ascii("∅", "{0}", ["empty", "emptyset", "nullset"]),
+    ascii("∴", "{:.}", ["therefore"]),
+    ascii("∵", "{.:}", ["because"]),
+    ascii("⟙", "{T}", ["top", "true", "tack:down"]),
+    ascii("⟘", "{F}", ["bottom", "bot", "false", "tack:up"]),
+    ascii("⊨", "{|=}", ["models", "vDash"]),
+    ascii("⊭", "{!|=}", not("models", "vDash")),
+
+    ascii("⊩", "{||-}", ["forcecs", "Vdash"]),
+    ascii("⊯", "{!||-}", not("forces", "Vdash")),
+    ascii("⊢", "{|-}", ["proves", "turnstile", "ts", "vdash", "tack:right"]),
+    ascii(
+        "⊬",
+        "{!|-}",
+        not("proves", "turnstile", "ts", "vdash", "tack:right")
+    ),
+    ascii("⊣", "{-|}", ["proven", "turnstile:rev", "dashv", "tack:left"])
+])

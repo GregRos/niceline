@@ -40,5 +40,14 @@ export const game = namespace("game", [
         named("⚃", ["4", "four"]),
         named("⚄", ["5", "five"]),
         named("⚅", ["6", "six"])
+    ]),
+    namespace("draughts|checkers", [
+        namespace("white|w", [named("⛀", ["man"]), named("⛁", ["king"])]),
+        namespace("black|b", [named("⛂", ["man"]), named("⛃", ["king"])])
+    ]),
+    namespace("shogi", [
+        // TODO: add more pieces
+        namespace("white|w", [named("⛉", ["turned"])]),
+        namespace("black|b", [named("⛊", ["turned"])])
     ])
 ])

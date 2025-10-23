@@ -15,7 +15,9 @@ export const religion = namespace("religion", [
         named("✞", [""]),
         named("☦", ["orthodox"]),
         named("☨", ["lorraine"]),
-        named("☩", ["jerusalem"])
+        named("☩", ["jerusalem"]),
+        named("✙", ["maltese"]),
+        named("✚", ["greek"])
     ]),
     named("☥", ["ankh"]),
 

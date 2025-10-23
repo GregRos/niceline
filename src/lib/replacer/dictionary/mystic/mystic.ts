@@ -1,6 +1,15 @@
 import { named, namespace } from "../../registered"
 
 export const mystic = namespace("mystic", [
+    named("⚝", ["star:magic", "magic"]),
+    named("⛤", ["pentacle", "pentagram"]),
+    named("⛧", ["pentagram:inverted", "pentacle:inverted"]),
+    named("⚳", ["ceres"]),
+    named("⚴", ["pallas"]),
+    named("⚵", ["juno"]),
+    named("⚶", ["vesta"]),
+    named("⚷", ["chiron"]),
+    named("⚸", ["blackmoon", "lilith"]),
     named("☿", ["mercury"]),
     named("♀", ["venus"]),
     named("♁", ["earth"]),
@@ -50,5 +59,7 @@ export const mystic = namespace("mystic", [
     named("♐", ["sagittarius"]),
     named("♑", ["capricorn"]),
     named("♒", ["aquarius"]),
-    named("♓", ["pisces"])
+    named("♓", ["pisces"]),
+
+    named("⛎", ["ophiuchus"])
 ])
