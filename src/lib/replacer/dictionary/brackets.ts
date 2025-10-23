@@ -12,30 +12,40 @@ const double = ["double", "d"] as const
 
 export const paired = namespace("paired", [
     namespace("bracket|parentheses|paren|brace|braces", [
-        namespace("halfmoon", []),
         namespace("paren", [
-            // called "white"
-            ascii("⦅", "{(_(}", leftOne),
-            ascii("⦆", "{)_)}", rightOne),
-            // halfmoon namespace
-            //    white
-            ascii("⦇", "{|_)}", leftOne),
-            ascii("⦈", "{(_|}", rightOne),
-            //    black
-            ascii("◖", "{(%|}", leftOne),
-            ascii("◗", "{|%)}", rightOne),
-            // 1:angle|angle
-            ascii("⦓", "{<(<)}", leftOne),
-            ascii("⦔", "{>)>}", leftOne),
-            // 2:angle
-            ascii("⦕", "{(>(<}", leftOne),
-            ascii("⦖", "{)>)>}", leftOne),
-            // 2
-            ascii("⸨", "{((}", leftOne),
-            ascii("⸩", "{))}", rightOne),
-            // flattened
-            ascii("⟮", "{([}", leftOne),
-            ascii("⟯", "{])}", rightOne)
+            namespace("white", [
+                ascii("⦅", "{(_(}", leftOne),
+                ascii("⦆", "{)_)}", rightOne)
+            ]),
+            namespace("halfmoon", [
+                namespace("white", [
+                    ascii("⦇", "{|_)}", leftOne),
+                    ascii("⦈", "{(_|}", rightOne)
+                ]),
+                namespace("black", [
+                    ascii("◖", "{(%|}", leftOne),
+                    ascii("◗", "{|%)}", rightOne)
+                ])
+            ]),
+            namespace("angle", [
+                namespace("1", [
+                    ascii("⦓", "{<(<)}", leftOne),
+                    ascii("⦔", "{>)>}", leftOne)
+                ]),
+                namespace("2:angle", [
+                    ascii("⦕", "{(>(<}", leftOne),
+                    ascii("⦖", "{)>)>}", leftOne)
+                ])
+            ]),
+
+            namespace("2", [
+                ascii("⸨", "{((}", leftOne),
+                ascii("⸩", "{))}", rightOne)
+            ]),
+            namespace("flat", [
+                ascii("⟮", "{|()}", leftOne),
+                ascii("⟯", "{)|}", rightOne)
+            ])
         ]),
         namespace("E", [
             ascii("⁅", "{[-}", leftOne),
@@ -57,8 +67,8 @@ export const paired = namespace("paired", [
                     ascii("❱", "{)))>}", rightOne)
                 ]),
                 namespace("dot", [
-                    ascii("⦑", "{<.}", leftOne),
-                    ascii("⦒", "{.>}", rightOne)
+                    ascii("⦑", "{<(.}", leftOne),
+                    ascii("⦒", "{.)>)}", rightOne)
                 ]),
                 namespace("curved", [
                     ascii("⧼", "{<|(}", leftOne),

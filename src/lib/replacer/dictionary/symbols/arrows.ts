@@ -14,6 +14,10 @@ export const arrows2 = namespace("arrow", [
         ascii("\u27f5", "{<---}", ["left"]),
         ascii("\u27f6", "{--->}", ["right"]),
         ascii("\u27f7", "{<--->}", ["left:right"]),
+        namespace("zigzag", [
+            ascii("\u2b33", "{<~~-}", ["left"]),
+            ascii("\u27ff", "{-~~>}", ["right"])
+        ]),
         namespace("double|bb", [
             ascii("\u27f8", "{<===}", ["left"]),
             ascii("\u27f9", "{===>}", ["right"]),
