@@ -1,14 +1,10 @@
 // ◖
 //◗
 
-import { aliasAscii, ascii, named, namespace } from "../registered"
+import { ascii, named, namespace } from "../registered"
 
 const leftOne = ["left", "l"] as const
 const rightOne = ["right", "r"] as const
-const french = ["french", "guillemets"] as const
-const german = ["low", "german", "czech"] as const
-const single = ["single", "s"] as const
-const double = ["double", "d"] as const
 
 export const paired = namespace("paired", [
     namespace("bracket|parentheses|paren|brace|braces", [
@@ -101,31 +97,5 @@ export const paired = namespace("paired", [
     namespace("brace", [
         namespace("white", [named("⦃", leftOne), named("⦄", rightOne)])
     ]),
-    namespace("angle", []),
-
-    namespace("quote", [
-        namespace(double, [
-            namespace(leftOne, [
-                ascii("“", '{"|}', [""]),
-                ascii("«", `{"<}`, french),
-                ascii("„", `{,,}`, german)
-            ]),
-            namespace(rightOne, [
-                ascii("”", `{|"}`, [""]),
-                ascii("»", `{>"}`, french)
-            ])
-        ]),
-        namespace("single", [
-            namespace(leftOne, [
-                ascii("‘", "{'|}", [""]),
-                ascii("‹", `{'<}`, french),
-                ascii("‚", `{,}`, german)
-            ]),
-            namespace(rightOne, [
-                ascii("’", "{|'}", [""]),
-                ascii("›", `{>'}`, french),
-                aliasAscii("left", "{<,}", german)
-            ])
-        ])
-    ])
+    namespace("angle", [])
 ])

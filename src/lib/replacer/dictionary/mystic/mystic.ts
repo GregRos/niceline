@@ -31,7 +31,6 @@ export const mystic = namespace("mystic", [
     named("⯛", ["pholus"]),
     named("⯜", ["nessus"]),
     named("⯝", ["selena"]),
-    named("⯞", ["cross:black:diamond"]),
     named("⯟", ["arta"]),
     named("⯠", ["cupido"]),
     named("⯡", ["hades"]),

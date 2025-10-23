@@ -50,4 +50,6 @@ export const game = namespace("game", [
         namespace("white|w", [named("⛉", ["turned"])]),
         namespace("black|b", [named("⛊", ["turned"])])
     ])
+    // TODO: add pieces for majhong, go, backgammon, etc.
+    // TODO: add card characters if they exist
 ])

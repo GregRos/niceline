@@ -70,7 +70,13 @@ export const units = namespace("tech", [
             named("⏺", ["record"]),
             named("⏹", ["stop"]),
             named("⏏", ["eject"])
-        ])
+        ]),
+        namespace("volume", [
+            named("🕨", ["mute"]),
+            named("🕩", ["low"]),
+            named("🕪", ["high"])
+        ]),
+        namespace("horn", [named("🕫", ["off"]), named("🕬", ["low"])])
     ]),
     namespace("actions", []),
     namespace("actions", [
@@ -110,4 +116,31 @@ export const electric = namespace("electric", [
     named("⏚", ["ground"]),
     named("⏦", ["ac"]),
     named("⎓", ["dc"])
+])
+
+const computers = namespace("computer", [
+    named("🖧", ["network"]),
+    named("🖨", ["printer"]),
+    named("🖩", ["calculator"]),
+    named("🖳", ["pc", "PC"]),
+    named("🖵", ["screen"]),
+    named("🖶", ["printer"]),
+    named("🖷", ["fax"]),
+
+    namespace("input", [named("🖰", ["mouse"]), named("🖦", ["kbm", "KBM"])]),
+    namespace("media", [
+        namespace("document", [
+            named("🖹", ["text"]),
+            named("🖺", ["rich"]),
+            named("🖻", ["picture"])
+        ]),
+        namespace("cd|disc|disk", [named("🖸", ["cd"])]),
+        namespace("floppy", [
+            named("🖫", ["white"]),
+            named("🖪", ["black"]),
+            named("🖭", ["tape"])
+        ])
+    ]),
+    // TODO: https://www.compart.com/en/unicode/block/U+1F300
+    namespace("mouse", [named("🖱", ["black"])])
 ])

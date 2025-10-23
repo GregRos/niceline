@@ -18,7 +18,7 @@ export const ideograms = namespace("idea", [
     named("☣", ["biohazard"]),
     named("⚕", ["caduceus", "medical"]),
     named("☠", ["skull", "death", "poison"]),
-
+    named("🕱", ["crossbones"]),
     // ideological
     named("Ⓐ", ["anarchy", "anarchism"]),
     named("☲", ["confucianism", "trigram-li"]),
@@ -41,10 +41,14 @@ export const ideograms = namespace("idea", [
     named("⚒", ["hammer-and-pick"]),
     named("⧗", ["hourglass:black"]),
     named("⧖", ["hourglass:white"]),
-    named("☎", ["phone", "telephone"]),
+    namespace("phone|telephone", [
+        named("🕿", ["black"]),
+        named("🕾", ["white"]),
+        named("☎", ["b"]), ]),
+    ])
     named("☀", ["sun"]),
     named("⚚", ["hermes", "trade", "negotiation"]),
-
+    named("🕷", ["spider"]),
     named("☁", ["cloud"]),
     named("☂", ["umbrella", "rain"]),
     named("☃", ["snowman", "snow"]),
@@ -64,7 +68,37 @@ export const ideograms = namespace("idea", [
     named("🛠", ["hammer:wrench", "tools"]),
     named("🛣", ["motorway", "road"]),
     named("🛎", ["bellhop"]),
-    named("✉", ["envelope", "mail"]),
+    namespace("envelope", [
+        named("✉", [""]),
+        named("🖂", ["back"]),
+        named("🖃", ["stamped"]),
+        named("🖄", ["lightning"]),
+        named("🖅", ["flying"]),
+        named("🖆", ["signed"])
+    ]),
+    namespace("writing", [
+        named("🖊", ["pen"]),
+        named("🖋", ["fountain", "pen"]),
+        named("🖌", ["paintbrush"]),
+        named("🖍", ["crayon"])
+    ]),
+    named("🖃", ["envelope:open"]),
+    named("🎖", ["medal"]),
+    named("🎗", ["ribbon", "reminder"]),
+    named("🎞", ["film"]),
+    named("🎟", ["ticket"]),
+    named("🏞", ["park"]),
+    named("🏘", ["houses"]),
+    named("🏖", ["beach"]),
+    named("🏗", ["construction"]),
+    named("🏙", ["city", "cityscape"]),
+    named("🏚", ["abandoned", "house"]),
+    named("🏛", ["building"]),
+    named("🏟", ["stadium"]),
+    named("🏜", ["desert"]),
+    named("🏕", ["camping"]),
+    named("🏔", ["mountain"]),
+    named("🏝", ["island"]),
     namespace("scissors", [
         named("✂", ["black", ""]),
         named("✀", ["safety"]),
