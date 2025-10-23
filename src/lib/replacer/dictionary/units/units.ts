@@ -5,6 +5,6 @@ export const units = namespace("tech", [
     named("°", ["deg", "degree"]),
     named("℃", ["celsius"]),
     named("℉", ["fahrenheit"]),
-    ascii("o/oo", "‰", ["percent:2", "per:thousand", "permille"]),
-    ascii("o/ooo", "‱", ["percent:4", "per:myriad", "permyriad"])
+    ascii("‰", "{o/oo}", ["percent:2", "per:thousand", "permille"]),
+    ascii("‱", "{o/ooo}", ["percent:4", "per:myriad", "permyriad"])
 ])

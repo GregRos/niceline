@@ -9,7 +9,7 @@ export const mystic = namespace("mystic", [
     named("♄", ["saturn"]),
     named("♅", ["uranus"]),
     named("♆", ["neptune"]),
-    named("♇", ["pluto"]),
+    named("♇", ["pluto", "pluto:a"]),
     named("☉", ["sun"]),
     named("⯓", ["pluto:b"]),
     named("⯔", ["pluto:c"]),

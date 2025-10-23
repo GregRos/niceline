@@ -1,4 +1,4 @@
-import { named, namespace } from "../replacer/registered"
+import { named, namespace } from "../../registered"
 
 export const keys = namespace("key", [
     named("⏎", ["return"]),

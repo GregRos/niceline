@@ -98,8 +98,8 @@ export function namespace(
     return new Namespace(entries.flat(), name)
 }
 export function ascii(
-    input: string,
     value: string,
+    input: InputShape,
     names: AtLeastOne<string>
 ): Signed {
     return new Signed(value, input, names)

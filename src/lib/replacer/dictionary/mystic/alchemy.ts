@@ -10,9 +10,9 @@ export const alchemy = namespace("alchemy", [
 
     // Acids and solutions
     named("🜅", ["aquafortis"]),
-    named("🜆", ["aqua:regia"]),
+    named("🜆", ["aqua:regia", "aqua:regia:a"]),
     named("🜇", ["aqua:regia:b"]),
-    named("🜈", ["aqua:vitae"]),
+    named("🜈", ["aqua:vitae", "aqua:vitae:a"]),
     named("🜉", ["aqua:vitae:b"]),
     named("🜊", ["vinegar"]),
     named("🜋", ["vinegar:b"]),
@@ -24,7 +24,7 @@ export const alchemy = namespace("alchemy", [
     named("🜏", ["black:sulfur"]),
 
     // Mercury compounds
-    named("🜐", ["mercury:sublimate"]),
+    named("🜐", ["mercury:sublimate", "mercury:sublimate:a"]),
     named("🜑", ["mercury:sublimate:b"]),
     named("🜒", ["mercury:sublimate:c"]),
     named("🜓", ["cinnabar"]),
@@ -32,7 +32,7 @@ export const alchemy = namespace("alchemy", [
     // Salts and minerals
     named("🜔", ["salt"]),
     named("🜕", ["nitre"]),
-    named("🜖", ["vitriol"]),
+    named("🜖", ["vitriol", "vitriol:a"]),
     named("🜗", ["vitriol:b"]),
     named("🜘", ["salt:rock"]),
     named("🜙", ["salt:rock:b"]),
@@ -40,14 +40,14 @@ export const alchemy = namespace("alchemy", [
     // Metals
     named("🜚", ["gold"]),
     named("🜛", ["silver"]),
-    named("🜜", ["iron:ore"]),
+    named("🜜", ["iron:ore", "iron:ore:a"]),
     named("🜝", ["iron:ore:b"]),
     named("🜞", ["iron:crocus"]),
     named("🜟", ["iron:regulus"]),
     named("🜠", ["copper:ore"]),
     named("🜡", ["iron:copper:ore"]),
     named("🜢", ["copper:sublimate"]),
-    named("🜣", ["copper:crocus"]),
+    named("🜣", ["copper:crocus", "copper:crocus:a"]),
     named("🜤", ["copper:crocus:b"]),
     named("🜥", ["copper:antimoniate"]),
     named("🜦", ["salt:copper:antimoniate"]),
@@ -61,33 +61,33 @@ export const alchemy = namespace("alchemy", [
     named("🜬", ["antimony:sublimate"]),
     named("🜭", ["antimony:salt"]),
     named("🜮", ["antimony:sublimate:salt"]),
-    named("🜰", ["antimony:regulus"]),
+    named("🜰", ["antimony:regulus", "antimony:regulus:a"]),
     named("🜱", ["antimony:regulus:b"]),
 
     // Regulus variants
-    named("🜲", ["regulus"]),
+    named("🜲", ["regulus", "regulus:a"]),
     named("🜳", ["regulus:b"]),
     named("🜴", ["regulus:c"]),
     named("🜵", ["regulus:d"]),
 
     // Alkalis and other compounds
-    named("🜶", ["alkali"]),
+    named("🜶", ["alkali", "alkali:a"]),
     named("🜷", ["alkali:b"]),
     named("🜸", ["marcasite"]),
     named("🜹", ["sal:ammoniac"]),
     named("🜺", ["arsenic"]),
-    named("🜻", ["realgar"]),
+    named("🜻", ["realgar", "realgar:a"]),
     named("🜼", ["realgar:b"]),
     named("🜽", ["auripigment"]),
     named("🜾", ["bismuth:ore"]),
 
     // Tartar and lime
-    named("🜿", ["tartar"]),
+    named("🜿", ["tartar", "tartar:a"]),
     named("🝀", ["tartar:b"]),
     named("🝁", ["quicklime"]),
 
     // Borax and alum
-    named("🝂", ["borax"]),
+    named("🝂", ["borax", "borax:a"]),
     named("🝃", ["borax:b"]),
     named("🝄", ["borax:c"]),
     named("🝅", ["alum"]),
@@ -121,12 +121,12 @@ export const alchemy = namespace("alchemy", [
     named("🝛", ["amalgam"]),
 
     // Processes and operations
-    named("🝜", ["sss", "stratum:super"]),
-    named("🝝", ["stratum:super:b"]),
+    named("🝜", ["sss", "stratum:super", "sss:a", "stratum:super:a"]),
+    named("🝝", ["stratum:super:b", "sss:b"]),
     named("🝞", ["sublimate"]),
     named("🝟", ["precipitate"]),
     named("🝠", ["distill"]),
-    named("🝡", ["dissolve"]),
+    named("🝡", ["dissolve", "dissolve:a"]),
     named("🝢", ["dissolve:b"]),
     named("🝣", ["purify"]),
     named("🝤", ["putrefy"]),
