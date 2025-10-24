@@ -44,8 +44,8 @@ export const ideograms = namespace("idea", [
     namespace("phone|telephone", [
         named("🕿", ["black"]),
         named("🕾", ["white"]),
-        named("☎", ["b"]), ]),
-    ])
+        named("☎", ["b"])
+    ]),
     named("☀", ["sun"]),
     named("⚚", ["hermes", "trade", "negotiation"]),
     named("🕷", ["spider"]),
@@ -106,11 +106,7 @@ export const ideograms = namespace("idea", [
     ]),
     namespace("writing", [
         named("✒", ["fountain", "pen"]),
-        namespace("pencil", [
-            named("✏", [""]),
-            named("🖉", ["tilted"]),
-            named("z", "")
-        ])
+        namespace("pencil", [named("✏", [""]), named("🖉", ["tilted"])])
     ]),
     namespace("florette", [
         named("✿", ["black", "b"]),

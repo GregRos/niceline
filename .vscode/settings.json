@@ -1,5 +1,6 @@
 {
   "editor.fontLigatures": false,
+  "jest.runMode": "deferred",
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "editor.fontSize": 15,
   "errorLens.excludeBySource": [],

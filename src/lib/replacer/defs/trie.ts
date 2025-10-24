@@ -7,16 +7,16 @@ import { seq } from "doddle"
 // are stored in a separate Map that maps leaf-Map objects to strings.
 export type TrieNode = Map<string, TrieNode>
 export type MapMap = Map<TrieNode, string>
-export type Key = readonly [string, ...string[]]
+export type Key = readonly string[]
 export type PartialKey = readonly string[]
 export type Value = string
 export type Pair = readonly [Key, Value]
 const NOT_FOUND = ""
-const missingNode = new Map() as TrieNode
+const MISSING_NODE = new Map() as TrieNode
 export class Trie {
     static NOT_FOUND = NOT_FOUND
     get length() {
-        return this._mapMap.size // exclude missing node
+        return this.entries().length
     }
     // Private constructor. Use Trie.make to create instances.
     private constructor(
@@ -28,7 +28,7 @@ export class Trie {
         return this.length === 0
     }
     get isInvalid() {
-        return this._root === missingNode
+        return this._root === MISSING_NODE
     }
     // Create an empty Trie or initialize from entries ([string[], string]).
     static make(entries?: Pair[]): Trie {
@@ -87,7 +87,9 @@ export class Trie {
         if (this.length !== other.length) {
             return false
         }
-        return seq(this.entries()).seqEquals(other.entries()).pull()
+        return seq(this.entries())
+            .setEquals(other.entries(), pair => pair.join("אבג"))
+            .pull()
     }
 
     // Insert or replace a key -> value mapping. Uses only Maps (monomorphic).
@@ -104,7 +106,7 @@ export class Trie {
             const part = key[i]
 
             if (!node.has(part)) {
-                return missingNode
+                return MISSING_NODE
             }
 
             const next = node.get(part) as TrieNode
@@ -138,21 +140,32 @@ export class Trie {
     }
 
     // Return true iff the exact multi-word key exists in the trie.
-    has(...key: Key): boolean {
-        return this._getMapNode(key) !== missingNode
+    has(key: Key): boolean {
+        return this._hasValue(this._getMapNode(key))
+    }
+
+    get nodeCount() {
+        const rec = (node: TrieNode): number => {
+            let count = 1 // count this node
+            for (const child of node.values()) {
+                count += rec(child)
+            }
+            return count
+        }
+        return rec(this._root)
     }
 
     // Always returns a string. If not found, returns the empty string (missing is mapped to "").
-    get(...key: Key): string {
+    get(key: Key): string {
         const m = this._getMapNode(key)
         return this._resolveMapValue(m)
     }
 
     // Get the immediate child MapNode under the root for a single-word key.
     // If not found, returns the missing MapNode.
-    getNode(...key: PartialKey): Trie {
+    getSubtrie(key: PartialKey): Trie {
         const node = this._getMapNode(key)
-        if (node === missingNode) {
+        if (node === MISSING_NODE) {
             throw new Error("Key not found")
         }
         return new Trie(node, this._mapMap)

@@ -76,17 +76,16 @@ function _expandNestedKeys(x: any): any {
     const result: any = {}
     const rec = (prefixes: string[], obj: any) => {
         for (const [key, value] of Object.entries(obj)) {
-            if (Array.isArray(value)) {
+            if (Array.isArray(value))
                 for (const entry of value) {
                     if (entry === null) continue
-                    const prefixed =
-                        prefixes.length > 0
-                            ? `${prefixes.join(":")}:${entry}`
-                            : entry
+                    const prefixed = [...prefixes, key].join(":")
                     result[prefixed] = entry
                 }
-            } else {
-                rec([...prefixes, key], value)
+            else {
+                prefixes.push(key)
+                rec(prefixes, value)
+                prefixes.pop()
             }
         }
     }
@@ -123,7 +122,3 @@ const x = namespaces({
         }
     }
 })
-
-type StringTest = `${string}{${keyof typeof x}}`
-
-let a: StringTest = "asdsf {dsfsf} sdf"
