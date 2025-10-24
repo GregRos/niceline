@@ -1,7 +1,8 @@
 {
   "editor.fontLigatures": false,
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
-  "editor.fontSize": 16,
+  "editor.fontSize": 15,
+  "errorLens.excludeBySource": [],
   "search.exclude": {
     "**/node_modules": true,
     "**/site": true

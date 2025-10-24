@@ -13,14 +13,13 @@ class _Base extends _Aliased {
         return this.aliases[0]
     }
 }
-export type AsciiShape = `{${string}}`
-
+export type Ascii_Shape = `{${string}}`
 export class Named extends _Base {}
 export class Signed extends _Base {
     constructor(
         value: string,
         readonly input: string,
-        aliases: AtLeastOne<string>
+        aliases: at_least_one<string>
     ) {
         super(value, aliases)
     }
@@ -33,10 +32,10 @@ export class Signed extends _Base {
         }
     }
 
-    also_big(value: string, input: AsciiShape) {
+    also_big(value: string, input: Ascii_Shape) {
         return this._variation(value, "big")(input)
     }
-    also_not(value: string, input: AsciiShape) {
+    also_not(value: string, input: Ascii_Shape) {
         return this._variation(value, "not")(input)
     }
 }
@@ -53,7 +52,7 @@ export class AsciiRef extends _Aliased {
     constructor(
         readonly target: string,
         readonly ascii: string,
-        aliases?: AtLeastOne<string>
+        aliases?: at_least_one<string>
     ) {
         super(aliases || [])
     }
@@ -65,7 +64,7 @@ export class AsciiRef extends _Aliased {
 export class NameSpaceRef extends _Aliased {
     constructor(
         readonly target: string,
-        aliases: AtLeastOne<string>
+        aliases: at_least_one<string>
     ) {
         super(aliases)
     }
@@ -73,7 +72,7 @@ export class NameSpaceRef extends _Aliased {
 export class Namespace extends _Aliased {
     constructor(
         readonly entries: Entry[],
-        aliases: AtLeastOne<string>
+        aliases: at_least_one<string>
     ) {
         super(aliases)
     }
@@ -85,4 +84,4 @@ export type Entry =
     | Namespace
     | NameSpaceRef
     | AsciiRef
-export type AtLeastOne<T> = readonly [T, ...T[]]
+export type at_least_one<T> = readonly [T, ...T[]]
