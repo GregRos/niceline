@@ -11,9 +11,10 @@ export type Key = readonly [string, ...string[]]
 export type PartialKey = readonly string[]
 export type Value = string
 export type Pair = readonly [Key, Value]
-const NOT_FOUND_STRING = ""
+const NOT_FOUND = ""
 const missingNode = new Map() as TrieNode
 export class Trie {
+    static NOT_FOUND = NOT_FOUND
     get length() {
         return this._mapMap.size // exclude missing node
     }
@@ -23,6 +24,12 @@ export class Trie {
         private readonly _mapMap: MapMap
     ) {}
 
+    get isEmpty() {
+        return this.length === 0
+    }
+    get isInvalid() {
+        return this._root === missingNode
+    }
     // Create an empty Trie or initialize from entries ([string[], string]).
     static make(entries?: Pair[]): Trie {
         const root: TrieNode = new Map()
@@ -127,24 +134,28 @@ export class Trie {
         if (this._mapMap.has(mapNode)) {
             return this._mapMap.get(mapNode) as Value
         }
-        return NOT_FOUND_STRING
+        return NOT_FOUND
     }
 
     // Return true iff the exact multi-word key exists in the trie.
-    has(key: Key): boolean {
+    has(...key: Key): boolean {
         return this._getMapNode(key) !== missingNode
     }
 
     // Always returns a string. If not found, returns the empty string (missing is mapped to "").
-    get(key: Key): string {
+    get(...key: Key): string {
         const m = this._getMapNode(key)
         return this._resolveMapValue(m)
     }
 
     // Get the immediate child MapNode under the root for a single-word key.
     // If not found, returns the missing MapNode.
-    getNode(key: PartialKey): Trie {
-        return new Trie(this._getMapNode(key), this._mapMap)
+    getNode(...key: PartialKey): Trie {
+        const node = this._getMapNode(key)
+        if (node === missingNode) {
+            throw new Error("Key not found")
+        }
+        return new Trie(node, this._mapMap)
     }
 
     // Collect all keys (each key is string[] of words).

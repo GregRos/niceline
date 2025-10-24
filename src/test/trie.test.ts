@@ -16,11 +16,11 @@ describe("Trie empty", () => {
     })
 
     it("get(['x']) == ''", () => {
-        expect(empty.get(["x"] as const)).toBe("")
+        expect(empty.get("x")).toBe(Trie.NOT_FOUND)
     })
 
     it("has(['x']) == false", () => {
-        expect(empty.has(["x"] as const)).toBe(false)
+        expect(empty.has("x")).toBe(false)
     })
 
     it("clone -> also empty but !== original", () => {
@@ -29,12 +29,16 @@ describe("Trie empty", () => {
         expect(c).not.toBe(empty)
     })
 
+    it("getNode -> errors", () => {
+        expect(() => empty.getNode("x")).toThrow("not found")
+    })
+
     it("clone -> clone.set(['x'], 'y') -> check the operation", () => {
         const c = empty.clone()
-        c.set(["x"] as const, "y")
-        expect(c.get(["x"] as const)).toBe("y")
+        c.set(["x"], "y")
+        expect(c.get("x")).toBe("y")
         // original remains unchanged
-        expect(empty.get(["x"] as const)).toBe("")
+        expect(empty.get("x")).toBe("")
     })
 })
 
