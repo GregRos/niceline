@@ -1,24 +1,31 @@
-import { named, namespace } from "../../registered"
+import { shape } from "../../defs/namespace/shape"
 
-export const geometry = namespace("geometry", [
-    named("∥", ["parallel", "par"]),
-    named("∦", ["parallel:not", "par:not"]),
-    named("⊥", ["perpendicular", "perp"]),
-    namespace("arc", [
-        named("⌒", [""]),
-        named("⌓", ["segment"]),
-        named("⌔", ["sector"]),
-        named("⏜", ["frown"]),
-        named("⏝", ["smile"])
-    ]),
-    namespace("angle", [
-        named("∠", [""]),
-        named("⦜", ["right"]),
-        named("∡", ["measured"]),
-        named("∢", ["spherical"]),
-        named("⦟", ["acute"]),
-        namespace("obtuse", [named("⦦", ["", "up"]), named("⦧", ["down"])]),
+export default shape({
+    geometry: {
+        "∥": [null, "parallel", "par"],
+        "∦": [null, "parallel:not", "par:not"],
+        "⊥": [null, "perpendicular", "perp"],
 
-        named("⟀", ["3d"])
-    ])
-])
+        arc: {
+            "⌒": [null, ""],
+            "⌓": [null, "segment"],
+            "⌔": [null, "sector"],
+            "⏜": [null, "frown"],
+            "⏝": [null, "smile"]
+        },
+
+        angle: {
+            "∠": [null, ""],
+            "⦜": [null, "right"],
+            "∡": [null, "measured"],
+            "∢": [null, "spherical"],
+            "⦟": [null, "acute"],
+            obtuse: {
+                "⦦": [null, "", "up"],
+                "⦧": [null, "down"]
+            },
+
+            "⟀": [null, "3d"]
+        }
+    }
+})
