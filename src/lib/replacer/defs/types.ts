@@ -19,7 +19,7 @@ export class Signed extends _Base {
     constructor(
         value: string,
         readonly input: string,
-        aliases: at_least_one<string>
+        aliases: At_Least_One<string>
     ) {
         super(value, aliases)
     }
@@ -52,7 +52,7 @@ export class AsciiRef extends _Aliased {
     constructor(
         readonly target: string,
         readonly ascii: string,
-        aliases?: at_least_one<string>
+        aliases?: At_Least_One<string>
     ) {
         super(aliases || [])
     }
@@ -64,7 +64,7 @@ export class AsciiRef extends _Aliased {
 export class NameSpaceRef extends _Aliased {
     constructor(
         readonly target: string,
-        aliases: at_least_one<string>
+        aliases: At_Least_One<string>
     ) {
         super(aliases)
     }
@@ -72,7 +72,7 @@ export class NameSpaceRef extends _Aliased {
 export class Namespace extends _Aliased {
     constructor(
         readonly entries: Entry[],
-        aliases: at_least_one<string>
+        aliases: At_Least_One<string>
     ) {
         super(aliases)
     }
@@ -84,4 +84,4 @@ export type Entry =
     | Namespace
     | NameSpaceRef
     | AsciiRef
-export type at_least_one<T> = readonly [T, ...T[]]
+export type At_Least_One<T> = readonly [T, ...T[]]

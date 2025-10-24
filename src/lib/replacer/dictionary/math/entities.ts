@@ -1,23 +1,29 @@
-import { ascii, named, namespace } from "../../registered"
+import { shape } from "../../defs/namespace/shape"
 
-export const entities = namespace("entities", [
-    named("∞", ["infinity"]),
-    named("π", ["pi"]),
-    named("ℏ", ["hbar", "planck:reduced"]),
-    named("ℇ", ["epsilon"]),
-    ascii("ℍ", "{#H}", ["quaternions"]),
-    ascii("ℕ", "{#N}", ["naturals", "N"]),
-    ascii("ℤ", "{#Z}", ["integers", "Z"]),
-    ascii("ℚ", "{#Q}", ["rationals", "Q"]),
-    ascii("ℝ", "{#R}", ["reals", "R"]),
-    ascii("ℂ", "{#C}", ["complex", "C"]),
-    ascii("ℙ", "{#P}", ["prime", "P"]),
-    ascii("ℯ", "{#e}", ["exponential", "e"]),
-    ascii("ⅆ", "{d}", ["differential", "dx"]),
-    named("ℑ", ["Im"]),
-    named("ℜ", ["Re"]),
-    named("ℵ", ["aleph"]),
-    named("ℶ", ["beth"]),
-    named("ℷ", ["gimel"]),
-    named("ℸ", ["daleth"])
-])
+export default shape({
+    entities: {
+        // has ascii:
+        ℍ: ["{#H}", "quaternions"],
+        ℕ: ["{#N}", "naturals", "N"],
+        ℤ: ["{#Z}", "integers", "Z"],
+        ℚ: ["{#Q}", "rationals", "Q"],
+        ℝ: ["{#R}", "reals", "R"],
+        ℂ: ["{#C}", "complex", "C"],
+        ℙ: ["{#P}", "prime", "P"],
+        ℯ: ["{#e}", "exponential", "e"],
+        ⅆ: ["{d}", "differential", "dx"],
+
+        // no ascii:
+        "∞": [null, "infinity"],
+        π: [null, "pi"],
+        ℏ: [null, "hbar", "planck:reduced"],
+        ℇ: [null, "epsilon"],
+        ℑ: [null, "Im"],
+        ℜ: [null, "Re"],
+        ℵ: [null, "aleph"],
+        ℶ: [null, "beth"],
+        ℷ: [null, "gimel"],
+        ℸ: [null, "daleth"]
+        // aliasNamespace / aliasAscii helpers removed; leave comments where they were used previously if needed
+    }
+})
