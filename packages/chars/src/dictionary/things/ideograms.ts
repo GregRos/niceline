@@ -39,7 +39,7 @@ export default shape({
         "⚒": [null, "hammer-and-pick"],
         "⧗": [null, "hourglass:black"],
         "⧖": [null, "hourglass:white"],
-        "phone|telephone": {
+        phone: {
             "🕿": [null, "black"],
             "🕾": [null, "white"],
             "☎": [null, "b"]

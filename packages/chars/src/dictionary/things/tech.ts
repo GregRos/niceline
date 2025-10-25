@@ -19,7 +19,7 @@ export default shape({
                 "🖺": [null, "rich"],
                 "🖻": [null, "picture"]
             },
-            "cd|disc|disk": {
+            cd: {
                 "🖸": [null, "cd"]
             },
             floppy: {
@@ -142,7 +142,7 @@ export default shape({
             "♺": [null, ""],
             "♼": [null, "paper"],
             "♽": [null, "paper:partial"],
-            "plastic|p": {
+            plastic: {
                 "♳": [null, "", "1"],
                 "♴": [null, "2"],
                 "♵": [null, "3"],

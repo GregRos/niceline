@@ -1,4 +1,4 @@
-import Trie from "@lib/replacer/defs/trie"
+import Trie from "@lib/index"
 
 describe("Trie empty", () => {
     const empty = Trie.make()

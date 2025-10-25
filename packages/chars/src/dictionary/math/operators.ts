@@ -16,7 +16,7 @@ export default shape({
         "⨂": ["{((x))}", "circ:times:big", "otimes:big"],
         "±": ["{+-}", "plusminus", "plusminus"],
         "∓": ["{-+}", "minusplus", "minusplus"],
-        "times|multiply": {
+        times: {
             "×": ["{x}", "", "s1"],
             "⨉": ["{X}", "s2"],
             "✕": ["{xx}", "s3"],
@@ -27,7 +27,7 @@ export default shape({
         "∛": ["{|3/}", "root:3", "cbrpt"],
         "∜": ["{|4/}", "root:4", "qrrt"],
         "÷": ["{-:-}", "division", "div"],
-        "sum|sigma": {
+        sum: {
             "∑": ["{Z|}", "", "1"],
             "⨊": ["{Zo|}", "modulo"]
         },
@@ -45,14 +45,14 @@ export default shape({
             }
         },
         "∏": [null, "product", "prod", "pi"],
-        "int|integral": {
+        int: {
             "∫": ["{S|}", "", "1"],
             "∬": ["{SS|}", "2"],
             "∭": ["{SSS|}", "3"],
             "⨌": ["{SSSS|}", "4"],
             "∱": [null, "cw"],
             "⨘": [null, "product", "prod"],
-            "closed|contour|o": {
+            closed: {
                 "∮": [null, ""],
                 "∯": [null, "2", "2d"],
                 "∰": [null, "3", "3d"],

@@ -3,7 +3,7 @@ import { shape } from "../../defs/namespace/shape"
 export default shape({
     game: {
         chess: {
-            "white|w": {
+            white: {
                 "♔": [null, "king", "k"],
                 "♕": [null, "queen", "q"],
                 "♖": [null, "rook", "r"],
@@ -11,7 +11,7 @@ export default shape({
                 "♘": [null, "knight", "n"],
                 "♙": [null, "pawn", "p"]
             },
-            "black|b": {
+            black: {
                 "♚": [null, "king", "k"],
                 "♛": [null, "queen", "q"],
                 "♜": [null, "rook", "r"],
@@ -21,13 +21,13 @@ export default shape({
             }
         },
         cards: {
-            "black|b": {
+            black: {
                 "♠": [null, "spade", "spades", "s"],
                 "♣": [null, "club", "clubs", "c"],
                 "♥": [null, "heart", "hearts", "h"],
                 "♦": [null, "diamond", "diamonds", "d"]
             },
-            "white|w": {
+            white: {
                 "♤": [null, "spade", "spades", "s"],
                 "♧": [null, "club", "clubs", "c"],
                 "♡": [null, "heart", "hearts", "h"],
@@ -42,22 +42,22 @@ export default shape({
             "⚄": [null, "5", "five"],
             "⚅": [null, "6", "six"]
         },
-        "draughts|checkers": {
-            "white|w": {
+        draughts: {
+            white: {
                 "⛀": [null, "man"],
                 "⛁": [null, "king"]
             },
-            "black|b": {
+            black: {
                 "⛂": [null, "man"],
                 "⛃": [null, "king"]
             }
         },
         shogi: {
             // TODO: add more pieces
-            "white|w": {
+            white: {
                 "⛉": [null, "turned"]
             },
-            "black|b": {
+            black: {
                 "⛊": [null, "turned"]
             }
         }

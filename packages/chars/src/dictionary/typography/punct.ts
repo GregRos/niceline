@@ -34,21 +34,21 @@ export default shape({
         "‽": [null, "interrobang"],
         "⁇": [null, "question:2"],
 
-        "ampersand|and": {
+        ampersand: {
             "🙴": [null, "big"],
             "🙵": [null, "swash"]
         },
 
         quote: {
-            "double|d": {
-                "left|l": {
+            double: {
+                left: {
                     "“": ['{"|}', ""],
                     "«": ['{"<}', "french", "guillemets"],
                     "„": ["{,,|}", "low", "german", "czech"],
                     "🙸": ["{,,||}", "low", "german", "czech", "heavy", "bold"],
                     "🙶": ['{"||}', "heavy", "bold"]
                 },
-                "right|r": {
+                right: {
                     "”": ['{|"}', ""],
                     "»": ['{>"}', "french", "guillemets"],
                     "🙷": ['{|""}', "french", "guillemets", "heavy", "bold"]
@@ -56,13 +56,13 @@ export default shape({
                     // aliasAscii("..left:heavy", '{|,,}', ["low","german","czech","heavy","bold"]) - removed per refactor
                 }
             },
-            "single|s": {
-                "left|l": {
+            single: {
+                left: {
                     "‘": ["{'|}", ""],
                     "‹": ["{'<}", "french", "guillemets"],
                     "‚": ["{,}", "low", "german", "czech"]
                 },
-                "right|r": {
+                right: {
                     "’": ["{|'}", ""],
                     "›": ["{>'}", "french", "guillemets"]
                     // aliasAscii("left", '{<,}', ["low","german","czech"]) - removed per refactor

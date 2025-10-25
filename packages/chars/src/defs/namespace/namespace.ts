@@ -1,5 +1,5 @@
+import Trie from "@niceline/trie"
 import type { NamespaceShape, UnpackNamespaceShape } from "./shape"
-import Trie from "./trie"
 
 export class Namespace<X> {
     private constructor(private readonly _trie: Trie) {}

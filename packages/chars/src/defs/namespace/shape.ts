@@ -1,6 +1,12 @@
 // prettier-ignore
-import type { Ascii_Shape,At_Least_One } from "../types"
-import type { Join_Strings, Prettify, Value_Of } from "../util"
+import type { Ascii_Shape } from "../types"
+import type {
+    At_Least_One,
+    Join_Strings,
+    Prettify,
+    Union_To_Intersection,
+    Value_Of
+} from "../util"
 export type Ascii_Shape_Or_Null = Ascii_Shape | null
 
 type _Names = At_Least_One<string>
@@ -57,18 +63,9 @@ export type NamespaceShape = {
     [K in string]: TxEntry | NamespaceShape
 }
 
-type UnionToIntersection<U> = (U extends any ? (x: U) => 0 : never) extends (
-    x: infer I
-) => 0
-    ? I
-    : 1
 export type UnpackNamespaceShape<X> = Prettify<
-    UnionToIntersection<_Flatten_Flip<_Expand_Nested_keys<[], X>>>
+    Union_To_Intersection<_Flatten_Flip<_Expand_Nested_keys<[], X>>>
 >
-
-export type PluckNeverKeys<X> = keyof {
-    [K in keyof X as X[K] extends never ? K : never]: X[K]
-}
 
 export function shape<const X extends NamespaceShape>(shape: X): Prettify<X> {
     return shape as Prettify<X>

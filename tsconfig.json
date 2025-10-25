@@ -1,10 +1,10 @@
 {
   "references": [
     {
-      "path": "./packages/nicetrie/tsconfig.json"
+      "path": "./packages/trie/tsconfig.json"
     },
     {
-      "path": "./packages/nicemap/tsconfig.json"
+      "path": "./packages/chars/tsconfig.json"
     },
     {
       "path": "./packages/niceline/tsconfig.json"

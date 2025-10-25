@@ -2,7 +2,7 @@
 
 export default shape({
     music: {
-        "barline|bar": {
+        bar: {
             "𝄀": [null, "single", "1"],
             "𝄁": [null, "double", "2"],
             "𝄂": [null, "final", "end"],
@@ -31,19 +31,19 @@ export default shape({
             "𝅘𝅥𝅱": [null, "1/64", "64th"],
             "𝅘𝅥𝅲": [null, "1/128", "128th"]
         },
-        "beam|b": {
+        beam: {
             "\u{1D173}": [null, "begin"],
             "\u{1D174}": [null, "end"]
         },
-        "tie|t": {
+        tie: {
             "\u{1D175}": [null, "begin"],
             "\u{1D176}": [null, "end"]
         },
-        "slur|s": {
+        slur: {
             "\u{1D177}": [null, "begin"],
             "\u{1D178}": [null, "end"]
         },
-        "phrase|p": {
+        phrase: {
             "\u{1D179}": [null, "begin"],
             "\u{1D17A}": [null, "end"]
         }

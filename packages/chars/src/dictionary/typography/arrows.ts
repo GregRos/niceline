@@ -19,7 +19,7 @@ export default shape({
                 "⬳": ["{<~~-}", "left"],
                 "⟿": ["{-~~>}", "right"]
             },
-            "double|bb": {
+            bb: {
                 "⟸": ["{<===}", "left"],
                 "⟹": ["{===>}", "right"],
                 "⟺": ["{<===>}", "left:right"]
@@ -27,7 +27,7 @@ export default shape({
             from: {
                 "⟻": ["{<---|}", "left"],
                 "⟼": ["{|--->}", "right"],
-                "double|bb": {
+                bb: {
                     "⟽": ["{<===|}", "left"],
                     "⟾": ["{|===>}", "right"]
                 }
@@ -41,7 +41,7 @@ export default shape({
             "⇜": ["{<~-}", "left"],
             "⇝": ["{-~>}", "right"]
         },
-        "double|bb": {
+        bb: {
             "⇐": ["{<==}", "left"],
             "⇒": ["{==>}", "right", "right"],
             "⇑": ["{==^}", "up", "double:up"],
@@ -54,7 +54,7 @@ export default shape({
         from: {
             "↤": ["{<--|}", "left"],
             "↦": ["{|-->}", "right"],
-            "bb|double": {
+            bb: {
                 "⤆": ["{<==|}", "left"],
                 "⤇": ["{|==>}", "right"]
             }
@@ -137,7 +137,7 @@ export default shape({
             "⤒": ["{--^|}", "up"],
             "⤓": ["{--v|}", "down"]
         },
-        "bbb|triple": {
+        bbb: {
             "⇚": ["{<(===)}", "left"],
             "⇛": ["{(===)>}", "right"],
             "⤊": ["{(===)^}", "left"],

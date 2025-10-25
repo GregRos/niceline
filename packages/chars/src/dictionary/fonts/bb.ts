@@ -1,7 +1,7 @@
 import { shape } from "../../defs/namespace/shape"
 
 export default shape({
-    "bb|double": {
+    bb: {
         // Double-struck uppercase
         "𝔸": ["{~D: A}", "A"],
         "𝔹": ["{~D: B}", "B"],

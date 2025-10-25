@@ -36,6 +36,11 @@
     "test:coverage": "jest --coverage",
     "tidy": "yarn install && run-s lint:fix build:clean test"
   },
+  "dependencies": {
+    "@niceline/chars": "workspace:^",
+    "doddle": "^7.1.6",
+    "what-are-you": "^0.1.13"
+  },
   "devDependencies": {
     "@swc/core": "^1.5.25",
     "@swc/jest": "^0.2.36",
@@ -45,8 +50,9 @@
     "jest": "^29.7.0",
     "lodash": "^4.17.21",
     "npm-run-all": "^4.1.5",
+    "ts-jest": "^29.4.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.9.3"
   },
   "packageManager": "yarn@4.2.2"
 }
