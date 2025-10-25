@@ -45,20 +45,7 @@ const a = shape({
         "⯱": [null, "eris:b"],
         "⯲": [null, "sedna"],
         "☽": [null, "crescent:right"],
-        "☾": [null, "crescent:left"],
-        "♈": [null, "aries"],
-        "♉": [null, "taurus"],
-        "♊": [null, "gemini"],
-        "♋": [null, "cancer"],
-        "♌": [null, "leo"],
-        "♍": [null, "virgo"],
-        "♎": [null, "libra"],
-        "♏": [null, "scorpio"],
-        "♐": [null, "sagittarius"],
-        "♑": [null, "capricorn"],
-        "♒": [null, "aquarius"],
-        "♓": [null, "pisces"],
-        "⛎": [null, "ophiuchus"]
+        "☾": [null, "crescent:left"]
     }
 })
 export default a
