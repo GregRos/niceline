@@ -1,39 +1,19 @@
 {
-  "name": "niceline",
+  "name": "@niceline/chars",
   "version": "0.1.0",
-  "description": "Pretty print everything!",
+  "description": "Replaces special escapes with Unicode characters.",
   "keywords": [
+    "unicode",
     "pretty",
-    "human",
-    "humanize",
-    "prettify",
-    "readable",
-    "time",
-    "duration",
-    "text",
-    "number",
-    "byte",
-    "bytes",
-    "filesize",
-    "size",
-    "path",
-    "url",
-    "error",
-    "hash",
-    "hex",
-    "fraction",
-    "float",
     "string",
-    "function",
-    "object",
-    "record",
-    "random",
-    "date"
+    "replace",
+    "math",
+    "text"
   ],
   "repository": {
     "type": "git",
     "url": "github:GregRos/niceline",
-    "directory": "packages/niceline"
+    "directory": "packages/chars"
   },
   "license": "MIT",
   "author": "GregRos",
@@ -66,10 +46,6 @@
   },
   "dependencies": {
     "doddle": "^7.1.6",
-    "hotscript": "^1.0.13",
-    "pretty-bytes": "^6.1.1",
-    "pretty-ms": "^9.0.0",
-    "shrink-path": "^0.3.1",
     "what-are-you": "^0.1.13"
   },
   "devDependencies": {

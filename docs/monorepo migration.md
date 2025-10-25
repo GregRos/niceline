@@ -13,11 +13,17 @@ Move the dependencies based on their current versions, don't make up your own.
 
 in addition, add the following deps to the root package.j
 
-I want you to generate the package.json of the packages in directories map and trie.
+# pakcage.json creation
+
+I'm migrating the repo to a monorepo.
+
+I want you to generate the package.json of the packages in directories packages/{map,trie}
 
 I'm using yarn workspaces.
 
 Use niceline/package.json as a basis.
+
+for dependencies, use the versions specified in the niceline package.json.
 
 ```yaml
 packages/trie:
@@ -25,7 +31,8 @@ packages/trie:
     based on: packages/niceline/package.json
     keywords: none
     private: false
-
+    dependencies: none
+    what it is: A monomorphic trie with string[] keys and string values
 packages/chars:
     name: @niceline/chars
     based on: packages/niceline/package.json
@@ -37,11 +44,9 @@ packages/chars:
         - math
         - text
     private: false
-
-/package.json:
-    workspaces:
-        - packages/niceline
-        - packages/chars
-        - packages/trie
+    what it is: Replaces special escapes with Unicode characters.
+    dependencies:
+        - doddle
+        - what-are-you
 
 ```

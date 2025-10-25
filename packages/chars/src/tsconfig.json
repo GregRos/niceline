@@ -2,7 +2,7 @@
   "extends": "../../../tsconfig.base.json",
   "references": [
     {
-      "path": "../../nicetrie/src/tsconfig.json"
+      "path": "../../trie/src/tsconfig.json"
     }
   ],
   "compilerOptions": {

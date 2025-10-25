@@ -2,7 +2,7 @@
   "extends": "../../../tsconfig.base.json",
   "references": [
     {
-      "path": "../../nicemap/src/tsconfig.json"
+      "path": "../../chars/src/tsconfig.json"
     }
   ],
   "compilerOptions": {

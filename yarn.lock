@@ -822,6 +822,62 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@niceline/chars@workspace:packages/chars":
+  version: 0.0.0-use.local
+  resolution: "@niceline/chars@workspace:packages/chars"
+  dependencies:
+    "@swc/core": "npm:^1.5.25"
+    "@swc/jest": "npm:^0.2.36"
+    "@types/jest": "npm:^29.5.12"
+    "@types/lodash": "npm:^4.17.4"
+    "@types/node": "npm:^24.9.1"
+    doddle: "npm:^7.1.6"
+    jest: "npm:^29.7.0"
+    lodash: "npm:^4.17.21"
+    npm-run-all: "npm:^4.1.5"
+    ts-node: "npm:^10.9.2"
+    typescript: "npm:^5.4.5"
+    what-are-you: "npm:^0.1.13"
+  languageName: unknown
+  linkType: soft
+
+"@niceline/monorepo@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@niceline/monorepo@workspace:."
+  dependencies:
+    "@gregros/eslint-config": "npm:^0.6.0"
+    "@typescript-eslint/eslint-plugin": "npm:^7.12.0"
+    "@typescript-eslint/parser": "npm:^7.12.0"
+    eslint: "npm:^8"
+    husky: "npm:^9.0.11"
+    lint-staged: "npm:^15.2.5"
+    npm-run-all: "npm:^4.1.5"
+    prettier: "npm:^3.3.1"
+    prettier-plugin-jsdoc: "npm:^1.3.0"
+    prettier-plugin-organize-imports: "npm:^3.2.4"
+    prettier-plugin-packagejson: "npm:^2.5.0"
+    shelljs: "npm:0.8.5"
+    shx: "npm:^0.3.4"
+  languageName: unknown
+  linkType: soft
+
+"@niceline/trie@workspace:packages/trie":
+  version: 0.0.0-use.local
+  resolution: "@niceline/trie@workspace:packages/trie"
+  dependencies:
+    "@swc/core": "npm:^1.5.25"
+    "@swc/jest": "npm:^0.2.36"
+    "@types/jest": "npm:^29.5.12"
+    "@types/lodash": "npm:^4.17.4"
+    "@types/node": "npm:^24.9.1"
+    jest: "npm:^29.7.0"
+    lodash: "npm:^4.17.21"
+    npm-run-all: "npm:^4.1.5"
+    ts-node: "npm:^10.9.2"
+    typescript: "npm:^5.4.5"
+  languageName: unknown
+  linkType: soft
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -4740,34 +4796,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"niceline@workspace:.":
+"niceline@workspace:packages/niceline":
   version: 0.0.0-use.local
-  resolution: "niceline@workspace:."
+  resolution: "niceline@workspace:packages/niceline"
   dependencies:
-    "@gregros/eslint-config": "npm:^0.6.0"
     "@swc/core": "npm:^1.5.25"
     "@swc/jest": "npm:^0.2.36"
     "@types/jest": "npm:^29.5.12"
     "@types/lodash": "npm:^4.17.4"
     "@types/node": "npm:^24.9.1"
-    "@typescript-eslint/eslint-plugin": "npm:^7.12.0"
-    "@typescript-eslint/parser": "npm:^7.12.0"
     doddle: "npm:^7.1.6"
-    eslint: "npm:^8"
     hotscript: "npm:^1.0.13"
-    husky: "npm:^9.0.11"
     jest: "npm:^29.7.0"
-    lint-staged: "npm:^15.2.5"
     lodash: "npm:^4.17.21"
     npm-run-all: "npm:^4.1.5"
-    prettier: "npm:^3.3.1"
-    prettier-plugin-jsdoc: "npm:^1.3.0"
-    prettier-plugin-organize-imports: "npm:^3.2.4"
-    prettier-plugin-packagejson: "npm:^2.5.0"
     pretty-bytes: "npm:^6.1.1"
     pretty-ms: "npm:^9.0.0"
     shrink-path: "npm:^0.3.1"
-    shx: "npm:^0.3.4"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.4.5"
     what-are-you: "npm:^0.1.13"
@@ -5582,7 +5627,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shelljs@npm:^0.8.5":
+"shelljs@npm:0.8.5, shelljs@npm:^0.8.5":
   version: 0.8.5
   resolution: "shelljs@npm:0.8.5"
   dependencies:
