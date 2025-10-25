@@ -1,0 +1,15 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "references": [
+    {
+      "path": "../../nicetrie/src/tsconfig.json"
+    }
+  ],
+  "compilerOptions": {
+    "rootDir": ".",
+    "noEmit": false,
+    "outDir": "../dist",
+    "tsBuildInfoFile": "../dist/src.tsbuildinfo"
+  },
+  "include": ["**/*.ts"]
+}
