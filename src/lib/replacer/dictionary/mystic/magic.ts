@@ -1,7 +1,7 @@
 import { shape, type UnpackNamespaceShape } from "../../defs/namespace/shape"
 
 const a = shape({
-    mystic: {
+    magic: {
         "⚝": [null, "star:magic", "magic"],
         "⛤": [null, "pentacle", "pentagram"],
         "⛧": [null, "pentagram:inverted", "pentacle:inverted"],

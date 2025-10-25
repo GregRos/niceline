@@ -1,12 +1,12 @@
 import { shape } from "../../defs/namespace/shape"
 import alchemy from "./alchemy"
 import astrology from "./astrology"
-import mystic from "./mystic"
+import magic from "./magic"
 import religion from "./religion"
 
 export default shape({
     mystic: {
-        ...mystic,
+        ...magic,
         ...religion,
         ...alchemy,
         ...astrology

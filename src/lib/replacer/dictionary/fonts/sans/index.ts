@@ -1,7 +1,10 @@
-import { shape } from "../../defs/namespace/shape"
-
+import { shape } from "../../../defs/namespace/shape"
+import bold from "./sans.b"
+import italic from "./sans.i"
 export default shape({
     sans: {
+        bold,
+        italic,
         // Sans serif uppercase
         "𝖠": ["{~n: A}", "A"],
         "𝖡": ["{~n: B}", "B"],
