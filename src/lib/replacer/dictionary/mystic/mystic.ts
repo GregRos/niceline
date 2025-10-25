@@ -1,6 +1,6 @@
-import { shape } from "../../defs/namespace/shape"
+import { shape, type UnpackNamespaceShape } from "../../defs/namespace/shape"
 
-export default shape({
+const a = shape({
     mystic: {
         "⚝": [null, "star:magic", "magic"],
         "⛤": [null, "pentacle", "pentagram"],
@@ -61,3 +61,7 @@ export default shape({
         "⛎": [null, "ophiuchus"]
     }
 })
+export default a
+
+type A = typeof a
+type R = UnpackNamespaceShape<A>

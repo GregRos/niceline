@@ -1,7 +1,7 @@
 // ◖
 //◗
 
-import { shape } from "../defs/namespace/shape"
+import { shape } from "../../defs/namespace/shape"
 
 export default shape({
     paired: {

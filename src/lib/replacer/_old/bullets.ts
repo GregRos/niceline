@@ -1,4 +1,4 @@
-import { ascii, namespace } from "../../registered"
+import { ascii, namespace } from "../registered"
 
 export const bullets = namespace("list", [
     namespace("box", [

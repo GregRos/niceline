@@ -1,3 +1,4 @@
+// ts-plugin-niceline/index.ts
 import type * as ts from "typescript/lib/tsserverlibrary"
 
 function init({
@@ -10,6 +11,7 @@ function init({
             const ls = info.languageService
             const proxy: ts.LanguageService = Object.create(null)
             for (const k of Object.keys(ls) as (keyof ts.LanguageService)[]) {
+                // @ts-expect-error dynamic
                 proxy[k] = (...args: any[]) => (ls[k] as any).apply(ls, args)
             }
 

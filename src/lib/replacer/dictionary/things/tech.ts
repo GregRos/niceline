@@ -1,6 +1,38 @@
 import { shape } from "../../defs/namespace/shape"
 
-export const units = shape({
+export default shape({
+    computer: {
+        "🖧": [null, "network"],
+        "🖨": [null, "printer"],
+        "🖩": [null, "calculator"],
+        "🖳": [null, "pc", "PC"],
+        "🖵": [null, "screen"],
+        "🖶": [null, "printer"],
+        "🖷": [null, "fax"],
+        input: {
+            "🖰": [null, "mouse"],
+            "🖦": [null, "kbm", "KBM"]
+        },
+        media: {
+            document: {
+                "🖹": [null, "text"],
+                "🖺": [null, "rich"],
+                "🖻": [null, "picture"]
+            },
+            "cd|disc|disk": {
+                "🖸": [null, "cd"]
+            },
+            floppy: {
+                "🖫": [null, "white"],
+                "🖪": [null, "black"],
+                "🖭": [null, "tape"]
+            }
+        },
+        // TODO: https://www.compart.com/en/unicode/block/U+1F300
+        mouse: {
+            "🖱": [null, "black"]
+        }
+    },
     tech: {
         "⌨": [null, "keyboard"],
         Ω: [null, "ohm"],
@@ -82,6 +114,15 @@ export const units = shape({
                 "🕬": [null, "low"]
             }
         },
+        electric: {
+            "⏧": [null, "intersection"],
+            "⌁": [null, "arrow"],
+            "⌂": [null, "house"],
+            "⏛": [null, "fuse"],
+            "⏚": [null, "ground"],
+            "⏦": [null, "ac"],
+            "⎓": [null, "dc"]
+        },
         // namespace("actions", []) removed (empty)
         actions: {
             "⏎": [null, "return"],
@@ -110,53 +151,6 @@ export const units = shape({
                 "♸": [null, "6"],
                 "♹": [null, "7"]
             }
-        }
-    }
-})
-
-export const electric = shape({
-    electric: {
-        "⏧": [null, "intersection"],
-        "⌁": [null, "arrow"],
-        "⌂": [null, "house"],
-        "⏛": [null, "fuse"],
-        "⏚": [null, "ground"],
-        "⏦": [null, "ac"],
-        "⎓": [null, "dc"]
-    }
-})
-
-const computers = shape({
-    computer: {
-        "🖧": [null, "network"],
-        "🖨": [null, "printer"],
-        "🖩": [null, "calculator"],
-        "🖳": [null, "pc", "PC"],
-        "🖵": [null, "screen"],
-        "🖶": [null, "printer"],
-        "🖷": [null, "fax"],
-        input: {
-            "🖰": [null, "mouse"],
-            "🖦": [null, "kbm", "KBM"]
-        },
-        media: {
-            document: {
-                "🖹": [null, "text"],
-                "🖺": [null, "rich"],
-                "🖻": [null, "picture"]
-            },
-            "cd|disc|disk": {
-                "🖸": [null, "cd"]
-            },
-            floppy: {
-                "🖫": [null, "white"],
-                "🖪": [null, "black"],
-                "🖭": [null, "tape"]
-            }
-        },
-        // TODO: https://www.compart.com/en/unicode/block/U+1F300
-        mouse: {
-            "🖱": [null, "black"]
         }
     }
 })

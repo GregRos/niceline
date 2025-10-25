@@ -1,3 +1,0 @@
-import { namespace } from "../../registered"
-
-export const box = namespace("xx", [])

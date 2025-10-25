@@ -12,7 +12,7 @@ export default shape({
         ℙ: ["{#P}", "prime", "P"],
         ℯ: ["{#e}", "exponential", "e"],
         ⅆ: ["{d}", "differential", "dx"],
-
+        "∎": [null, "proof:end", "qed", "tombstone", "tstone"],
         // no ascii:
         "∞": [null, "infinity"],
         π: [null, "pi"],
