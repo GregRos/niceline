@@ -1,0 +1,17 @@
+{
+  "references": [
+    {
+      "path": "../lib/tsconfig.json"
+    }
+  ],
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../dist/lib",
+    "tsBuildInfoFile": "../../dist/lib/tsconfig.tsbuildinfo",
+    "rootDir": ".",
+    "noEmit": false,
+    "experimentalDecorators": true
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["**/node_modules"]
+}

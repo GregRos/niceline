@@ -1,154 +1,156 @@
-import { named, namespace } from "../../registered"
+import { shape } from "../../defs/namespace/shape"
 
-export const alchemy = namespace("alchemy", [
-    // Elements and essences
-    named("🜀", ["quintessence"]),
-    named("🜁", ["air"]),
-    named("🜂", ["fire"]),
-    named("🜃", ["earth"]),
-    named("🜄", ["water"]),
+export default shape({
+    alchemy: {
+        // Elements and essences
+        "🜀": [null, "quintessence"],
+        "🜁": [null, "air"],
+        "🜂": [null, "fire"],
+        "🜃": [null, "earth"],
+        "🜄": [null, "water"],
 
-    // Acids and solutions
-    named("🜅", ["aquafortis"]),
-    named("🜆", ["aqua:regia", "aqua:regia:a"]),
-    named("🜇", ["aqua:regia:b"]),
-    named("🜈", ["aqua:vitae", "aqua:vitae:a"]),
-    named("🜉", ["aqua:vitae:b"]),
-    named("🜊", ["vinegar"]),
-    named("🜋", ["vinegar:b"]),
-    named("🜌", ["vinegar:c"]),
+        // Acids and solutions
+        "🜅": [null, "aquafortis"],
+        "🜆": [null, "aqua:regia", "aqua:regia:a"],
+        "🜇": [null, "aqua:regia:b"],
+        "🜈": [null, "aqua:vitae", "aqua:vitae:a"],
+        "🜉": [null, "aqua:vitae:b"],
+        "🜊": [null, "vinegar"],
+        "🜋": [null, "vinegar:b"],
+        "🜌": [null, "vinegar:c"],
 
-    // Sulfur compounds
-    named("🜍", ["sulfur"]),
-    named("🜎", ["philosophers:sulfur"]),
-    named("🜏", ["black:sulfur"]),
+        // Sulfur compounds
+        "🜍": [null, "sulfur"],
+        "🜎": [null, "philosophers:sulfur"],
+        "🜏": [null, "black:sulfur"],
 
-    // Mercury compounds
-    named("🜐", ["mercury:sublimate", "mercury:sublimate:a"]),
-    named("🜑", ["mercury:sublimate:b"]),
-    named("🜒", ["mercury:sublimate:c"]),
-    named("🜓", ["cinnabar"]),
+        // Mercury compounds
+        "🜐": [null, "mercury:sublimate", "mercury:sublimate:a"],
+        "🜑": [null, "mercury:sublimate:b"],
+        "🜒": [null, "mercury:sublimate:c"],
+        "🜓": [null, "cinnabar"],
 
-    // Salts and minerals
-    named("🜔", ["salt"]),
-    named("🜕", ["nitre"]),
-    named("🜖", ["vitriol", "vitriol:a"]),
-    named("🜗", ["vitriol:b"]),
-    named("🜘", ["salt:rock"]),
-    named("🜙", ["salt:rock:b"]),
+        // Salts and minerals
+        "🜔": [null, "salt"],
+        "🜕": [null, "nitre"],
+        "🜖": [null, "vitriol", "vitriol:a"],
+        "🜗": [null, "vitriol:b"],
+        "🜘": [null, "salt:rock"],
+        "🜙": [null, "salt:rock:b"],
 
-    // Metals
-    named("🜚", ["gold"]),
-    named("🜛", ["silver"]),
-    named("🜜", ["iron:ore", "iron:ore:a"]),
-    named("🜝", ["iron:ore:b"]),
-    named("🜞", ["iron:crocus"]),
-    named("🜟", ["iron:regulus"]),
-    named("🜠", ["copper:ore"]),
-    named("🜡", ["iron:copper:ore"]),
-    named("🜢", ["copper:sublimate"]),
-    named("🜣", ["copper:crocus", "copper:crocus:a"]),
-    named("🜤", ["copper:crocus:b"]),
-    named("🜥", ["copper:antimoniate"]),
-    named("🜦", ["salt:copper:antimoniate"]),
-    named("🜧", ["sublimate:salt:copper"]),
-    named("🜨", ["verdigris"]),
-    named("🜩", ["tin:ore"]),
-    named("🜪", ["lead:ore"]),
+        // Metals
+        "🜚": [null, "gold"],
+        "🜛": [null, "silver"],
+        "🜜": [null, "iron:ore", "iron:ore:a"],
+        "🜝": [null, "iron:ore:b"],
+        "🜞": [null, "iron:crocus"],
+        "🜟": [null, "iron:regulus"],
+        "🜠": [null, "copper:ore"],
+        "🜡": [null, "iron:copper:ore"],
+        "🜢": [null, "copper:sublimate"],
+        "🜣": [null, "copper:crocus", "copper:crocus:a"],
+        "🜤": [null, "copper:crocus:b"],
+        "🜥": [null, "copper:antimoniate"],
+        "🜦": [null, "salt:copper:antimoniate"],
+        "🜧": [null, "sublimate:salt:copper"],
+        "🜨": [null, "verdigris"],
+        "🜩": [null, "tin:ore"],
+        "🜪": [null, "lead:ore"],
 
-    // Antimony compounds
-    named("🜫", ["antimony:ore"]),
-    named("🜬", ["antimony:sublimate"]),
-    named("🜭", ["antimony:salt"]),
-    named("🜮", ["antimony:sublimate:salt"]),
-    named("🜰", ["antimony:regulus", "antimony:regulus:a"]),
-    named("🜱", ["antimony:regulus:b"]),
+        // Antimony compounds
+        "🜫": [null, "antimony:ore"],
+        "🜬": [null, "antimony:sublimate"],
+        "🜭": [null, "antimony:salt"],
+        "🜮": [null, "antimony:sublimate:salt"],
+        "🜰": [null, "antimony:regulus", "antimony:regulus:a"],
+        "🜱": [null, "antimony:regulus:b"],
 
-    // Regulus variants
-    named("🜲", ["regulus", "regulus:a"]),
-    named("🜳", ["regulus:b"]),
-    named("🜴", ["regulus:c"]),
-    named("🜵", ["regulus:d"]),
+        // Regulus variants
+        "🜲": [null, "regulus", "regulus:a"],
+        "🜳": [null, "regulus:b"],
+        "🜴": [null, "regulus:c"],
+        "🜵": [null, "regulus:d"],
 
-    // Alkalis and other compounds
-    named("🜶", ["alkali", "alkali:a"]),
-    named("🜷", ["alkali:b"]),
-    named("🜸", ["marcasite"]),
-    named("🜹", ["sal:ammoniac"]),
-    named("🜺", ["arsenic"]),
-    named("🜻", ["realgar", "realgar:a"]),
-    named("🜼", ["realgar:b"]),
-    named("🜽", ["auripigment"]),
-    named("🜾", ["bismuth:ore"]),
+        // Alkalis and other compounds
+        "🜶": [null, "alkali", "alkali:a"],
+        "🜷": [null, "alkali:b"],
+        "🜸": [null, "marcasite"],
+        "🜹": [null, "sal:ammoniac"],
+        "🜺": [null, "arsenic"],
+        "🜻": [null, "realgar", "realgar:a"],
+        "🜼": [null, "realgar:b"],
+        "🜽": [null, "auripigment"],
+        "🜾": [null, "bismuth:ore"],
 
-    // Tartar and lime
-    named("🜿", ["tartar", "tartar:a"]),
-    named("🝀", ["tartar:b"]),
-    named("🝁", ["quicklime"]),
+        // Tartar and lime
+        "🜿": [null, "tartar", "tartar:a"],
+        "🝀": [null, "tartar:b"],
+        "🝁": [null, "quicklime"],
 
-    // Borax and alum
-    named("🝂", ["borax", "borax:a"]),
-    named("🝃", ["borax:b"]),
-    named("🝄", ["borax:c"]),
-    named("🝅", ["alum"]),
+        // Borax and alum
+        "🝂": [null, "borax", "borax:a"],
+        "🝃": [null, "borax:b"],
+        "🝄": [null, "borax:c"],
+        "🝅": [null, "alum"],
 
-    // Substances
-    named("🝆", ["oil"]),
-    named("🝇", ["spirit"]),
-    named("🝈", ["tincture"]),
-    named("🝉", ["gum"]),
-    named("🝊", ["wax"]),
-    named("🝋", ["powder"]),
-    named("🝌", ["calx"]),
-    named("🝍", ["tutty"]),
-    named("🝎", ["caput:mortuum"]),
+        // Substances
+        "🝆": [null, "oil"],
+        "🝇": [null, "spirit"],
+        "🝈": [null, "tincture"],
+        "🝉": [null, "gum"],
+        "🝊": [null, "wax"],
+        "🝋": [null, "powder"],
+        "🝌": [null, "calx"],
+        "🝍": [null, "tutty"],
+        "🝎": [null, "caput:mortuum"],
 
-    // Symbols and tools
-    named("🝏", ["scepter:jove"]),
-    named("🝐", ["caduceus"]),
-    named("🝑", ["trident"]),
-    named("🝒", ["trident:starred"]),
-    named("🝓", ["lodestone"]),
-    named("🝔", ["soap"]),
-    named("🝕", ["urine"]),
-    named("🝖", ["dung:horse"]),
+        // Symbols and tools
+        "🝏": [null, "scepter:jove"],
+        "🝐": [null, "caduceus"],
+        "🝑": [null, "trident"],
+        "🝒": [null, "trident:starred"],
+        "🝓": [null, "lodestone"],
+        "🝔": [null, "soap"],
+        "🝕": [null, "urine"],
+        "🝖": [null, "dung:horse"],
 
-    // Ashes and materials
-    named("🝗", ["ashes"]),
-    named("🝘", ["ashes:pot"]),
-    named("🝙", ["brick"]),
-    named("🝚", ["brick:powdered"]),
-    named("🝛", ["amalgam"]),
+        // Ashes and materials
+        "🝗": [null, "ashes"],
+        "🝘": [null, "ashes:pot"],
+        "🝙": [null, "brick"],
+        "🝚": [null, "brick:powdered"],
+        "🝛": [null, "amalgam"],
 
-    // Processes and operations
-    named("🝜", ["sss", "stratum:super", "sss:a", "stratum:super:a"]),
-    named("🝝", ["stratum:super:b", "sss:b"]),
-    named("🝞", ["sublimate"]),
-    named("🝟", ["precipitate"]),
-    named("🝠", ["distill"]),
-    named("🝡", ["dissolve", "dissolve:a"]),
-    named("🝢", ["dissolve:b"]),
-    named("🝣", ["purify"]),
-    named("🝤", ["putrefy"]),
+        // Processes and operations
+        "🝜": [null, "sss", "stratum:super", "sss:a", "stratum:super:a"],
+        "🝝": [null, "stratum:super:b", "sss:b"],
+        "🝞": [null, "sublimate"],
+        "🝟": [null, "precipitate"],
+        "🝠": [null, "distill"],
+        "🝡": [null, "dissolve", "dissolve:a"],
+        "🝢": [null, "dissolve:b"],
+        "🝣": [null, "purify"],
+        "🝤": [null, "putrefy"],
 
-    // Equipment
-    named("🝥", ["crucible"]),
-    named("🝦", ["crucible:b"]),
-    named("🝧", ["crucible:c"]),
-    named("🝨", ["crucible:d"]),
-    named("🝩", ["crucible:e"]),
-    named("🝪", ["alembic"]),
-    named("🝫", ["bath:mary"]),
-    named("🝬", ["bath:vapours", "bath:vapors"]),
-    named("🝭", ["retort"]),
+        // Equipment
+        "🝥": [null, "crucible"],
+        "🝦": [null, "crucible:b"],
+        "🝧": [null, "crucible:c"],
+        "🝨": [null, "crucible:d"],
+        "🝩": [null, "crucible:e"],
+        "🝪": [null, "alembic"],
+        "🝫": [null, "bath:mary"],
+        "🝬": [null, "bath:vapours", "bath:vapors"],
+        "🝭": [null, "retort"],
 
-    // Time measurements
-    named("🝮", ["hour"]),
-    named("🝯", ["night"]),
-    named("🝰", ["day:night"]),
-    named("🝱", ["month"]),
+        // Time measurements
+        "🝮": [null, "hour"],
+        "🝯": [null, "night"],
+        "🝰": [null, "day:night"],
+        "🝱": [null, "month"],
 
-    // Measurements
-    named("🝲", ["dram:half"]),
-    named("🝳", ["ounce:half"])
-])
+        // Measurements
+        "🝲": [null, "dram:half"],
+        "🝳": [null, "ounce:half"]
+    }
+})
