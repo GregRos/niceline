@@ -1,28 +1,34 @@
-import { named, namespace } from "../../registered"
+import { shape } from "../../defs/namespace/shape"
 
-export const traffic = namespace("signage", [
-    namespace("no", [
-        named("⛔", ["entry"]),
-        named("🚫", [""]),
-        named("🚭", ["smoking"]),
-        named("🚱", ["water"]),
-        named("🚳", ["bicycle"]),
-        named("🚷", ["pedestrian"]),
-        named("🚯", ["litter"]),
-        named("🚱", ["drinking"]),
-        named("🚷", ["foot"])
-    ]),
-    named("⛛", ["yield"]),
-    namespace("car", [named("⛍", ["disabled"]), named("⛐", ["sliding"])]),
-    namespace("warning", [named("⚠", ["general"])]),
-    namespace("lanes", [
-        named("⛗", ["two:way"]),
-        named("⛙", ["left:merge"]),
-        named("⛜", ["left:closed"]),
-        named("⛚", ["slow"]),
-        named("⛌", ["crossing"])
-    ]),
-
-    named("🚸", ["kids"]),
-    named("🚥", ["traffic:light", "trafficlight"])
-])
+export default shape({
+    signage: {
+        no: {
+            "⛔": [null, "entry"],
+            "🚫": [null, ""],
+            "🚭": [null, "smoking"],
+            "🚱": [null, "water"],
+            "🚳": [null, "bicycle"],
+            "🚷": [null, "pedestrian"],
+            "🚯": [null, "litter"]
+            // "🚱": [null, "drinking"], // duplicate key
+            // "🚷": [null, "foot"] // duplicate key
+        },
+        "⛛": [null, "yield"],
+        car: {
+            "⛍": [null, "disabled"],
+            "⛐": [null, "sliding"]
+        },
+        warning: {
+            "⚠": [null, "general"]
+        },
+        lanes: {
+            "⛗": [null, "two:way"],
+            "⛙": [null, "left:merge"],
+            "⛜": [null, "left:closed"],
+            "⛚": [null, "slow"],
+            "⛌": [null, "crossing"]
+        },
+        "🚸": [null, "kids"],
+        "🚥": [null, "traffic:light", "trafficlight"]
+    }
+})

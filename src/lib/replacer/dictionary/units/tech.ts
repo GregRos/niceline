@@ -1,146 +1,162 @@
-import { ascii, named, namespace } from "../../registered"
+import { shape } from "../../defs/namespace/shape"
 
-export const units = namespace("tech", [
-    named("⌨", ["keyboard"]),
-    named("Ω", ["ohm"]),
-    named("°", ["deg", "degree"]),
-    named("⌱", ["origin"]),
-    named("⍾", ["bell"]),
-    named("⎁", ["completion"]),
-    named("⏚", ["earth"]),
-    named("⎈", ["helm"]),
-    named("⎌", ["undo"]),
-    named("⎔", ["function"]),
-    named("⎙", ["print"]),
-    named("⎚", ["clear"]),
-    named("⏍", ["sqft"]),
-    named("⎗", ["page:previous"]),
-    named("⎘", ["page:next"]),
-    named("⎆", ["enter"]),
-    named("⎃", ["emphasis"]),
-    named("⏿", ["observer"]),
-    named("⮓", ["newline:right"]),
-    named("⯐", ["position"]),
-    named("⮒", ["newline:left"]),
-    named("⌀", ["diameter", "diam"]),
-    named("⏲", ["timer"]),
-    named("℃", ["celsius"]),
-    named("℉", ["fahrenheit"]),
-    named("K", ["kelvin"]),
-    named("Å", ["angstrom"]),
-    named("✇", ["tape"]),
-    ascii("‰", "{o/oo}", ["percent:2", "per:thousand", "permille"]),
-    ascii("‱", "{o/ooo}", ["percent:4", "per:myriad", "permyriad"]),
-    namespace("media", [
-        named("🆜", ["2nd-screen", "2ndscr"]),
-        named("🆛", ["3d", "3D"]),
-        named("🆝", ["2k", "2K"]),
-        named("🆞", ["4k", "4K"]),
-        named("🆟", ["8k", "8K"]),
-        named("🆠", ["5.1"]),
-        named("🆡", ["7.1"]),
-        named("🆢", ["22.2"]),
-        named("🆣", ["60p", "60P"]),
-        named("🆤", ["120p", "120P"]),
-        named("🆦", ["hc", "HC"]),
-        named("🅌", ["sd", "SD"]),
-        named("🆧", ["hdr", "HDR"]),
-        named("🆨", ["hi-res", "Hi-res"]),
-        named("🆩", ["lossless", "Lossless"]),
-        named("🆪", ["SHV"]),
-        named("🆫", ["uhd", "UHD"]),
-        named("🆬", ["vod", "VOD"]),
-        named("🅎", ["ppv", "PPV"]),
-        named("🄭", ["cd", "CD"]),
-        named("🅍", ["ss", "SS", "supersurround"]),
-        ascii("🅭", "{(cc)}", ["closed:caption", "cc"]),
-        named("🆐", ["dj", "DJ"])
-    ]),
-    namespace("control", [
-        namespace("power", [
-            ascii("⏼", "{(|)}", [""]),
-            ascii("⏻", "{|)}", ["on:off"]),
-            ascii("⏽", "{(|}", ["on"]),
-            named("⏾", ["sleep"])
-        ]),
-        namespace("media", [
-            named("⏯", ["play:pause"]),
-            named("⏮", ["previous", "prev"]),
-            named("⏭", ["next"]),
-            named("⏺", ["record"]),
-            named("⏹", ["stop"]),
-            named("⏏", ["eject"])
-        ]),
-        namespace("volume", [
-            named("🕨", ["mute"]),
-            named("🕩", ["low"]),
-            named("🕪", ["high"])
-        ]),
-        namespace("horn", [named("🕫", ["off"]), named("🕬", ["low"])])
-    ]),
-    namespace("actions", []),
-    namespace("actions", [
-        named("⏎", ["return"]),
-        named("⇧", ["shift"]),
-        named("🄰", ["capslock"]),
-        named("⇪", ["capslock:bb"]),
-        named("⌫", ["backspace", "delete:left"]),
-        named("⌦", ["delete:right"]),
-        named("⭾", ["tab"]),
-        namespace("mac", [named("⌘", ["mac:cmd"]), named("⌥", ["mac:option"])])
-    ]),
-    named("⏱", ["stopwatch"]),
+export const units = shape({
+    tech: {
+        "⌨": [null, "keyboard"],
+        Ω: [null, "ohm"],
+        "°": [null, "deg", "degree"],
+        "⌱": [null, "origin"],
+        "⍾": [null, "bell"],
+        "⎁": [null, "completion"],
+        "⏚": [null, "earth"],
+        "⎈": [null, "helm"],
+        "⎌": [null, "undo"],
+        "⎔": [null, "function"],
+        "⎙": [null, "print"],
+        "⎚": [null, "clear"],
+        "⏍": [null, "sqft"],
+        "⎗": [null, "page:previous"],
+        "⎘": [null, "page:next"],
+        "⎆": [null, "enter"],
+        "⎃": [null, "emphasis"],
+        "⏿": [null, "observer"],
+        "⮓": [null, "newline:right"],
+        "⯐": [null, "position"],
+        "⮒": [null, "newline:left"],
+        "⌀": [null, "diameter", "diam"],
+        "⏲": [null, "timer"],
+        "℃": [null, "celsius"],
+        "℉": [null, "fahrenheit"],
+        K: [null, "kelvin"],
+        Å: [null, "angstrom"],
+        "✇": [null, "tape"],
+        "‰": ["{o/oo}", "percent:2", "per:thousand", "permille"],
+        "‱": ["{o/ooo}", "percent:4", "per:myriad", "permyriad"],
+        media: {
+            "🆜": [null, "2nd-screen", "2ndscr"],
+            "🆛": [null, "3d", "3D"],
+            "🆝": [null, "2k", "2K"],
+            "🆞": [null, "4k", "4K"],
+            "🆟": [null, "8k", "8K"],
+            "🆠": [null, "5.1"],
+            "🆡": [null, "7.1"],
+            "🆢": [null, "22.2"],
+            "🆣": [null, "60p", "60P"],
+            "🆤": [null, "120p", "120P"],
+            "🆦": [null, "hc", "HC"],
+            "🅌": [null, "sd", "SD"],
+            "🆧": [null, "hdr", "HDR"],
+            "🆨": [null, "hi-res", "Hi-res"],
+            "🆩": [null, "lossless", "Lossless"],
+            "🆪": [null, "SHV"],
+            "🆫": [null, "uhd", "UHD"],
+            "🆬": [null, "vod", "VOD"],
+            "🅎": [null, "ppv", "PPV"],
+            "🄭": [null, "cd", "CD"],
+            "🅍": [null, "ss", "SS", "supersurround"],
+            "🅭": ["{(cc)}", "closed:caption", "cc"],
+            "🆐": [null, "dj", "DJ"]
+        },
+        control: {
+            power: {
+                "⏼": ["{(|)}", ""],
+                "⏻": ["{|)}", "on:off"],
+                "⏽": ["{(|}", "on"],
+                "⏾": [null, "sleep"]
+            },
+            media: {
+                "⏯": [null, "play:pause"],
+                "⏮": [null, "previous", "prev"],
+                "⏭": [null, "next"],
+                "⏺": [null, "record"],
+                "⏹": [null, "stop"],
+                "⏏": [null, "eject"]
+            },
+            volume: {
+                "🕨": [null, "mute"],
+                "🕩": [null, "low"],
+                "🕪": [null, "high"]
+            },
+            horn: {
+                "🕫": [null, "off"],
+                "🕬": [null, "low"]
+            }
+        },
+        // namespace("actions", []) removed (empty)
+        actions: {
+            "⏎": [null, "return"],
+            "⇧": [null, "shift"],
+            "🄰": [null, "capslock"],
+            "⇪": [null, "capslock:bb"],
+            "⌫": [null, "backspace", "delete:left"],
+            "⌦": [null, "delete:right"],
+            "⭾": [null, "tab"],
+            mac: {
+                "⌘": [null, "mac:cmd"],
+                "⌥": [null, "mac:option"]
+            }
+        },
+        "⏱": [null, "stopwatch"],
+        recycle: {
+            "♺": [null, ""],
+            "♼": [null, "paper"],
+            "♽": [null, "paper:partial"],
+            "plastic|p": {
+                "♳": [null, "", "1"],
+                "♴": [null, "2"],
+                "♵": [null, "3"],
+                "♶": [null, "4"],
+                "♷": [null, "5"],
+                "♸": [null, "6"],
+                "♹": [null, "7"]
+            }
+        }
+    }
+})
 
-    namespace("recycle", [
-        named("♺", [""]),
-        named("♼", ["paper"]),
-        named("♽", ["paper:partial"]),
+export const electric = shape({
+    electric: {
+        "⏧": [null, "intersection"],
+        "⌁": [null, "arrow"],
+        "⌂": [null, "house"],
+        "⏛": [null, "fuse"],
+        "⏚": [null, "ground"],
+        "⏦": [null, "ac"],
+        "⎓": [null, "dc"]
+    }
+})
 
-        namespace("plastic|p", [
-            named("♳", ["", "1"]),
-            named("♴", ["2"]),
-            named("♵", ["3"]),
-            named("♶", ["4"]),
-            named("♷", ["5"]),
-            named("♸", ["6"]),
-            named("♹", ["7"])
-        ])
-    ])
-])
-
-export const electric = namespace("electric", [
-    named("⏧", ["intersection"]),
-    named("⌁", ["arrow"]),
-    named("⌂", ["house"]),
-    named("⏛", ["fuse"]),
-    named("⏚", ["ground"]),
-    named("⏦", ["ac"]),
-    named("⎓", ["dc"])
-])
-
-const computers = namespace("computer", [
-    named("🖧", ["network"]),
-    named("🖨", ["printer"]),
-    named("🖩", ["calculator"]),
-    named("🖳", ["pc", "PC"]),
-    named("🖵", ["screen"]),
-    named("🖶", ["printer"]),
-    named("🖷", ["fax"]),
-
-    namespace("input", [named("🖰", ["mouse"]), named("🖦", ["kbm", "KBM"])]),
-    namespace("media", [
-        namespace("document", [
-            named("🖹", ["text"]),
-            named("🖺", ["rich"]),
-            named("🖻", ["picture"])
-        ]),
-        namespace("cd|disc|disk", [named("🖸", ["cd"])]),
-        namespace("floppy", [
-            named("🖫", ["white"]),
-            named("🖪", ["black"]),
-            named("🖭", ["tape"])
-        ])
-    ]),
-    // TODO: https://www.compart.com/en/unicode/block/U+1F300
-    namespace("mouse", [named("🖱", ["black"])])
-])
+const computers = shape({
+    computer: {
+        "🖧": [null, "network"],
+        "🖨": [null, "printer"],
+        "🖩": [null, "calculator"],
+        "🖳": [null, "pc", "PC"],
+        "🖵": [null, "screen"],
+        "🖶": [null, "printer"],
+        "🖷": [null, "fax"],
+        input: {
+            "🖰": [null, "mouse"],
+            "🖦": [null, "kbm", "KBM"]
+        },
+        media: {
+            document: {
+                "🖹": [null, "text"],
+                "🖺": [null, "rich"],
+                "🖻": [null, "picture"]
+            },
+            "cd|disc|disk": {
+                "🖸": [null, "cd"]
+            },
+            floppy: {
+                "🖫": [null, "white"],
+                "🖪": [null, "black"],
+                "🖭": [null, "tape"]
+            }
+        },
+        // TODO: https://www.compart.com/en/unicode/block/U+1F300
+        mouse: {
+            "🖱": [null, "black"]
+        }
+    }
+})

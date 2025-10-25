@@ -20,8 +20,8 @@ type _Maybe_Prefix_String<
 
 type _Prefix_Array<
     Prefixes extends string[],
-    Arr extends TxEntry
-> = Arr extends readonly [infer Head, ...infer Tail extends _Strs]
+    Arr extends (string | null)[]
+> = Arr extends readonly [infer Head, ...infer Tail extends (string | null)[]]
     ? Head extends string
         ? [
               _Maybe_Prefix_String<Prefixes, Head>,
@@ -33,7 +33,7 @@ type _Prefix_Array<
 type _Add<T extends string[], U extends string> = [...T, U]
 
 type _Expand_Nested_keys<Prefixes extends string[], X> = {
-    [K in keyof X & string]: X[K] extends TxEntry
+    [K in keyof X & string]: X[K] extends any[]
         ? _Prefix_Array<Prefixes, X[K]>[number]
         : _Expand_Nested_keys<_Add<Prefixes, K>, X[K]>
 }

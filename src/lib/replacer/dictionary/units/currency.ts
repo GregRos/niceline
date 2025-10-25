@@ -1,31 +1,33 @@
-import { named, namespace } from "../../registered"
+import { shape } from "../../defs/namespace/shape"
 
-export const currency2 = namespace("cur", [
-    named("₡", ["colon"]),
-    named("₢", ["cruzeiro"]),
-    named("₣", ["franc"]),
-    named("₤", ["lira"]),
-    named("₥", ["mill"]),
-    named("₦", ["naira"]),
-    named("₧", ["peseta"]),
-    named("₨", ["rupee"]),
-    named("₩", ["won"]),
-    named("₪", ["shekel"]),
-    named("₫", ["dong"]),
-    named("€", ["euro"]),
-    named("₭", ["kip"]),
-    named("₮", ["tugrik"]),
-    named("₯", ["drachma"]),
-    named("₰", ["pfennig"]),
-    named("₱", ["peso"]),
-    named("₲", ["guarani"]),
-    named("₳", ["austral"]),
-    named("₴", ["hryvnia"]),
-    named("₵", ["cedi"]),
-    named("₸", ["tenge"]),
-    named("₺", ["lira:turkish"]),
-    named("₼", ["manat"]),
-    named("₽", ["ruble"]),
-    named("₾", ["lari"]),
-    named("₿", ["bitcoin"])
-])
+export default shape({
+    cur: {
+        "₡": [null, "colon"],
+        "₢": [null, "cruzeiro"],
+        "₣": [null, "franc"],
+        "₤": [null, "lira"],
+        "₥": [null, "mill"],
+        "₦": [null, "naira"],
+        "₧": [null, "peseta"],
+        "₨": [null, "rupee"],
+        "₩": [null, "won"],
+        "₪": [null, "shekel"],
+        "₫": [null, "dong"],
+        "€": [null, "euro"],
+        "₭": [null, "kip"],
+        "₮": [null, "tugrik"],
+        "₯": [null, "drachma"],
+        "₰": [null, "pfennig"],
+        "₱": [null, "peso"],
+        "₲": [null, "guarani"],
+        "₳": [null, "austral"],
+        "₴": [null, "hryvnia"],
+        "₵": [null, "cedi"],
+        "₸": [null, "tenge"],
+        "₺": [null, "lira:turkish"],
+        "₼": [null, "manat"],
+        "₽": [null, "ruble"],
+        "₾": [null, "lari"],
+        "₿": [null, "bitcoin"]
+    }
+})

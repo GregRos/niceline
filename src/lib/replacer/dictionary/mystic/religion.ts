@@ -1,27 +1,26 @@
-import { named, namespace } from "../../registered"
+import { shape } from "../../defs/namespace/shape"
 
-export const religion = namespace("religion", [
-    named("✡", ["star-of-david", "magen-david"]),
-    named("☪", ["islam", "star-and-crescent"]),
-    named("☸", ["buddhism", "dharmachakra"]),
-    named("🕉", ["hinduism", "aum", "om"]),
-    named("☯", ["taoism", "yin-yang"]),
-    named("⛩", ["shinto", "torii"]),
-    named("☸", ["jainism", "dharmachakra"]),
-    named("☬", ["sikhism", "khanda"]),
-    named("☫", ["farsi"]),
-    named("☯", ["yin-yang", "taijitu"]),
-    namespace("cross", [
-        named("✞", [""]),
-        named("☦", ["orthodox"]),
-        named("☨", ["lorraine"]),
-        named("☩", ["jerusalem"]),
-        named("✙", ["maltese"]),
-        named("✚", ["greek"]),
-        named("⯞", ["diamond"]),
-        named("🕇", ["latin"])
-    ]),
-    named("☥", ["ankh"]),
-
-    named("ﷲ", ["allah"])
-])
+export default shape({
+    religion: {
+        "✡": [null, "star-of-david", "magen-david"],
+        "☪": [null, "islam", "star-and-crescent"],
+        "☸": [null, "buddhism", "dharmachakra"],
+        "🕉": [null, "hinduism", "aum", "om"],
+        "☯": [null, "taoism", "yin-yang"],
+        "⛩": [null, "shinto", "torii"],
+        "☬": [null, "sikhism", "khanda"],
+        "☫": [null, "farsi"],
+        cross: {
+            "✞": [null, ""],
+            "☦": [null, "orthodox"],
+            "☨": [null, "lorraine"],
+            "☩": [null, "jerusalem"],
+            "✙": [null, "maltese"],
+            "✚": [null, "greek"],
+            "⯞": [null, "diamond"],
+            "🕇": [null, "latin"]
+        },
+        "☥": [null, "ankh"],
+        ﷲ: [null, "allah"]
+    }
+})

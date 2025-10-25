@@ -1,18 +1,14 @@
-import { named, namespace } from "../../registered"
+import { shape } from "../../defs/namespace/shape"
 
-export const ornaments = namespace("ornament", [
-    namespace("quilt", [
-        named("🙪", [""]),
-        named("🙫", ["black"]),
-        namespace("big", [named("🙨", [""]), named("🙩", ["black"])])
-    ])
-])
-
-const a = {
-    "quilt|q": {
-        CHAR: ["{>=}", "big"],
-        black: {
-            CHAR: ["{#>=}", "big", "heavy"]
+export default shape({
+    ornament: {
+        quilt: {
+            "🙪": [null, ""],
+            "🙫": [null, "black"],
+            big: {
+                "🙨": [null, ""],
+                "🙩": [null, "black"]
+            }
         }
     }
-}
+})

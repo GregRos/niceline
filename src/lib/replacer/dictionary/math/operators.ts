@@ -1,76 +1,71 @@
-import {
-    aliasName,
-    aliasNamespace,
-    ascii,
-    named,
-    namespace
-} from "../../registered"
+import { shape } from "../../defs/namespace/shape"
 
-export const op = namespace("op", [
-    ascii("⊕", "{(+)}", ["circ:plus", "oplus"]),
-    ascii("⊖", "{(-)}", ["circ:minus", "ominus"]),
-    ascii("⊗", "{(x)}", ["circ:times", "otimes"]),
-    ascii("⊙", "{(.)}", ["circ:dot", "odot"]),
-    ascii("⨸", "{(:)}", ["circ:colon", "ocolon"]),
-    ascii("⊘", "{(/)}", ["circ:slash", "oslash"]),
-    ascii("⊛", "{(*)}", ["circ:ast", "oast"]),
-    ascii("⊚", "{(o)}", ["circ:circ", "ocirc"]),
-    ascii("⊜", "{(=)}", ["circ:equal", "oeq"]),
-    ascii("⨀", "{((.))}}", ["circ:dot:big", "odot:big"]),
-    ascii("⨁", "{((+))}", ["circ:plus:big", "oplus:big"]),
-    ascii("⨂", "{((x))}", ["circ:times:big", "otimes:big"]),
-    ascii("±", "{+-}", ["plusminus", "plusminus"]),
-    ascii("∓", "{-+}", ["minusplus", "minusplus"]),
-    namespace("times|multiply", [
-        ascii("×", "{x}", ["", "s1"]),
-        ascii("⨉", "{X}", ["s2"]),
-        ascii("✕", "{xx}", ["s3"]),
-        ascii("✖", "{XX}", ["s4"])
-    ]),
-    named("∙", ["cdot", "*"]),
-    ascii("√", "{|/}", ["root", "sqrt"]),
-    ascii("∛", "{|3/}", ["root:3", "cbrpt"]),
-    ascii("∜", "{|4/}", ["root:4", "qrrt"]),
-
-    ascii("÷", "{-:-}", ["division", "div"]),
-    namespace("sum|sigma", [
-        ascii("∑", "{Z|}", ["", "1"]),
-        ascii("⨊", "{Zo|}", ["modulo"])
-    ]),
-    named("∑", ["sum", "sigma"]),
-    named("⨊", ["sum"]),
-    namespace("plus", [
-        namespace("above", [
-            ascii("⨣", "{+^^^}", ["breve"]),
-            ascii("⨢", "{+^^o}", ["circ"]),
-            ascii("⨤", "{+^^~}", ["tilde"])
-        ]),
-        namespace("below", [
-            ascii("⨥", "{+__.}", ["dot"]),
-            ascii("⨦", "{+__~}", ["circ"])
-        ])
-    ]),
-    named("∏", ["product", "prod", "pi"]),
-    namespace("int|integral", [
-        ascii("∫", "{S|}", ["", "1"]),
-        ascii("∬", "{SS|}", ["2"]),
-        ascii("∭", "{SSS|}", ["3"]),
-        ascii("⨌", "{SSSS|}", ["4"]),
-        named("∱", ["cw"]),
-        named("⨘", ["product", "prod"]),
-        namespace("closed|contour|o", [
-            named("∮", [""]),
-            named("∯", ["2", "2d"]),
-            named("∰", ["3", "3d"]),
-            named("∲", ["cw"]),
-            named("∳", ["ccw"])
-        ]),
-        aliasName("closed:2", ["surface"]),
-        aliasName("closed:3", ["volume"])
-    ]),
-    aliasNamespace("integral:closed", ["oint"]),
-    named("∂", ["partial", "pd"]),
-    named("∇", ["nabla", "nabla", "del"]),
-    named("∆", ["laplacian", "diff"]),
-    ascii("∘", "{o}", ["ring", "circle", "circ", "compose"])
-])
+export default shape({
+    op: {
+        "⊕": ["{(+)}", "circ:plus", "oplus"],
+        "⊖": ["{(-)}", "circ:minus", "ominus"],
+        "⊗": ["{(x)}", "circ:times", "otimes"],
+        "⊙": ["{(.)}", "circ:dot", "odot"],
+        "⨸": ["{(:)}", "circ:colon", "ocolon"],
+        "⊘": ["{(/)}", "circ:slash", "oslash"],
+        "⊛": ["{(*)}", "circ:ast", "oast"],
+        "⊚": ["{(o)}", "circ:circ", "ocirc"],
+        "⊜": ["{(=)}", "circ:equal", "oeq"],
+        "⨀": ["{((.))}}", "circ:dot:big", "odot:big"],
+        "⨁": ["{((+))}", "circ:plus:big", "oplus:big"],
+        "⨂": ["{((x))}", "circ:times:big", "otimes:big"],
+        "±": ["{+-}", "plusminus", "plusminus"],
+        "∓": ["{-+}", "minusplus", "minusplus"],
+        "times|multiply": {
+            "×": ["{x}", "", "s1"],
+            "⨉": ["{X}", "s2"],
+            "✕": ["{xx}", "s3"],
+            "✖": ["{XX}", "s4"]
+        },
+        "∙": [null, "cdot", "*"],
+        "√": ["{|/}", "root", "sqrt"],
+        "∛": ["{|3/}", "root:3", "cbrpt"],
+        "∜": ["{|4/}", "root:4", "qrrt"],
+        "÷": ["{-:-}", "division", "div"],
+        "sum|sigma": {
+            "∑": ["{Z|}", "", "1"],
+            "⨊": ["{Zo|}", "modulo"]
+        },
+        // aliasName for "∑" with ["sum", "sigma"] - handled by namespace prefix
+        // aliasName for "⨊" with ["sum"] - handled by namespace prefix
+        plus: {
+            above: {
+                "⨣": ["{+^^^}", "breve"],
+                "⨢": ["{+^^o}", "circ"],
+                "⨤": ["{+^^~}", "tilde"]
+            },
+            below: {
+                "⨥": ["{+__.}", "dot"],
+                "⨦": ["{+__~}", "circ"]
+            }
+        },
+        "∏": [null, "product", "prod", "pi"],
+        "int|integral": {
+            "∫": ["{S|}", "", "1"],
+            "∬": ["{SS|}", "2"],
+            "∭": ["{SSS|}", "3"],
+            "⨌": ["{SSSS|}", "4"],
+            "∱": [null, "cw"],
+            "⨘": [null, "product", "prod"],
+            "closed|contour|o": {
+                "∮": [null, ""],
+                "∯": [null, "2", "2d"],
+                "∰": [null, "3", "3d"],
+                "∲": [null, "cw"],
+                "∳": [null, "ccw"]
+            }
+            // aliasName("closed:2", ["surface"]) - removed as per instructions
+            // aliasName("closed:3", ["volume"]) - removed as per instructions
+        },
+        // aliasNamespace("integral:closed", ["oint"]) - removed as per instructions
+        "∂": [null, "partial", "pd"],
+        "∇": [null, "nabla", "nabla", "del"],
+        "∆": [null, "laplacian", "diff"],
+        "∘": ["{o}", "ring", "circle", "circ", "compose"]
+    }
+})

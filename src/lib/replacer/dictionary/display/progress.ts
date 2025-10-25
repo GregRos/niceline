@@ -1,36 +1,38 @@
-import { named, namespace } from "../../registered"
+import { shape } from "../../defs/namespace/shape"
 
-export const progress = namespace("progress", [
-    namespace("vblock", [
-        named("▁", ["1/8"]),
-        named("▂", ["2/8"]),
-        named("▃", ["3/8"]),
-        named("▄", ["4/8"]),
-        named("▅", ["5/8"]),
-        named("▆", ["6/8"]),
-        named("▇", ["7/8"]),
-        named("█", ["8/8"])
-    ]),
-    namespace("hblock", [
-        named("▏", ["1/8"]),
-        named("▎", ["2/8"]),
-        named("▍", ["3/8"]),
-        named("▌", ["4/8"]),
-        named("▋", ["5/8"]),
-        named("▊", ["6/8"]),
-        named("▉", ["7/8"]),
-        named("█", ["8/8"])
-    ]),
-    namespace("shade", [
-        named("░", ["1/4"]),
-        named("▒", ["2/4"]),
-        named("▓", ["3/4"]),
-        named("█", ["4/4"])
-    ]),
-    namespace("quadrant", [
-        named("▖", ["bl", "1/4"]),
-        named("▗", ["br", "2/4"]),
-        named("▘", ["ul", "3/4"]),
-        named("▝", ["ur", "4/4"])
-    ])
-])
+export default shape({
+    progress: {
+        vblock: {
+            "▁": [null, "1/8"],
+            "▂": [null, "2/8"],
+            "▃": [null, "3/8"],
+            "▄": [null, "4/8"],
+            "▅": [null, "5/8"],
+            "▆": [null, "6/8"],
+            "▇": [null, "7/8"],
+            "█": [null, "8/8"]
+        },
+        hblock: {
+            "▏": [null, "1/8"],
+            "▎": [null, "2/8"],
+            "▍": [null, "3/8"],
+            "▌": [null, "4/8"],
+            "▋": [null, "5/8"],
+            "▊": [null, "6/8"],
+            "▉": [null, "7/8"],
+            "█": [null, "8/8"]
+        },
+        shade: {
+            "░": [null, "1/4"],
+            "▒": [null, "2/4"],
+            "▓": [null, "3/4"],
+            "█": [null, "4/4"]
+        },
+        quadrant: {
+            "▖": [null, "bl", "1/4"],
+            "▗": [null, "br", "2/4"],
+            "▘": [null, "ul", "3/4"],
+            "▝": [null, "ur", "4/4"]
+        }
+    }
+})

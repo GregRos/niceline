@@ -1,7 +1,9 @@
-import { named, namespace } from "../../registered"
+import { shape } from "../../defs/namespace/shape"
 
-export const dashes = namespace("dash", [
-    named("–", ["en", "dash:en"]),
-    named("—", ["em", "dash:em"]),
-    named("‑", ["nb", "dash:nb"])
-])
+export default shape({
+    dash: {
+        "–": [null, "en", "dash:en"],
+        "—": [null, "em", "dash:em"],
+        "‑": [null, "nb", "dash:nb"]
+    }
+})

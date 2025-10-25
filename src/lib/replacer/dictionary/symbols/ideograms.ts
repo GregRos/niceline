@@ -1,130 +1,137 @@
-import { named, namespace } from "../../registered"
+import { shape } from "../../defs/namespace/shape"
 
-export const ideograms = namespace("idea", [
-    named("♂", ["male", "masc"]),
-    named("♀", ["female", "femme"]),
-    named("⚲", ["nonbinary", "nb", "enby", "neuter", "neutral"]),
-    named("⚥", ["intersex", "intersex"]),
-    named("⚤", ["mf", "fm", "het", "heterosexual"]),
-    named("⚣", ["mm", "m", "homosexual", "hom"]),
-    named("⚢", ["ff", "f", "lesbian", "les"]),
-
-    named("⚭", ["marriage"]),
-    named("⚮", ["divorce"]),
-    named("⚯", ["partnership"]),
-
-    named("☮", ["peace"]),
-    named("☢", ["radioactive"]),
-    named("☣", ["biohazard"]),
-    named("⚕", ["caduceus", "medical"]),
-    named("☠", ["skull", "death", "poison"]),
-    named("🕱", ["crossbones"]),
-    // ideological
-    named("Ⓐ", ["anarchy", "anarchism"]),
-    named("☲", ["confucianism", "trigram-li"]),
-    named("☭", ["communism", "hammer-and-sickle"]),
-
-    named("⚜", ["fleur-de-lis", "fleur"]),
-    named("☘", ["shamrock", "clover"]),
-    named("☄", ["comet"]),
-    named("☇", ["lightning"]),
-    named("☈", ["thunder"]),
-    named("♺", ["recycle"]),
-    named("⚑", ["flag", "flag:black"]),
-    named("⚐", ["flag", "flag:white"]),
-    named("⚔", ["swords", "battle", "fencing"]),
-    named("⛰", ["mountain"]),
-    named("⚖", ["scales", "justice", "law"]),
-    named("⚗", ["alchemy", "alembic"]),
-    named("⚙", ["gear", "cog"]),
-    named("⚛", ["atom", "science"]),
-    named("⚒", ["hammer-and-pick"]),
-    named("⧗", ["hourglass:black"]),
-    named("⧖", ["hourglass:white"]),
-    namespace("phone|telephone", [
-        named("🕿", ["black"]),
-        named("🕾", ["white"]),
-        named("☎", ["b"])
-    ]),
-    named("☀", ["sun"]),
-    named("⚚", ["hermes", "trade", "negotiation"]),
-    named("🕷", ["spider"]),
-    named("☁", ["cloud"]),
-    named("☂", ["umbrella", "rain"]),
-    named("☃", ["snowman", "snow"]),
-    named("⛓", ["chains"]),
-    named("⯑", ["uncertainty"]),
-    named("♨", ["hot:spring", "hotspring"]),
-    named("⛆", ["rain"]),
-    named("⛏", ["pick"]),
-    named("⛱", ["umbrella"]),
-    named("⛴", ["ferry"]),
-    named("⛫", ["castle"]),
-    named("⛼", ["headstone"]),
-    named("🛏", ["bed"]),
-    named("🛨", ["plane"]),
-    named("🛰", ["satellite"]),
-    named("🛱", ["firetruck"]),
-    named("🛠", ["hammer:wrench", "tools"]),
-    named("🛣", ["motorway", "road"]),
-    named("🛎", ["bellhop"]),
-    namespace("envelope", [
-        named("✉", [""]),
-        named("🖂", ["back"]),
-        named("🖃", ["stamped"]),
-        named("🖄", ["lightning"]),
-        named("🖅", ["flying"]),
-        named("🖆", ["signed"])
-    ]),
-    namespace("writing", [
-        named("🖊", ["pen"]),
-        named("🖋", ["fountain", "pen"]),
-        named("🖌", ["paintbrush"]),
-        named("🖍", ["crayon"])
-    ]),
-    named("🖃", ["envelope:open"]),
-    named("🎖", ["medal"]),
-    named("🎗", ["ribbon", "reminder"]),
-    named("🎞", ["film"]),
-    named("🎟", ["ticket"]),
-    named("🏞", ["park"]),
-    named("🏘", ["houses"]),
-    named("🏖", ["beach"]),
-    named("🏗", ["construction"]),
-    named("🏙", ["city", "cityscape"]),
-    named("🏚", ["abandoned", "house"]),
-    named("🏛", ["building"]),
-    named("🏟", ["stadium"]),
-    named("🏜", ["desert"]),
-    named("🏕", ["camping"]),
-    named("🏔", ["mountain"]),
-    named("🏝", ["island"]),
-    namespace("scissors", [
-        named("✂", ["black", ""]),
-        named("✀", ["safety"]),
-        named("✄", ["white"])
-    ]),
-    namespace("writing", [
-        named("✒", ["fountain", "pen"]),
-        namespace("pencil", [named("✏", [""]), named("🖉", ["tilted"])])
-    ]),
-    namespace("florette", [
-        named("✿", ["black", "b"]),
-        named("❀", ["white", "w"]),
-        named("❁", ["8"])
-    ]),
-    namespace("snowflake", [named("❄", ["6", ""]), named("❅", ["3"])]),
-    namespace("sparkle", [named("❇", [""]), named("❈", ["big"])]),
-    named("⚘", ["flower:b"]),
-    namespace("key", [named("⚿", ["squared"])])
-])
-
-export const musicSimple = namespace("notes", [
-    named("♭", ["flat"]),
-    named("♯", ["sharp"]),
-    named("♮", ["natural"]),
-    named("♩", ["quarter"]),
-    named("♪", ["eighth"]),
-    named("♫", ["eighth:2"]),
-    named("♬", ["sixteenth:2"])
-])
+export default shape({
+    idea: {
+        "♂": [null, "male", "masc"],
+        "♀": [null, "female", "femme"],
+        "⚲": [null, "nonbinary", "nb", "enby", "neuter", "neutral"],
+        "⚥": [null, "intersex", "intersex"],
+        "⚤": [null, "mf", "fm", "het", "heterosexual"],
+        "⚣": [null, "mm", "m", "homosexual", "hom"],
+        "⚢": [null, "ff", "f", "lesbian", "les"],
+        "⚭": [null, "marriage"],
+        "⚮": [null, "divorce"],
+        "⚯": [null, "partnership"],
+        "☮": [null, "peace"],
+        "☢": [null, "radioactive"],
+        "☣": [null, "biohazard"],
+        "⚕": [null, "caduceus", "medical"],
+        "☠": [null, "skull", "death", "poison"],
+        "🕱": [null, "crossbones"],
+        // ideological
+        "Ⓐ": [null, "anarchy", "anarchism"],
+        "☲": [null, "confucianism", "trigram-li"],
+        "☭": [null, "communism", "hammer-and-sickle"],
+        "⚜": [null, "fleur-de-lis", "fleur"],
+        "☘": [null, "shamrock", "clover"],
+        "☄": [null, "comet"],
+        "☇": [null, "lightning"],
+        "☈": [null, "thunder"],
+        "♺": [null, "recycle"],
+        "⚑": [null, "flag", "flag:black"],
+        "⚐": [null, "flag", "flag:white"],
+        "⚔": [null, "swords", "battle", "fencing"],
+        "⛰": [null, "mountain"],
+        "⚖": [null, "scales", "justice", "law"],
+        "⚗": [null, "alchemy", "alembic"],
+        "⚙": [null, "gear", "cog"],
+        "⚛": [null, "atom", "science"],
+        "⚒": [null, "hammer-and-pick"],
+        "⧗": [null, "hourglass:black"],
+        "⧖": [null, "hourglass:white"],
+        "phone|telephone": {
+            "🕿": [null, "black"],
+            "🕾": [null, "white"],
+            "☎": [null, "b"]
+        },
+        "☀": [null, "sun"],
+        "⚚": [null, "hermes", "trade", "negotiation"],
+        "🕷": [null, "spider"],
+        "☁": [null, "cloud"],
+        "☂": [null, "umbrella", "rain"],
+        "☃": [null, "snowman", "snow"],
+        "⛓": [null, "chains"],
+        "⯑": [null, "uncertainty"],
+        "♨": [null, "hot:spring", "hotspring"],
+        "⛆": [null, "rain"],
+        "⛏": [null, "pick"],
+        "⛱": [null, "umbrella"],
+        "⛴": [null, "ferry"],
+        "⛫": [null, "castle"],
+        "⛼": [null, "headstone"],
+        "🛏": [null, "bed"],
+        "🛨": [null, "plane"],
+        "🛰": [null, "satellite"],
+        "🛱": [null, "firetruck"],
+        "🛠": [null, "hammer:wrench", "tools"],
+        "🛣": [null, "motorway", "road"],
+        "🛎": [null, "bellhop"],
+        envelope: {
+            "✉": [null, ""],
+            "🖂": [null, "back"],
+            "🖃": [null, "stamped"],
+            "🖄": [null, "lightning"],
+            "🖅": [null, "flying"],
+            "🖆": [null, "signed"]
+        },
+        writing: {
+            "🖊": [null, "pen"],
+            "🖋": [null, "fountain", "pen"],
+            "🖌": [null, "paintbrush"],
+            "🖍": [null, "crayon"],
+            "✒": [null, "fountain", "pen"],
+            pencil: {
+                "✏": [null, ""],
+                "🖉": [null, "tilted"]
+            }
+        },
+        "🖃": [null, "envelope:open"],
+        "🎖": [null, "medal"],
+        "🎗": [null, "ribbon", "reminder"],
+        "🎞": [null, "film"],
+        "🎟": [null, "ticket"],
+        "🏞": [null, "park"],
+        "🏘": [null, "houses"],
+        "🏖": [null, "beach"],
+        "🏗": [null, "construction"],
+        "🏙": [null, "city", "cityscape"],
+        "🏚": [null, "abandoned", "house"],
+        "🏛": [null, "building"],
+        "🏟": [null, "stadium"],
+        "🏜": [null, "desert"],
+        "🏕": [null, "camping"],
+        "🏔": [null, "mountain"],
+        "🏝": [null, "island"],
+        scissors: {
+            "✂": [null, "black", ""],
+            "✀": [null, "safety"],
+            "✄": [null, "white"]
+        },
+        florette: {
+            "✿": [null, "black", "b"],
+            "❀": [null, "white", "w"],
+            "❁": [null, "8"]
+        },
+        snowflake: {
+            "❄": [null, "6", ""],
+            "❅": [null, "3"]
+        },
+        sparkle: {
+            "❇": [null, ""],
+            "❈": [null, "big"]
+        },
+        "⚘": [null, "flower:b"],
+        key: {
+            "⚿": [null, "squared"]
+        }
+    },
+    notes: {
+        "♭": [null, "flat"],
+        "♯": [null, "sharp"],
+        "♮": [null, "natural"],
+        "♩": [null, "quarter"],
+        "♪": [null, "eighth"],
+        "♫": [null, "eighth:2"],
+        "♬": [null, "sixteenth:2"]
+    }
+})

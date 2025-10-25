@@ -1,17 +1,19 @@
-import { ascii, named, namespace } from "../../registered"
+import { shape } from "../../defs/namespace/shape"
 
-export const marks = namespace("mark", [
-    ascii("©", "{(c)}", ["copyright", "copy", "c"]),
-    ascii("®", "{(r)}", ["r", "R", "registered"]),
-    ascii("™", "{(tm)}", ["tm", "TM", "trade"]),
-    ascii("℠", "{(sm)}", ["sm", "SM", "service"]),
-    ascii("℗", "{(p)}", ["p", "P", "record", "phonogram"]),
-    named("℡", ["tel", "Tel"]),
-    named("℮", ["estimated", "est"]),
-    ascii("№", "{No}", ["number", "no"]),
-    ascii("℀", "{a/c}", ["account"]),
-    ascii("🄯", "{(CL)}", ["copyleft", "cl"]),
-    ascii("🅮", "{!(C)}", ["nc", "NC", "pd", "PD"]),
-    ascii("🄏", "{!($)}", ["dollar:not", "free"]),
-    ascii("🅏", "{[WC]}", ["wc", "WC"])
-])
+export default shape({
+    mark: {
+        "©": ["{(c)}", "copyright", "copy", "c"],
+        "®": ["{(r)}", "r", "R", "registered"],
+        "™": ["{(tm)}", "tm", "TM", "trade"],
+        "℠": ["{(sm)}", "sm", "SM", "service"],
+        "℗": ["{(p)}", "p", "P", "record", "phonogram"],
+        "℡": [null, "tel", "Tel"],
+        "℮": [null, "estimated", "est"],
+        "№": ["{No}", "number", "no"],
+        "℀": ["{a/c}", "account"],
+        "🄯": ["{(CL)}", "copyleft", "cl"],
+        "🅮": ["{!(C)}", "nc", "NC", "pd", "PD"],
+        "🄏": ["{!($)}", "dollar:not", "free"],
+        "🅏": ["{[WC]}", "wc", "WC"]
+    }
+})
