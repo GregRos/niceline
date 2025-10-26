@@ -4,7 +4,7 @@ export default shape({
     set: {
         "∖": ["{s-}", "set:minus"],
         "∩": ["{s&}", "cap", "intersection", "inter"],
-        "∪": ["{s|}", "union", "cup", "cup"],
+        "∪": ["{s|}", "union", "cup"],
         "⋂": ["{s&&}", "cap:big", "intersection:big", "inter:big"],
         "⋃": ["{s||}", "union:big", "cup:big"],
         "∧": ["{l&}", "and", "land"],

@@ -2,20 +2,25 @@ import { shape } from "../../namespace/shape"
 
 export default shape({
     op: {
-        "⊕": ["{(+)}", "circ:plus", "oplus"],
-        "⊖": ["{(-)}", "circ:minus", "ominus"],
-        "⊗": ["{(x)}", "circ:times", "otimes"],
-        "⊙": ["{(.)}", "circ:dot", "odot"],
-        "⨸": ["{(:)}", "circ:colon", "ocolon"],
-        "⊘": ["{(/)}", "circ:slash", "oslash"],
-        "⊛": ["{(*)}", "circ:ast", "oast"],
-        "⊚": ["{(o)}", "circ:circ", "ocirc"],
-        "⊜": ["{(=)}", "circ:equal", "oeq"],
-        "⨀": ["{((.))}}", "circ:dot:big", "odot:big"],
-        "⨁": ["{((+))}", "circ:plus:big", "oplus:big"],
-        "⨂": ["{((x))}", "circ:times:big", "otimes:big"],
-        "±": ["{+-}", "plusminus", "plusminus"],
-        "∓": ["{-+}", "minusplus", "minusplus"],
+        circ: {
+            "⊕": ["{(+)}", "plus", "oplus"],
+            "⊖": ["{(-)}", "minus", "ominus"],
+            "⊗": ["{(x)}", "times", "otimes"],
+            "⊙": ["{(.)}", "dot", "odot"],
+            "⨸": ["{(:)}", "colon", "ocolon"],
+            "⊘": ["{(/)}", "slash", "oslash"],
+            "⊛": ["{(*)}", "ast", "oast"],
+            "⊚": ["{(o)}", "circ", "ocirc"],
+            "⊜": ["{(=)}", "equal", "oeq"],
+            big: {
+                "⨀": ["{((.))}}", "dot", "odot"],
+                "⨁": ["{((+))}", "plus", "oplus"],
+                "⨂": ["{((x))}", "times", "otimes"]
+            }
+        },
+
+        "±": ["{+-}", "plusminus"],
+        "∓": ["{-+}", "minusplus"],
         times: {
             "×": ["{x}", "", "s1"],
             "⨉": ["{X}", "s2"],
@@ -26,7 +31,7 @@ export default shape({
         "√": ["{|/}", "root", "sqrt"],
         "∛": ["{|3/}", "root:3", "cbrpt"],
         "∜": ["{|4/}", "root:4", "qrrt"],
-        "÷": ["{-:-}", "division", "div"],
+        "÷": ["{:-}", "division", "div"],
         sum: {
             "∑": ["{Z|}", "", "1"],
             "⨊": ["{Zo|}", "modulo"]
@@ -64,7 +69,7 @@ export default shape({
         },
         // aliasNamespace("integral:closed", ["oint"]) - removed as per instructions
         "∂": [null, "partial", "pd"],
-        "∇": [null, "nabla", "nabla", "del"],
+        "∇": [null, "nabla", "del"],
         "∆": [null, "laplacian", "diff"],
         "∘": ["{o}", "ring", "circle", "circ", "compose"]
     }

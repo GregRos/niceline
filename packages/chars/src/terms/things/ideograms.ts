@@ -5,7 +5,7 @@ export default shape({
         "♂": [null, "male", "masc"],
         "♀": [null, "female", "femme"],
         "⚲": [null, "nonbinary", "nb", "enby", "neuter", "neutral"],
-        "⚥": [null, "intersex", "intersex"],
+        "⚥": [null, "intersex"],
         "⚤": [null, "mf", "fm", "het", "heterosexual"],
         "⚣": [null, "mm", "m", "homosexual", "hom"],
         "⚢": [null, "ff", "f", "lesbian", "les"],
@@ -28,8 +28,10 @@ export default shape({
         "☇": [null, "lightning"],
         "☈": [null, "thunder"],
         "♺": [null, "recycle"],
-        "⚑": [null, "flag", "flag:black"],
-        "⚐": [null, "flag", "flag:white"],
+        flag: {
+            "⚑": [null, "black"],
+            "⚐": [null, "white"]
+        },
         "⚔": [null, "swords", "battle", "fencing"],
         "⛰": [null, "mountain"],
         "⚖": [null, "scales", "justice", "law"],
@@ -48,14 +50,13 @@ export default shape({
         "⚚": [null, "hermes", "trade", "negotiation"],
         "🕷": [null, "spider"],
         "☁": [null, "cloud"],
-        "☂": [null, "umbrella", "rain"],
+        "☂": [null, "umbrella"],
         "☃": [null, "snowman", "snow"],
         "⛓": [null, "chains"],
         "⯑": [null, "uncertainty"],
         "♨": [null, "hot:spring", "hotspring"],
         "⛆": [null, "rain"],
         "⛏": [null, "pick"],
-        "⛱": [null, "umbrella"],
         "⛴": [null, "ferry"],
         "⛫": [null, "castle"],
         "⛼": [null, "headstone"],
@@ -75,33 +76,40 @@ export default shape({
             "🖆": [null, "signed"]
         },
         writing: {
-            "🖊": [null, "pen"],
-            "🖋": [null, "fountain", "pen"],
+            pen: {
+                "🖊": [null, ""],
+                fountain: {
+                    "🖋": [null, ""],
+                    "✒": [null, "tip"]
+                }
+            },
             "🖌": [null, "paintbrush"],
             "🖍": [null, "crayon"],
-            "✒": [null, "fountain", "pen"],
+
             pencil: {
-                "✏": [null, ""],
-                "🖉": [null, "tilted"]
+                "🖉": [null, ""],
+                "✏": [null, "tip"]
             }
         },
-        "🖃": [null, "envelope:open"],
         "🎖": [null, "medal"],
         "🎗": [null, "ribbon", "reminder"],
         "🎞": [null, "film"],
         "🎟": [null, "ticket"],
-        "🏞": [null, "park"],
-        "🏘": [null, "houses"],
-        "🏖": [null, "beach"],
-        "🏗": [null, "construction"],
-        "🏙": [null, "city", "cityscape"],
-        "🏚": [null, "abandoned", "house"],
-        "🏛": [null, "building"],
-        "🏟": [null, "stadium"],
-        "🏜": [null, "desert"],
-        "🏕": [null, "camping"],
-        "🏔": [null, "mountain"],
-        "🏝": [null, "island"],
+        place: {
+            "🏞": [null, "park"],
+            "🏘": [null, "houses"],
+            "🏖": [null, "beach"],
+            "🏗": [null, "construction"],
+            "🏙": [null, "city", "cityscape"],
+            "🏚": [null, "abandoned", "house"],
+            "🏛": [null, "building"],
+            "🏟": [null, "stadium"],
+            "🏜": [null, "desert"],
+            "🏕": [null, "camping"],
+            "🏔": [null, "mountain"],
+            "🏝": [null, "island"]
+        },
+
         scissors: {
             "✂": [null, "black", ""],
             "✀": [null, "safety"],

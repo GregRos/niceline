@@ -16,9 +16,9 @@ export class Namespace<X> {
         return this._trie.has(key.split(":"))
     }
 
-    get(key: keyof X & string): string | null {
+    get<K extends keyof X & string>(key: K): X[K] {
         const value = this._trie.get(key.split(":"))
-        return value === Trie.NOT_FOUND ? null : value
+        return value as X[K]
     }
 }
 

@@ -3,7 +3,6 @@ import { shape } from "../../namespace/shape"
 export default shape({
     computer: {
         "🖧": [null, "network"],
-        "🖨": [null, "printer"],
         "🖩": [null, "calculator"],
         "🖳": [null, "pc", "PC"],
         "🖵": [null, "screen"],

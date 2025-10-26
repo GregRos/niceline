@@ -4,8 +4,8 @@ export default shape({
     punct: {
         space: {
             "\u200b": ["{,}", "zwsp", "0em", "0"],
-            "\u200a": ["{:}", "1/em"],
-            "\u2005": ["{;}", "1/em", "0.em"],
+            "\u200a": ["{:}", "1/8em"],
+            "\u2005": ["{;}", "1/4em", "0.25em"],
             "\u2000": ["{::}", "en", "1/2em", "0.5em"],
             "\u2001": ["{;;}", "em", "1em"],
             "\u2060": ["{-,-}", "zwj", "joiner:0", "wj", "joiner:1"],
@@ -41,17 +41,23 @@ export default shape({
 
         quote: {
             double: {
+                big: {
+                    left: {
+                        "🙸": ["{,,||}", "german"],
+                        "🙶": ['{"||}', ""]
+                    },
+                    right: {
+                        "🙷": ['{|""}', ""]
+                    }
+                },
                 left: {
                     "“": ['{"|}', ""],
                     "«": ['{"<}', "french", "guillemets"],
-                    "„": ["{,,|}", "low", "german", "czech"],
-                    "🙸": ["{,,||}", "low", "german", "czech", "heavy", "bold"],
-                    "🙶": ['{"||}', "heavy", "bold"]
+                    "„": ["{,,|}", "low", "german"]
                 },
                 right: {
                     "”": ['{|"}', ""],
-                    "»": ['{>"}', "french", "guillemets"],
-                    "🙷": ['{|""}', "french", "guillemets", "heavy", "bold"]
+                    "»": ['{>"}', "french", "guillemets"]
                     // aliasAscii("..:left", '{|,,}', ["low","german","czech"]) - removed per refactor
                     // aliasAscii("..left:heavy", '{|,,}', ["low","german","czech","heavy","bold"]) - removed per refactor
                 }
@@ -60,7 +66,7 @@ export default shape({
                 left: {
                     "‘": ["{'|}", ""],
                     "‹": ["{'<}", "french", "guillemets"],
-                    "‚": ["{,}", "low", "german", "czech"]
+                    "‚": ["{,|}", "low", "german", "czech"]
                 },
                 right: {
                     "’": ["{|'}", ""],

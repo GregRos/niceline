@@ -3,7 +3,6 @@ import type {
     At_Least_One,
     Join_Strings,
     Prettify,
-    Union_To_Intersection,
     Value_Of
 } from "../util"
 export type Ascii_Shape_Or_Null = Ascii_Shape | null
@@ -61,13 +60,18 @@ export type TxEntry<
 export type NamespaceShape = {
     [K in string]: TxEntry | NamespaceShape
 }
-
-export type UnpackNamespaceShape<X> = Prettify<
-    Union_To_Intersection<_Flatten_Flip<_Expand_Nested_keys<[], X>>>
+export type ObjectUnionToObject<Union extends object> = {
+    [O in Union as keyof O]: O[keyof O]
+}
+type _OldUnpackNamespaceShape<X> = Prettify<
+    ObjectUnionToObject<_Flatten_Flip<_Expand_Nested_keys<[], X>>>
 >
+export type UnpackNamespaceShape<X> = NamespaceShape
 
-export function shape<const X extends NamespaceShape>(shape: X): Prettify<X> {
-    return shape as Prettify<X>
+export function shape<const X extends NamespaceShape>(
+    shape: X
+): NamespaceShape {
+    return shape
 }
 
 // typed object transform

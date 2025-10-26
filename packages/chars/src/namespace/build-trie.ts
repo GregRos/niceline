@@ -6,6 +6,7 @@
 import type { Pair } from "@niceline/trie"
 import Trie from "@niceline/trie"
 import { isArray } from "what-are-you"
+import logger from "../logging"
 import type { NamespaceShape } from "./shape"
 
 const bracedPattern = /^\{(?<result>.+)\}$/
@@ -58,5 +59,12 @@ export function buildTrieFromNamespaceShape(obj: NamespaceShape): Trie {
     }
 
     walk(obj, [])
-    return Trie.make(entries)
+    const t = Trie.make()
+    t.onOverwrite = (key, oldValue, newValue) => {
+        logger.error(
+            `Overwriting existing key ${key.join(":")} from value ${oldValue} to ${newValue}`
+        )
+    }
+    t.addAll(entries)
+    return t
 }

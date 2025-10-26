@@ -30,6 +30,13 @@ export class Trie {
     get isInvalid() {
         return this._root === MISSING_NODE
     }
+
+    addAll(entries: Pair[]): void {
+        for (let i = 0; i < entries.length; i++) {
+            const [key, value] = entries[i]
+            this.add(key, value)
+        }
+    }
     // Create an empty Trie or initialize from entries ([string[], string]).
     static make(entries?: Pair[]): Trie {
         const root: TrieNode = new Map()
@@ -41,10 +48,7 @@ export class Trie {
         if (!entries) {
             return trie
         }
-        for (let i = 0; i < entries.length; i++) {
-            const [key, value] = entries[i]
-            trie.add(key, value)
-        }
+        trie.addAll(entries)
         return trie
     }
 

@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "doddle": "^7.1.6",
+    "shx": "^0.4.0",
     "what-are-you": "^0.1.13"
   },
   "devDependencies": {

@@ -55,6 +55,8 @@
             "**/node_modules": true,
             "site": true
         },
+        "jest.runMode": "on-demand",
+
         "search.exclude": {
             "**/node_modules": true,
             "**/bower_components": true,
