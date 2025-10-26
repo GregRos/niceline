@@ -1,5 +1,5 @@
 import { namespace } from "./namespace/namespace"
-import { shape } from "./namespace/shape"
+import { shape } from "./shape/shape"
 import display from "./terms/display"
 import fonts from "./terms/fonts"
 import math from "./terms/math"

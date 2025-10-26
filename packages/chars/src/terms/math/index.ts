@@ -1,4 +1,4 @@
-import { shape } from "../../namespace/shape"
+import { shape } from "../../shape/shape"
 import entities from "./entities"
 import geometry from "./geometry"
 import greek from "./greek"

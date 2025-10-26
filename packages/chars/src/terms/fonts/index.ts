@@ -1,4 +1,4 @@
-import { shape } from "../../namespace/shape"
+import { shape } from "../../shape/shape"
 import bb from "./bb"
 import bold from "./bold"
 import cursive from "./cursive"

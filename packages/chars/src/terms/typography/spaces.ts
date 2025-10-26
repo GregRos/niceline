@@ -1,3 +1,3 @@
-import { shape } from "../../namespace/shape"
+import { shape } from "../../shape/shape"
 
 export default shape({})

@@ -3,7 +3,11 @@ import { createLogger, format, transports } from "winston"
 const { combine, timestamp, errors, splat, printf } = format
 
 const logFormat = printf(({ timestamp, level, message, stack }) => {
-    return message as string
+    const strMessage = `${message}`
+    if (strMessage.includes("@@!@@")) {
+        return strMessage
+    }
+    return `${timestamp} [${level}] ${stack || message}`
 })
 const trieLogTransport = new transports.File({ filename: "trie.log" })
 const logger = createLogger({

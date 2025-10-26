@@ -1,4 +1,4 @@
-import { shape } from "../../namespace/shape"
+import { shape } from "../../shape/shape"
 import alchemy from "./alchemy"
 import astrology from "./astrology"
 import magic from "./magic"

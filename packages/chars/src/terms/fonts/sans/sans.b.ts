@@ -1,4 +1,4 @@
-import { shape } from "../../../namespace/shape"
+import { shape } from "../../../shape/shape"
 import sansBoldItalic from "./sans.bi"
 export default shape({
     // Sans serif bold uppercase

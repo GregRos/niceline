@@ -65,12 +65,12 @@ export class Trie {
             .pull()
     }
 
-    onOverwrite?: (key: Key, oldValue: Value, newValue: Value) => void
-
     add(key: Key, value: Value): void {
         const existing = this.get(key)
         if (existing !== NOT_FOUND) {
-            this.onOverwrite?.(key, existing, value)
+            throw new Error(
+                `Key ${key.join(":")} already exists with value ${existing}, cannot add value ${value}.`
+            )
         }
         this.set(key, value)
     }

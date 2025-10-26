@@ -1,15 +1,9 @@
 import type {
     Ascii_Shape,
-    At_Least_One,
     Join_Strings,
     Prettify,
     Value_Of
-} from "../util"
-export type Ascii_Shape_Or_Null = Ascii_Shape | null
-
-type _Names = At_Least_One<string>
-type _Strs = readonly string[]
-type _Headed_Array<Head, Tail extends _Strs> = readonly [Head, ...Tail]
+} from "../util-types"
 
 type _Maybe_Prefix_String<
     Prefixes extends readonly string[],
@@ -21,7 +15,6 @@ type _Maybe_Prefix_String<
       : In extends string
         ? `${Join_Strings<[...Prefixes, In], ":">}`
         : null
-
 type _Prefix_Array<
     Prefixes extends readonly string[],
     Arr extends readonly (string | null)[]
@@ -33,7 +26,6 @@ type _Prefix_Array<
           ]
         : _Prefix_Array<Prefixes, Tail>
     : []
-
 type _Add<T extends string[], U extends string> = [...T, U]
 
 export type _Expand_Nested_keys<Prefixes extends string[], X> = {
@@ -52,26 +44,9 @@ export type _Flatten_Flip<X> = Value_Of<{
         : _Flatten_Flip<X[K]>
 }>
 
-export type TxEntry<
-    Shape extends Ascii_Shape_Or_Null = Ascii_Shape_Or_Null,
-    Names extends _Names = _Names
-> = _Headed_Array<Shape, Names>
-
-export type NamespaceShape = {
-    [K in string]: TxEntry | NamespaceShape
-}
 export type ObjectUnionToObject<Union extends object> = {
     [O in Union as keyof O]: O[keyof O]
 }
-type _OldUnpackNamespaceShape<X> = Prettify<
+export type _OldUnpackNamespaceShape<X> = Prettify<
     ObjectUnionToObject<_Flatten_Flip<_Expand_Nested_keys<[], X>>>
 >
-export type UnpackNamespaceShape<X> = NamespaceShape
-
-export function shape<const X extends NamespaceShape>(
-    shape: X
-): NamespaceShape {
-    return shape
-}
-
-// typed object transform

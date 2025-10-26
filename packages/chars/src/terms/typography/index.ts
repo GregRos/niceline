@@ -1,4 +1,4 @@
-import { shape } from "../../namespace/shape"
+import { shape } from "../../shape/shape"
 import arrows from "./arrows"
 import brackets from "./brackets"
 import enclosed from "./enclosed"

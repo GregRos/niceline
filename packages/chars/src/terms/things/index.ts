@@ -1,4 +1,4 @@
-import { shape } from "../../namespace/shape"
+import { shape } from "../../shape/shape"
 import currency from "./currency"
 import game from "./game"
 import ideograms from "./ideograms"

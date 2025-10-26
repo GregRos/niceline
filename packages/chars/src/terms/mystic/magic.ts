@@ -1,4 +1,5 @@
-import { shape, type UnpackNamespaceShape } from "../../namespace/shape"
+import { shape } from "../../shape/shape"
+import { type UnpackNamespaceShape } from "../../shape/unpack"
 
 const a = shape({
     magic: {

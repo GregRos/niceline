@@ -1,6 +1,6 @@
-import { buildTrieFromNamespaceShape } from "@lib/namespace/build-trie"
+import { createTrieFromNamespaceShape } from "@lib/namespace/build-trie"
 import Trie from "@niceline/trie"
-const roTrie = buildTrieFromNamespaceShape({
+const roTrie = createTrieFromNamespaceShape({
     a: {
         a1_val: ["{a.a1}", "a1"],
         a2_val: [null, "a2"],

@@ -1,0 +1,15 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "references": [
+    {
+      "path": "../../trie/src/tsconfig.json"
+    }
+  ],
+  "compilerOptions": {
+    "rootDir": ".",
+    "noEmit": false,
+    "outDir": "../tools-dist",
+    "tsBuildInfoFile": "../dist/src.tsbuildinfo"
+  },
+  "include": ["**/*.ts"]
+}

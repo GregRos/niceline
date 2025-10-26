@@ -1,4 +1,4 @@
-import { shape } from "../../../namespace/shape"
+import { shape } from "../../../shape/shape"
 import bold from "./sans.b"
 import italic from "./sans.i"
 export default shape({
