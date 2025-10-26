@@ -8,13 +8,11 @@ import punct from "./punct"
 import script from "./script"
 
 export default shape({
-    typo: {
-        ...script,
-        ...arrows,
-        ...brackets,
-        ...marks,
-        ...numerals,
-        ...ornaments,
-        ...punct
-    }
+    ...script,
+    ...arrows,
+    ...brackets,
+    ...marks,
+    ...numerals,
+    ...ornaments,
+    ...punct
 })

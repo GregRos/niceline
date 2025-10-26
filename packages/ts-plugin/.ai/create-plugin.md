@@ -33,9 +33,24 @@ niceline`{A:}{alpha}{e:}{#R} {==>} {alpha} {!=} {alpha}`
 
 Autocomplete is based on lookups in a [trie structure](../../trie/src/index.ts).
 
-When the user types `{` in the tagged template, we look up the `"{"` key and autocomplete from there.
+When the user types `{` in the tagged template, we look up the `"ascii"` key and display its contents. 
 
-For `[`, we instead look up `"["` and then split the string based on `:` and use `getSubtrie` to get each next part. 
+For `[`, we instead look up `"name"` and then split the string based on `:` and use `getSubtrie` to get each next part. 
 
-For each option, the autocomplete should display the value of that option, if any. If no value, '~' should display instead.
+So for names, auto complete should be hierarchical.
+
+The user types (in the tagged template)
+
+`[`
+
+should show all namespaces directly under the `name` section of the trie.
+
+`{`
+
+should show instead all the ASCII art references we know about (they don't get split for now).
+
+For each option, the autocomplete should display the value of that option which is the unicode char it leads to. 
+
+If the option leads to a NS with no value, then a placeholder should be displayed.
+
 

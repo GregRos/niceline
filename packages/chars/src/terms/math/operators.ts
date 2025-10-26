@@ -48,7 +48,7 @@ export default shape({
             "⨦": ["{+__~}", "circ"]
         }
     },
-    "∏": [null, "product", "prod", "pi"],
+    "∏": [null, "product", "prod"],
     int: {
         "∫": ["{S|}", "", "1"],
         "∬": ["{SS|}", "2"],

@@ -1,5 +1,4 @@
 import { shape } from "../../shape/shape"
-var a = `{:name:thingy}`
 export default shape({
     arrow: {
         "←": ["{<--}", "left"],

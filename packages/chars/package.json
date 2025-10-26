@@ -35,6 +35,7 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
+    "check:duplicates": "tsx ./tools/check-for-duplicates.ts",
     "prepack": "shx rm -rf **/tsconfig*",
     "build": "tsc -b .",
     "build:clean": "run-s clean build",

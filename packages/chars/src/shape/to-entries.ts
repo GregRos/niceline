@@ -19,12 +19,12 @@ const getKeyForPath = (initial: string[], alias: string): string[] => {
                 `At ${splat(initial)}, braced alias must be in the form {alias}, got: ${alias}`
             )
         }
-        return [alias]
+        return ["ascii", alias]
     }
-    return [...initial, alias]
+    return ["name", ...initial, alias]
 }
 
-export function collectLeaves(shape: NamespaceShape): Pair[] {
+export function shapeToEntries(shape: NamespaceShape): Pair[] {
     const entries: Pair[] = []
 
     const add = (value: string, path: string[], alias: string) => {

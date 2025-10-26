@@ -1,4 +1,4 @@
-export const splat = (path: string[]): string => {
+export const splat = (path: readonly string[]): string => {
     return path.join(":")
 }
 

@@ -2,14 +2,18 @@
   "extends": "../../../tsconfig.base.json",
   "references": [
     {
-      "path": "../../trie/src/tsconfig.json"
+      "path": "../src/tsconfig.json"
     }
   ],
   "compilerOptions": {
     "rootDir": ".",
     "noEmit": false,
     "outDir": "../tools-dist",
-    "tsBuildInfoFile": "../dist/src.tsbuildinfo"
+    "tsBuildInfoFile": "../dist/tools.tsbuildinfo",
+    "paths": {
+      "@lib": ["../src"],
+      "@lib/*": ["../src/*"]
+    }
   },
   "include": ["**/*.ts"]
 }

@@ -1,0 +1,17 @@
+{
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run check-for-duplicates",
+      "runtimeExecutable": "tsx",
+      "runtimeArgs": [
+        "--tsconfig",
+        "tools/tsconfig.json",
+        "./tools/check-for-duplicates"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}
