@@ -1,6 +1,5 @@
-// prettier-ignore
-import type { Ascii_Shape } from "../types"
 import type {
+    Ascii_Shape,
     At_Least_One,
     Join_Strings,
     Prettify,

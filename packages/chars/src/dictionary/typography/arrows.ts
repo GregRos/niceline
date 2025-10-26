@@ -143,7 +143,7 @@ export default shape({
             "⤊": ["{(===)^}", "left"],
             "⤋": ["{(===)^}", "right"]
         },
-        quad: {
+        bbbb: {
             "⭅": ["{<(====)}", "left:quad"],
             "⭆": ["{(====)>}", "right:quad"],
             "⟰": ["{(====)^}", "up:quad"],

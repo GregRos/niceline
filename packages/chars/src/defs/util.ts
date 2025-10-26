@@ -20,3 +20,4 @@ export type Union_To_Intersection<U> = (
     : 1
 
 export type At_Least_One<T> = readonly [T, ...T[]]
+export type Ascii_Shape = `{${string}}`
