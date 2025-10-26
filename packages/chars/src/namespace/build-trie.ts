@@ -12,8 +12,8 @@ function createTrieFromEntries(entries: Pair[]): Trie {
             logger.warn(
                 `@@!@@ At ${key.join(":")}, overwriting existing value ${existing} with new value ${value}`
             )
-            t.set(key, value)
         }
+        t.set(key, value)
     }
     return t
 }

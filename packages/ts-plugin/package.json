@@ -67,10 +67,7 @@
   "dependencies": {
     "@niceline/chars": "workspace:^",
     "doddle": "^7.1.6",
-    "pretty-bytes": "^6.1.1",
-    "pretty-ms": "^9.0.0",
-    "shrink-path": "^0.3.1",
-    "ts-jest": "^29.4.5",
+    "typescript": "^5.9.3",
     "what-are-you": "^0.1.13"
   },
   "devDependencies": {
@@ -83,8 +80,7 @@
     "lodash": "^4.17.21",
     "npm-run-all": "^4.1.5",
     "shx": "^0.4.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "ts-node": "^10.9.2"
   },
   "packageManager": "yarn@4.2.2"
 }

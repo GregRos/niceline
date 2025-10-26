@@ -1,7 +1,6 @@
 import { shape } from "../../shape/shape"
 import arrows from "./arrows"
 import brackets from "./brackets"
-import enclosed from "./enclosed"
 import marks from "./marks"
 import numerals from "./numerals"
 import ornaments from "./ornaments"
@@ -10,10 +9,9 @@ import shapes from "./shapes"
 import spaces from "./spaces"
 
 export default shape({
-    typography: {
+    typo: {
         ...arrows,
         ...brackets,
-        ...enclosed,
         ...marks,
         ...numerals,
         ...ornaments,

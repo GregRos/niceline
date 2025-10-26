@@ -1,4 +1,4 @@
-import all from "@lib/all"
+import { all } from "@lib"
 
 it("hmm", () => {
     const theValue = all.get("")
