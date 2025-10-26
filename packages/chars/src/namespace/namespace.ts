@@ -1,4 +1,5 @@
 import Trie from "@niceline/trie"
+import { buildTrieFromNamespaceShape } from "./build-trie"
 import type { NamespaceShape, UnpackNamespaceShape } from "./shape"
 
 export class Namespace<X> {
@@ -7,7 +8,7 @@ export class Namespace<X> {
     static make<X extends NamespaceShape>(
         shape: X
     ): Namespace<UnpackNamespaceShape<X>> {
-        const trie = Trie.fromObject(shape as any)
+        const trie = buildTrieFromNamespaceShape(shape as any)
         return new Namespace<UnpackNamespaceShape<X>>(trie)
     }
 

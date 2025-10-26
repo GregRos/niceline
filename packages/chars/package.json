@@ -46,8 +46,10 @@
   },
   "dependencies": {
     "@niceline/trie": "workspace:^",
+    "@types/winston": "^2.4.4",
     "doddle": "^7.1.6",
-    "what-are-you": "^0.1.13"
+    "what-are-you": "^0.1.13",
+    "winston": "^3.18.3"
   },
   "devDependencies": {
     "@swc/core": "^1.5.25",

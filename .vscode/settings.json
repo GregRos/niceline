@@ -1,18 +1,5 @@
 {
   "editor.fontLigatures": false,
-  "jest.runMode": "deferred",
-  "errorLens.excludeBySource": [],
-
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/site": true
-  },
-  "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/.DS_Store": true,
-    "**/Thumbs.db": true,
-    "site": true
-  }
+  "jest.runMode": "on-demand",
+  "errorLens.excludeBySource": []
 }

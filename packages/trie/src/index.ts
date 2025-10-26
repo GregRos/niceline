@@ -3,7 +3,6 @@
 // Leaf nodes are represented by an empty Map object. Actual string values
 
 import { seq } from "doddle"
-
 // are stored in a separate Map that maps leaf-Map objects to strings.
 export type TrieNode = Map<string, TrieNode>
 export type MapMap = Map<TrieNode, string>
@@ -11,6 +10,7 @@ export type Key = readonly string[]
 export type PartialKey = readonly string[]
 export type Value = string
 export type Pair = readonly [Key, Value]
+
 const NOT_FOUND = ""
 const MISSING_NODE = new Map() as TrieNode
 export class Trie {
@@ -48,37 +48,6 @@ export class Trie {
         return trie
     }
 
-    // Construct a Trie from a nested object shape. Leaves are string values
-    // (e.g. {a: {b: "v"}} => key ["a","b"] -> "v"). A node may also
-    // store its own value under the empty-string key (""), e.g.
-    // {a: {"": "val", b: "v2"}} will map ["a"] -> "val" and
-    // ["a","b"] -> "v2".
-    static fromObject(obj: Record<string, any>): Trie {
-        const entries: Pair[] = []
-
-        const add = (path: string[], value: string) => {
-            entries.push([path.slice() as any, value])
-        }
-        const walk = (node: Record<string, any> | string, path: string[]) => {
-            if (typeof node === "string") {
-                add(path, node)
-                return
-            }
-            for (const [k, v] of Object.entries(node)) {
-                if (k === "") {
-                    add(path, v)
-                    continue
-                }
-                path.push(k)
-                walk(v, path)
-                path.pop()
-            }
-        }
-
-        walk(obj, [])
-        return Trie.make(entries)
-    }
-
     clone() {
         return Trie.make(this.entries())
     }
@@ -92,12 +61,12 @@ export class Trie {
             .pull()
     }
 
+    onOverwrite?: (key: Key, oldValue: Value, newValue: Value) => void
+
     add(key: Key, value: Value): void {
         const existing = this.get(key)
         if (existing !== NOT_FOUND) {
-            throw new Error(
-                `The key ${key.join(":")} was mapped to ${existing}, cannot remap to ${value}`
-            )
+            this.onOverwrite?.(key, existing, value)
         }
         this.set(key, value)
     }

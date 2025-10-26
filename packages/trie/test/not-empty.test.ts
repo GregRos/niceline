@@ -1,20 +1,17 @@
 import Trie from "@lib"
 
-const roTrie = Trie.fromObject({
-    a: {
-        "": "a-val",
-        a1: "a1-val",
-        a2: "a2-val",
-        a3: {
-            a31: "a31-val"
-        }
-    },
-    b: {
-        b1: "b1-val",
-        b2: "b2-val"
-    }
-})
-
+function getRoTrie() {
+    const t = Trie.make([
+        [["a"], "a_val"],
+        [["a", "a1"], "a1_val"],
+        [["a", "a2"], "a2_val"],
+        [["a", "a3", "a31"], "a31_val"],
+        [["b", "b1"], "b1_val"],
+        [["b", "b2"], "b2_val"]
+    ])
+    return t
+}
+const roTrie = getRoTrie()
 it("length == values, isEmpty == false", () => {
     expect(roTrie.length).toBe(6)
     expect(roTrie.isEmpty).toBe(false)
@@ -37,9 +34,9 @@ it("nodeCount equals the number of nodes in the structure", () => {
 })
 
 describe("has/get", () => {
-    it("['a'] -> a-val", () => {
+    it("['a'] -> a_val", () => {
         expect(roTrie.has(["a"])).toBe(true)
-        expect(roTrie.get(["a"])).toBe("a-val")
+        expect(roTrie.get(["a"])).toBe("a_val")
     })
 
     it("['b'] -> false", () => {
@@ -47,9 +44,9 @@ describe("has/get", () => {
         expect(roTrie.get(["b"])).toBe("")
     })
 
-    it("['a','a2'] -> a2-val", () => {
+    it("['a','a2'] -> a2_val", () => {
         expect(roTrie.has(["a", "a2"])).toBe(true)
-        expect(roTrie.get(["a", "a2"])).toBe("a2-val")
+        expect(roTrie.get(["a", "a2"])).toBe("a2_val")
     })
 
     it("['a','a3'] -> ''", () => {
@@ -57,9 +54,9 @@ describe("has/get", () => {
         expect(roTrie.get(["a", "a3"])).toBe("")
     })
 
-    it("['a','a3','a31'] -> a31-val", () => {
+    it("['a','a3','a31'] -> a31_val", () => {
         expect(roTrie.has(["a", "a3", "a31"])).toBe(true)
-        expect(roTrie.get(["a", "a3", "a31"])).toBe("a31-val")
+        expect(roTrie.get(["a", "a3", "a31"])).toBe("a31_val")
     })
 })
 
@@ -69,14 +66,14 @@ describe("set", () => {
         s.set(["a"], "x")
         expect(s.get(["a"])).toBe("x")
         // original remains
-        expect(roTrie.get(["a"])).toBe("a-val")
+        expect(roTrie.get(["a"])).toBe("a_val")
     })
 
     it("update at a->a1->'x'", () => {
         const s = roTrie.clone()
         s.set(["a", "a1"], "x")
         expect(s.get(["a", "a1"])).toBe("x")
-        expect(roTrie.get(["a", "a1"])).toBe("a1-val")
+        expect(roTrie.get(["a", "a1"])).toBe("a1_val")
     })
 
     it("insert at root: z->'x'", () => {
@@ -127,19 +124,19 @@ describe("subtrie for ['a']", () => {
     })
 
     describe("has/get", () => {
-        it("root -> a-val", () => {
+        it("root -> a_val", () => {
             // root node's own value is at empty path; call via any to bypass Key typing
-            expect(roSubtrie.get([])).toBe("a-val")
+            expect(roSubtrie.get([])).toBe("a_val")
         })
 
-        it("a1 -> a1-val", () => {
+        it("a1 -> a1_val", () => {
             expect(roSubtrie.has(["a1"])).toBe(true)
-            expect(roSubtrie.get(["a1"])).toBe("a1-val")
+            expect(roSubtrie.get(["a1"])).toBe("a1_val")
         })
 
-        it("a2 -> a2-val", () => {
+        it("a2 -> a2_val", () => {
             expect(roSubtrie.has(["a2"])).toBe(true)
-            expect(roSubtrie.get(["a2"])).toBe("a2-val")
+            expect(roSubtrie.get(["a2"])).toBe("a2_val")
         })
 
         it("has/get a3 (no value)", () => {
@@ -149,7 +146,7 @@ describe("subtrie for ['a']", () => {
 
         it("has/get a3.a31", () => {
             expect(roSubtrie.has(["a3", "a31"])).toBe(true)
-            expect(roSubtrie.get(["a3", "a31"])).toBe("a31-val")
+            expect(roSubtrie.get(["a3", "a31"])).toBe("a31_val")
         })
     })
 
@@ -159,14 +156,14 @@ describe("subtrie for ['a']", () => {
             subtrie.set([] as any, "x")
             expect((parent as any).get(["a"])).toBe("x")
             // original remains
-            expect((roSubtrie as any).get([])).toBe("a-val")
+            expect((roSubtrie as any).get([])).toBe("a_val")
         })
 
         it("update a1", () => {
             const s = roSubtrie.clone()
             s.set(["a1"], "x")
             expect(s.get(["a1"])).toBe("x")
-            expect(roSubtrie.get(["a1"])).toBe("a1-val")
+            expect(roSubtrie.get(["a1"])).toBe("a1_val")
         })
 
         it("insert z->'x'", () => {
