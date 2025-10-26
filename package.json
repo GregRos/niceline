@@ -21,6 +21,11 @@
     "tidy:kids": "yarn workspaces foreach -Ap run tidy",
     "watch": "tsc -b . -w"
   },
+  "resolutions": {
+    "@niceline/chars": "workspace:*",
+    "@niceline/trie": "workspace:*",
+    "niceline": "workspace:*"
+  },
   "devDependencies": {
     "@gregros/eslint-config": "^0.6.0",
     "@typescript-eslint/eslint-plugin": "^7.12.0",

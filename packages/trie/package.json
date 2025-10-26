@@ -18,14 +18,14 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "require": "./dist/lib/index.js",
-      "import": "./dist/lib/index.js",
-      "default": "./dist/lib/index.js",
-      "types": "./dist/lib/index.d.ts"
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "main": "dist/index.js",
-  "typings": "dist/index",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "prepack": "shx rm -rf **/tsconfig*",
     "build": "tsc -b .",
@@ -37,7 +37,6 @@
     "tidy": "yarn install && run-s lint:fix build:clean test"
   },
   "dependencies": {
-    "@niceline/chars": "workspace:^",
     "doddle": "^7.1.6",
     "what-are-you": "^0.1.13"
   },

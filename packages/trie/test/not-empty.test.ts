@@ -1,4 +1,4 @@
-import Trie from "@lib/replacer/defs/trie"
+import Trie from "@lib"
 
 const roTrie = Trie.fromObject({
     a: {

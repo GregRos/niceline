@@ -1,8 +1,8 @@
 {
   "editor.fontLigatures": false,
   "jest.runMode": "deferred",
-  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "errorLens.excludeBySource": [],
+
   "search.exclude": {
     "**/node_modules": true,
     "**/site": true

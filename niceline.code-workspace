@@ -18,6 +18,8 @@
         }
     ],
     "settings": {
+        "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+
         "python.analysis.ignore": ["**/node_modules/**", "**/.git/**"],
         "jest.disabledWorkspaceFolders": ["root"],
         "files.exclude": {

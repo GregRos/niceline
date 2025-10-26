@@ -42,8 +42,8 @@ export class Trie {
             return trie
         }
         for (let i = 0; i < entries.length; i++) {
-            const ent = entries[i]
-            trie.set(ent[0], ent[1])
+            const [key, value] = entries[i]
+            trie.add(key, value)
         }
         return trie
     }
@@ -90,6 +90,16 @@ export class Trie {
         return seq(this.entries())
             .setEquals(other.entries(), pair => pair.join("אבג"))
             .pull()
+    }
+
+    add(key: Key, value: Value): void {
+        const existing = this.get(key)
+        if (existing !== NOT_FOUND) {
+            throw new Error(
+                `The key ${key.join(":")} was mapped to ${existing}, cannot remap to ${value}`
+            )
+        }
+        this.set(key, value)
     }
 
     // Insert or replace a key -> value mapping. Uses only Maps (monomorphic).

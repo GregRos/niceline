@@ -1,11 +1,11 @@
-import { namespace } from "./defs/namespace/namespace"
-import { shape } from "./defs/namespace/shape"
-import display from "./dictionary/display"
-import fonts from "./dictionary/fonts"
-import math from "./dictionary/math"
-import mystic from "./dictionary/mystic"
-import things from "./dictionary/things"
-import typography from "./dictionary/typography"
+import { namespace } from "./namespace/namespace"
+import { shape } from "./namespace/shape"
+import display from "./terms/display"
+import fonts from "./terms/fonts"
+import math from "./terms/math"
+import mystic from "./terms/mystic"
+import things from "./terms/things"
+import typography from "./terms/typography"
 
 export const complete = shape({
     ...display,
