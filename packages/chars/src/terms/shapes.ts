@@ -1,4 +1,4 @@
-import { shape } from "../../shape/shape"
+import { shape } from "../shape/shape"
 
 export default shape({
     shape: {

@@ -5,18 +5,16 @@ import marks from "./marks"
 import numerals from "./numerals"
 import ornaments from "./ornaments"
 import punct from "./punct"
-import shapes from "./shapes"
-import spaces from "./spaces"
+import script from "./script"
 
 export default shape({
     typo: {
+        ...script,
         ...arrows,
         ...brackets,
         ...marks,
         ...numerals,
         ...ornaments,
-        ...punct,
-        ...shapes,
-        ...spaces
+        ...punct
     }
 })
