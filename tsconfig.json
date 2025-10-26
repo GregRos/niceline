@@ -8,6 +8,9 @@
     },
     {
       "path": "./packages/niceline/tsconfig.json"
+    },
+    {
+      "path": "./packages/ts-plugin/tsconfig.json"
     }
   ],
   "compilerOptions": {

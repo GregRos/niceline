@@ -2,9 +2,7 @@
   "name": "@niceline/monorepo",
   "private": true,
   "workspaces": [
-    "packages/chars",
-    "packages/trie",
-    "packages/niceline"
+    "packages/*"
   ],
   "scripts": {
     "build": "tsc -b .",

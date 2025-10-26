@@ -1,6 +1,10 @@
 {
     "folders": [
         {
+            "path": "./packages/ts-plugin",
+            "name": "ts-plugin"
+        },
+        {
             "path": "./packages/chars",
             "name": "chars"
         },
@@ -26,6 +30,7 @@
             "packages/chars": true,
             "packages/trie": true,
             "packages/niceline": true,
+            "packages/ts-plugin": true,
             "**/imports-dist": true,
             "**/dist-imports": true,
             "**/.git": true,
