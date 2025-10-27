@@ -1,0 +1,48 @@
+{
+  "$id": "niceline://namespace",
+  "$defs": {
+    "Namespace": {
+      "type": "object",
+      "patternProperties": {
+        "^.$": {
+          "anyOf": [
+            {
+              "type": "array",
+              "additionalItems": false,
+              "items": [
+                {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "title": "a {string}.",
+                      "description": "A {string}.",
+                      "pattern": "^\\{.+\\}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "AsciiId or null",
+                  "description": "Either an {AsciiId} or null."
+                },
+                {
+                  "not": {}
+                }
+              ],
+              "minItems": 2
+            },
+            {
+              "$ref": "#/$defs/Namespace"
+            }
+          ]
+        }
+      },
+      "title": "Namespace",
+      "description": "Recursive, namespaced dictionary of Unicode to ASCII codes.",
+      "additionalProperties": {
+        "$ref": "#/$defs/Namespace"
+      }
+    }
+  },
+  "$ref": "#/$defs/Namespace"
+}

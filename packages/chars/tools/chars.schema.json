@@ -1,0 +1,64 @@
+{
+  "$id": "https://gregros.dev/schemas/niceline/namespace-shape.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NamespaceShape (niceline/chars)",
+  "description": "Recursive object where each property is either a TxEntry leaf ([AsciiId|null, alias, ...aliases]) or another NamespaceShape. See src/shape/shape.ts.",
+  "$defs": {
+    "AsciiId": {
+      "type": ["string"],
+      "description": "An ASCII identifier wrapped in braces, e.g. {a.b}. Must contain at least one character between braces.",
+      "pattern": "^\\{.+\\}$"
+    },
+    "TxEntry": {
+      "title": "TxEntry tuple",
+      "type": "array",
+      "description": "Tuple [AsciiId|null, alias, ...aliases]. First element selects an ASCII code mapping (when braced) or null; remaining elements are one or more alias strings.",
+      "minItems": 2,
+      "prefixItems": [
+        {
+          "if": { "type": "string" },
+          "then": { "$ref": "#/$defs/AsciiId" },
+          "else": { "type": "null" }
+        }
+      ],
+      "items": { "type": "string" },
+      "uniqueItems": true,
+      "additionalItems": false
+    },
+    "NamespaceNode": {
+      "title": "NamespaceShape node",
+      "type": "object",
+      "patternProperties": {
+        "^.$": {
+          "anyOf": [
+            { "$ref": "#/$defs/TxEntry" },
+            { "$ref": "#/$defs/NamespaceNode" }
+          ]
+        },
+        "^.{2,}$": {
+          "$ref": "#/$defs/NamespaceNode"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$ref": "#/$defs/NamespaceNode",
+  "examples": [
+    {
+      "idea": {
+        "♂": [null, "male", "masc"],
+        "flag": {
+          "⚑": [null, "black"],
+          "⚐": [null, "white"]
+        }
+      },
+      "notes": {
+        "♭": [null, "flat"],
+        "special": {
+          "a_val": ["{a.a1}", "a1"],
+          "b_val": [null, "b1"]
+        }
+      }
+    }
+  ]
+}

@@ -5423,6 +5423,7 @@ __metadata:
     shx: "npm:^0.4.0"
     ts-jest: "npm:^29.4.5"
     ts-node: "npm:^10.9.2"
+    typebox: "npm:^1.0.43"
     typescript: "npm:^5.9.3"
     what-are-you: "npm:^0.1.13"
   languageName: unknown
@@ -7010,6 +7011,13 @@ __metadata:
   version: 4.41.0
   resolution: "type-fest@npm:4.41.0"
   checksum: 10c0/f5ca697797ed5e88d33ac8f1fec21921839871f808dc59345c9cf67345bfb958ce41bd821165dbf3ae591cedec2bf6fe8882098dfdd8dc54320b859711a2c1e4
+  languageName: node
+  linkType: hard
+
+"typebox@npm:^1.0.43":
+  version: 1.0.43
+  resolution: "typebox@npm:1.0.43"
+  checksum: 10c0/cbb820d06dd1919e5fd959e7c96e85d6152e4b1d02bac66c942ac929c34b9967ad8e28ad3470cab4169aee4475cb60ca5bcae91d96430bd182d013774787529a
   languageName: node
   linkType: hard
 

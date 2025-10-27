@@ -72,7 +72,7 @@
         },
         "typescript.tsdk": "root\\node_modules\\typescript\\lib",
         "yaml.schemas": {
-            "https://www.schemastore.org/sourcehut-build-0.65.0.json": "file:///c%3A/codegr/niceline/packages/chars/tools/test.yaml"
+            "https://raw.githubusercontent.com/GregRos/niceline/refs/heads/master/packages/chars/tools/data.schema.json": "**/*.nice.yaml"
         }
     }
 }
