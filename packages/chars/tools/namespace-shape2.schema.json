@@ -11,25 +11,26 @@
               "additionalItems": false,
               "items": [
                 {
+                  "type": "string"
+                }
+              ],
+              "minItems": 1,
+              "prefixItems": [
+                {
                   "anyOf": [
                     {
                       "type": "string",
                       "title": "a {string}.",
-                      "description": "A {string}.",
                       "pattern": "^\\{.+\\}$"
                     },
                     {
                       "type": "null"
                     }
                   ],
-                  "title": "AsciiId or null",
-                  "description": "Either an {AsciiId} or null."
-                },
-                {
-                  "not": {}
+                  "title": "AsciiId or null"
                 }
               ],
-              "minItems": 2
+              "title": "Array of aliases"
             },
             {
               "$ref": "#/$defs/Namespace"

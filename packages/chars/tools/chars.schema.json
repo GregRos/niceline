@@ -1,48 +1,56 @@
 {
   "$id": "https://gregros.dev/schemas/niceline/namespace-shape.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "NamespaceShape (niceline/chars)",
-  "description": "Recursive object where each property is either a TxEntry leaf ([AsciiId|null, alias, ...aliases]) or another NamespaceShape. See src/shape/shape.ts.",
+  "title": "",
+  "description": "Recursive, namespaced dictionary of Unicode to ASCII codes.",
   "$defs": {
-    "AsciiId": {
+    "NameAlias": {
       "type": ["string"],
-      "description": "An ASCII identifier wrapped in braces, e.g. {a.b}. Must contain at least one character between braces.",
+      "description": "A named alias."
+    },
+    "AsciiAlias": {
+      "type": ["string"],
+      "description": "A {string} ASCII alias.",
       "pattern": "^\\{.+\\}$"
     },
-    "TxEntry": {
-      "title": "TxEntry tuple",
+    "AliasMapping": {
+      "title": "AliasMapping",
       "type": "array",
-      "description": "Tuple [AsciiId|null, alias, ...aliases]. First element selects an ASCII code mapping (when braced) or null; remaining elements are one or more alias strings.",
-      "minItems": 2,
+      "description": "Unique aliases for a character. An AsciiAlias (or null) followed by one or more other aliases.",
       "prefixItems": [
         {
           "if": { "type": "string" },
-          "then": { "$ref": "#/$defs/AsciiId" },
+          "then": { "$ref": "#/$defs/AsciiAlias" },
           "else": { "type": "null" }
         }
       ],
-      "items": { "type": "string" },
+      "items": {
+        "$ref": "#/$defs/NameAlias"
+      },
       "uniqueItems": true,
       "additionalItems": false
     },
-    "NamespaceNode": {
-      "title": "NamespaceShape node",
+    "Namespace": {
+      "title": "Namespace",
+      "description": "Recursive, namespaced dictionary of Unicode to ASCII codes.",
       "type": "object",
       "patternProperties": {
         "^.$": {
+          "description": "A leaf AliasMapping or a namespaced entry.",
           "anyOf": [
-            { "$ref": "#/$defs/TxEntry" },
-            { "$ref": "#/$defs/NamespaceNode" }
+            { "$ref": "#/$defs/AliasMapping" },
+            { "$ref": "#/$defs/Namespace" }
           ]
         },
         "^.{2,}$": {
-          "$ref": "#/$defs/NamespaceNode"
+          "description": "A namespaced entry.",
+          "$ref": "#/$defs/Namespace"
         }
       },
       "additionalProperties": false
     }
   },
-  "$ref": "#/$defs/NamespaceNode",
+  "$ref": "#/$defs/Namespace",
   "examples": [
     {
       "idea": {

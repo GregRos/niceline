@@ -2,7 +2,7 @@
   "json.schemas": [
     {
       "fileMatch": ["**/*.nice.json", "**/*.nice.yaml"],
-      "url": "./tools/namespace-shape.schema.json"
+      "url": "./tools/chars.schema.json"
     }
   ]
 }
