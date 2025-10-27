@@ -27,8 +27,7 @@
       "items": {
         "$ref": "#/$defs/NameAlias"
       },
-      "uniqueItems": true,
-      "additionalItems": false
+      "uniqueItems": true
     },
     "Namespace": {
       "title": "Namespace",
