@@ -1,5 +1,25 @@
 # Create plugin
-in the ts-plugin folder/package, create a TypeScript compiler plugin that provides autocomplete for the symbol refernce syntax used by niceline.
+make a TypeScript plugin that provides auto completion for text in the tagged template `niceline`:
+
+```ts
+niceline`abc [here]`
+```
+
+The plugin should go in `packages/ts-plugin/src`.
+
+autocompletion should start when the user enters the `[` char in the tagged template:
+ab 
+```
+niceline`no complete [autocomplete]
+```
+
+create a dummy function called getOptions that receives the contents of the string starting with [` and returns a list of 
+
+```ts
+[string, string]
+```
+
+where the first item is an autocomplete suggestion text and the 2nd item is an extra info that should be displayed.
 
 ## Where
 The plugin should only apply in `niceline` tagged templates:

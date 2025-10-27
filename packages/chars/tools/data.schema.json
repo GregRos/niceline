@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "X": {
+      "type": "object",
+      "patternProperties": {
+        "^.$": {
+          "anyOf": [{ "type": "array" }, { "$ref": "#/$defs/X" }]
+        }
+      },
+      "additionalProperties": { "$ref": "#/$defs/X" }
+    }
+  },
+  "$ref": "#/$defs/X"
+}

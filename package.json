@@ -24,6 +24,9 @@
     "@niceline/trie": "workspace:*",
     "niceline": "workspace:*"
   },
+  "dependencies": {
+    "markdownlint-cli2": "^0.18.1"
+  },
   "devDependencies": {
     "@gregros/eslint-config": "^0.6.0",
     "@typescript-eslint/eslint-plugin": "^7.12.0",
@@ -40,8 +43,5 @@
     "shx": "^0.4.0",
     "typescript": "^5.9.3"
   },
-  "packageManager": "yarn@4.10.3",
-  "dependencies": {
-    "markdownlint-cli2": "^0.18.1"
-  }
+  "packageManager": "yarn@4.10.3"
 }

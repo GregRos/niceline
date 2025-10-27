@@ -9,7 +9,8 @@
     "rootDir": ".",
     "noEmit": false,
     "outDir": "../dist",
-    "tsBuildInfoFile": "../dist/src.tsbuildinfo"
+    "tsBuildInfoFile": "../dist/src.tsbuildinfo",
+    "plugins": [{ "name": "@niceline/ts-plugin" }]
   },
   "include": ["**/*.ts"]
 }

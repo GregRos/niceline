@@ -1,0 +1,8 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["*.nice.json", "*.nice.yaml"],
+      "url": "./tools/data.schema.json"
+    }
+  ]
+}

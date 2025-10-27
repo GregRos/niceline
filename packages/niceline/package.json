@@ -66,6 +66,7 @@
   },
   "dependencies": {
     "@niceline/chars": "workspace:^",
+    "@niceline/ts-plugin": "workspace:*",
     "doddle": "^7.1.6",
     "pretty-bytes": "^6.1.1",
     "pretty-ms": "^9.0.0",
