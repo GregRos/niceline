@@ -12,6 +12,25 @@
       ],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "TEST chars",
+      "program": "${workspaceFolder}/../../node_modules/jest/bin/jest.js",
+      "args": [
+        "--runInBand",
+        "--config",
+        "jest.config.mjs",
+        "--testPathPattern",
+        "schema.test.ts"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "NODE_ENV": "test"
+      }
     }
   ]
 }

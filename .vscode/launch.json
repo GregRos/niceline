@@ -4,19 +4,6 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "τ chars",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
-      "args": ["--runInBand", "--config", "jest.config.mjs"],
-      "cwd": "${workspaceFolder}/packages/chars",
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "env": {
-        "NODE_ENV": "test"
-      }
-    },
-    {
-      "type": "node",
-      "request": "launch",
       "name": "τ trie",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
       "args": ["--runInBand", "--config", "jest.config.mjs"],

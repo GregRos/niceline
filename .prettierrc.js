@@ -6,7 +6,7 @@ module.exports = {
     semi: false,
     overrides: [
         {
-            files: "*.{yaml,json}",
+            files: "*.{yaml,json,jsonc}",
             options: {
                 tabWidth: 2
             }

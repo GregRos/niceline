@@ -57,7 +57,8 @@
             "coverage": true,
             "docs": true,
             "**/node_modules": true,
-            "site": true
+            "site": true,
+            "*-dist": true
         },
         "jest.runMode": "on-demand",
 
@@ -71,8 +72,14 @@
             "**/*.log": true
         },
         "typescript.tsdk": "root\\node_modules\\typescript\\lib",
+        "json.schemas": [
+            {
+                "fileMatch": ["**/*.nice.{json,jsonc}", "**/*.nice.yaml"],
+                "url": "file:///c:/codegr/niceline/packages/chars/terms/chars.schema.json"
+            }
+        ],
         "yaml.schemas": {
-            "file:///c:/codegr/niceline/packages/chars/tools/chars.schema.json": "**/*.nice.yaml"
+            "file:///c:/codegr/niceline/packages/chars/terms/chars.schema.json": "**/*.nice.yaml"
         }
     }
 }

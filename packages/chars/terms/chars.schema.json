@@ -1,7 +1,6 @@
 {
   "$id": "https://gregros.dev/schemas/niceline/namespace-shape.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "",
+  "title": "Namespaced terms dictionary",
   "description": "Recursive, namespaced dictionary of Unicode to ASCII codes.",
   "$defs": {
     "NamedAlias": {
@@ -32,7 +31,19 @@
       "title": "Namespace",
       "description": "Recursive, namespaced dictionary of Unicode to ASCII codes.",
       "type": "object",
+      "properties": {
+        "->": {
+          "description": "Point to another dictionary file. . means current folder, / means dictionary root. Extension must be .json or .yaml.",
+          "type": "string",
+          "pattern": "^(\\.|/)\\/.+\\.(json|yaml|jsonc)$"
+        }
+      },
       "patternProperties": {
+        "->": {
+          "description": "Point to another dictionary file. Should start with ",
+          "type": "string",
+          "pattern": "^\\.\\/.+\\.json$"
+        },
         "^.$": {
           "description": "A leaf AliasMapping or a namespaced entry.",
           "anyOf": [
@@ -40,7 +51,7 @@
             { "$ref": "#/$defs/Namespace" }
           ]
         },
-        "^.{2,}$": {
+        "^\\w{2,}$": {
           "description": "A namespaced entry.",
           "$ref": "#/$defs/Namespace"
         }
