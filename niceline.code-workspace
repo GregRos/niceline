@@ -1,21 +1,30 @@
 {
     "folders": [
         {
+            "path": "./packages/py-ui-replacer",
+            "name": "PyReplacer"
+        },
+        {
+            "path": "./packages/unicode-dict",
+            "name": "Unicode dict"
+        },
+        {
             "path": "./packages/ts-plugin",
-            "name": "ts-plugin"
+            "name": "TS plugin"
         },
         {
-            "path": "./packages/chars",
-            "name": "chars"
+            "path": "./packages/ts-replacer",
+            "name": "TS replacer"
         },
         {
-            "path": "./packages/trie",
-            "name": "trie"
+            "path": "./packages/ts-trie",
+            "name": "TS trie"
         },
         {
-            "path": "./packages/niceline",
-            "name": "niceline"
+            "path": "./packages/ts-niceline",
+            "name": "TS niceline"
         },
+
         {
             "path": ".",
             "name": "root"
@@ -26,10 +35,13 @@
         "jest.disabledWorkspaceFolders": ["root"],
         "typescript.tsserver.log": "normal",
         "files.exclude": {
-            "packages/chars": true,
-            "packages/trie": true,
-            "packages/niceline": true,
+            "packages/unicode-dict": true,
+            "packages/ts-trie": true,
+            "packages/ts-niceline": true,
             "packages/ts-plugin": true,
+            "packages/ts-replacer": true,
+            "packages/py-ui-replacer": true,
+
             "**/imports-dist": true,
             "**/dist-imports": true,
             "**/.git": true,
@@ -71,15 +83,14 @@
             "**/site": true,
             "**/*.log": true
         },
-        "typescript.tsdk": "root\\node_modules\\typescript\\lib",
         "json.schemas": [
             {
                 "fileMatch": ["**/*.nice.{json,jsonc}", "**/*.nice.yaml"],
-                "url": "file:///c:/codegr/niceline/packages/chars/terms/chars.schema.json"
+                "url": "file:///c:/codegr/niceline/packages/unicode-dict/dict.schema.json"
             }
         ],
         "yaml.schemas": {
-            "file:///c:/codegr/niceline/packages/chars/terms/chars.schema.json": "**/*.nice.yaml"
+            "file:///c:/codegr/niceline/packages/unicode-dict/dict.schema.json": "**/*.nice.yaml"
         }
     }
 }

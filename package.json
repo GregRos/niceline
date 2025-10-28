@@ -2,7 +2,8 @@
   "name": "@niceline/monorepo",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/ts-*",
+    "packages/unicode-dict"
   ],
   "scripts": {
     "build": "tsc -b .",
@@ -20,7 +21,7 @@
     "watch": "tsc -b . -w"
   },
   "resolutions": {
-    "@niceline/chars": "workspace:*",
+    "@niceline/replacer": "workspace:*",
     "@niceline/trie": "workspace:*",
     "niceline": "workspace:*"
   },

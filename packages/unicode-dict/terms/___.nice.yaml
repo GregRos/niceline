@@ -1,0 +1,7 @@
+<-:
+  - ./fields/___.nice.yaml
+  - ./font/___.nice.yaml
+  - ./math/___.nice.yaml
+  - ./other/___.nice.yaml
+  - ./tech/___.nice.yaml
+  - ./typography/___.nice.yaml

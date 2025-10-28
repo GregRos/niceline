@@ -44,3 +44,7 @@ quote:
     right:
       ’: ["{|'}", ""]
       ›: ["{>'}", french, guillemets]
+bullet:
+  •: [null, ""]
+  ❥: [null, heart]
+  ‣: [null, tri, triangle]

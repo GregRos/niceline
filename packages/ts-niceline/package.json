@@ -1,19 +1,39 @@
 {
-  "name": "@niceline/chars",
+  "name": "niceline",
   "version": "0.1.0",
-  "description": "Replaces special escapes with Unicode characters.",
+  "description": "Pretty print everything!",
   "keywords": [
-    "unicode",
     "pretty",
+    "human",
+    "humanize",
+    "prettify",
+    "readable",
+    "time",
+    "duration",
+    "text",
+    "number",
+    "byte",
+    "bytes",
+    "filesize",
+    "size",
+    "path",
+    "url",
+    "error",
+    "hash",
+    "hex",
+    "fraction",
+    "float",
     "string",
-    "replace",
-    "math",
-    "text"
+    "function",
+    "object",
+    "record",
+    "random",
+    "date"
   ],
   "repository": {
     "type": "git",
     "url": "github:GregRos/niceline",
-    "directory": "packages/chars"
+    "directory": "packages/niceline"
   },
   "license": "MIT",
   "author": "GregRos",
@@ -26,16 +46,15 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/lib/index.js",
+      "import": "./dist/lib/index.js",
+      "default": "./dist/lib/index.js",
+      "types": "./dist/lib/index.d.ts"
     }
   },
   "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "typings": "dist/index",
   "scripts": {
-    "check:duplicates": "tsx ./tools/check-for-duplicates.ts",
     "prepack": "shx rm -rf **/tsconfig*",
     "build": "tsc -b .",
     "build:clean": "run-s clean build",
@@ -46,27 +65,26 @@
     "tidy": "yarn install && run-s lint:fix build:clean test"
   },
   "dependencies": {
-    "@niceline/trie": "workspace:^",
-    "@types/winston": "^2.4.4",
+    "@niceline/replacer": "workspace:^",
+    "@niceline/ts-plugin": "workspace:*",
     "doddle": "^7.1.6",
-    "what-are-you": "^0.1.13",
-    "winston": "^3.18.3"
+    "pretty-bytes": "^6.1.1",
+    "pretty-ms": "^9.0.0",
+    "shrink-path": "^0.3.1",
+    "ts-jest": "^29.4.5",
+    "typebox": "^1.0.43",
+    "what-are-you": "^0.1.13"
   },
   "devDependencies": {
     "@swc/core": "^1.5.25",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
-    "@types/js-yaml": "^4",
     "@types/lodash": "^4.17.4",
     "@types/node": "^24.9.1",
-    "ajv": "^8.17.1",
-    "ajv-errors": "^3.0.0",
     "jest": "^29.7.0",
-    "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "npm-run-all": "^4.1.5",
     "shx": "^0.4.0",
-    "ts-jest": "^29.4.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },

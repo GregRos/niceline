@@ -6,3 +6,8 @@ sign:
   <-: [./sign.nice.yaml]
 thing:
   <-: [./thing.nice.yaml]
+greek:
+  <-: [./greek.nice.yaml]
+shape:
+  <-: [./shape.nice.yaml]
+

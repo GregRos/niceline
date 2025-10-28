@@ -840,9 +840,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@niceline/chars@workspace:*, @niceline/chars@workspace:packages/chars":
+"@niceline/monorepo@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@niceline/chars@workspace:packages/chars"
+  resolution: "@niceline/monorepo@workspace:."
+  dependencies:
+    "@gregros/eslint-config": "npm:^0.6.0"
+    "@typescript-eslint/eslint-plugin": "npm:^7.12.0"
+    "@typescript-eslint/parser": "npm:^7.12.0"
+    eslint: "npm:^8"
+    husky: "npm:^9.0.11"
+    lint-staged: "npm:^15.2.5"
+    markdownlint-cli2: "npm:^0.18.1"
+    npm-run-all: "npm:^4.1.5"
+    prettier: "npm:^3.3.1"
+    prettier-plugin-jsdoc: "npm:^1.3.0"
+    prettier-plugin-organize-imports: "npm:^3.2.4"
+    prettier-plugin-packagejson: "npm:^2.5.0"
+    shelljs: "npm:0.8.5"
+    shx: "npm:^0.4.0"
+    typescript: "npm:^5.9.3"
+  languageName: unknown
+  linkType: soft
+
+"@niceline/replacer@workspace:*, @niceline/replacer@workspace:packages/ts-replacer":
+  version: 0.0.0-use.local
+  resolution: "@niceline/replacer@workspace:packages/ts-replacer"
   dependencies:
     "@niceline/trie": "workspace:^"
     "@swc/core": "npm:^1.5.25"
@@ -868,31 +890,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@niceline/monorepo@workspace:.":
+"@niceline/trie@workspace:*, @niceline/trie@workspace:packages/ts-trie":
   version: 0.0.0-use.local
-  resolution: "@niceline/monorepo@workspace:."
-  dependencies:
-    "@gregros/eslint-config": "npm:^0.6.0"
-    "@typescript-eslint/eslint-plugin": "npm:^7.12.0"
-    "@typescript-eslint/parser": "npm:^7.12.0"
-    eslint: "npm:^8"
-    husky: "npm:^9.0.11"
-    lint-staged: "npm:^15.2.5"
-    markdownlint-cli2: "npm:^0.18.1"
-    npm-run-all: "npm:^4.1.5"
-    prettier: "npm:^3.3.1"
-    prettier-plugin-jsdoc: "npm:^1.3.0"
-    prettier-plugin-organize-imports: "npm:^3.2.4"
-    prettier-plugin-packagejson: "npm:^2.5.0"
-    shelljs: "npm:0.8.5"
-    shx: "npm:^0.4.0"
-    typescript: "npm:^5.9.3"
-  languageName: unknown
-  linkType: soft
-
-"@niceline/trie@workspace:*, @niceline/trie@workspace:packages/trie":
-  version: 0.0.0-use.local
-  resolution: "@niceline/trie@workspace:packages/trie"
+  resolution: "@niceline/trie@workspace:packages/ts-trie"
   dependencies:
     "@swc/core": "npm:^1.5.25"
     "@swc/jest": "npm:^0.2.36"
@@ -915,7 +915,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@niceline/ts-plugin@workspace:packages/ts-plugin"
   dependencies:
-    "@niceline/chars": "workspace:^"
+    "@niceline/replacer": "workspace:^"
     "@swc/core": "npm:^1.5.25"
     "@swc/jest": "npm:^0.2.36"
     "@types/jest": "npm:^29.5.12"
@@ -5439,11 +5439,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"niceline@workspace:packages/niceline":
+"niceline@workspace:packages/ts-niceline":
   version: 0.0.0-use.local
-  resolution: "niceline@workspace:packages/niceline"
+  resolution: "niceline@workspace:packages/ts-niceline"
   dependencies:
-    "@niceline/chars": "workspace:^"
+    "@niceline/replacer": "workspace:^"
     "@niceline/ts-plugin": "workspace:*"
     "@swc/core": "npm:^1.5.25"
     "@swc/jest": "npm:^0.2.36"
@@ -7129,11 +7129,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A^5.9.3#optional!builtin<compat/typescript>":
   version: 5.9.3
-  resolution: "typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=b45daf"
+  resolution: "typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/6f7e53bf0d9702350deeb6f35e08b69cbc8b958c33e0ec77bdc0ad6a6c8e280f3959dcbfde6f5b0848bece57810696489deaaa53d75de3578ff255d168c1efbd
+  checksum: 10c0/ad09fdf7a756814dce65bc60c1657b40d44451346858eea230e10f2e95a289d9183b6e32e5c11e95acc0ccc214b4f36289dcad4bf1886b0adb84d711d336a430
   languageName: node
   linkType: hard
 

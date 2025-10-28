@@ -65,7 +65,7 @@
     "tidy": "yarn install && run-s lint:fix build:clean test"
   },
   "dependencies": {
-    "@niceline/chars": "workspace:^",
+    "@niceline/replacer": "workspace:^",
     "doddle": "^7.1.6",
     "typescript": "^5.9.3",
     "what-are-you": "^0.1.13"
