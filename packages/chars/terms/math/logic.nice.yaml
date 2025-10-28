@@ -1,16 +1,22 @@
+and:
+  ∧: ["{l&}", ""]
+  ⋀: ["{l&&}", big]
+or:
+  ∨: ["{l|}", ""]
+  ⋁: ["{l||}", big]
+⟙: ["{T}", top, "true"]
+⟘: ["{F}", bottom, "false"]
+¬: ["{!-}", not]
 ∴: ["{:.}", therefore]
 ∵: ["{.:}", because]
-⟙: ["{T}", top, "true", tack:down]
-⟘: ["{F}", bottom, bot, "false", tack:up]
-⊨: ["{|=}", models, vDash]
-⊭: ["{!|=}", models:not, vDash:not]
-⊩: ["{||-}", forcecs, Vdash]
-⊯: ["{!||-}", forces:not, Vdash:not]
-⊢: ["{|-}", proves, turnstile, ts, vdash, tack:right]
-⊬: ["{!|-}", proves:not, turnstile:not, ts:not, vdash:not, tack:right:not]
-⊣: ["{-|}", proven, turnstile:rev, dashv, tack:left]
-∧: ["{l&}", and, land]
-⋀: ["{l&&}", and:big, land:big]
-∨: ["{l|}", or, lor]
-⋁: ["{l||}", or:big, lor:big]
-¬: ["{l!}", not, lnot]
+models:
+  ⊨: ["{|=}", ""]
+  ⊭: ["{!|=}", not]
+forces:
+  ⊩: ["{||-}", ""]
+  ⊯: ["{!||-}", not]
+proves:
+  ⊢: ["{|-}", ""]
+  ⊬: ["{!|-}", not]
+proven:
+  ⊣: ["{-|}", ""]

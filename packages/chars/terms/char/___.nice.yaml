@@ -1,5 +1,7 @@
 bold:
   <-: [./bold.nice.yaml]
+  italic:
+    <-: [./bold-italic.nice.yaml]
 cursive:
   <-: [./cursive.nice.yaml]
 sans:
@@ -8,7 +10,8 @@ italic:
   <-: [./italic.nice.yaml]
 mono:
   <-: [./mono.nice.yaml]
-double:
+
+bb:
   <-: [./bb.nice.yaml]
 fraktur:
   <-: [./fraktur.nice.yaml]

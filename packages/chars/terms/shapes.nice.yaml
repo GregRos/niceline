@@ -46,7 +46,7 @@ shape:
       rl:
         ◪: ["{[_/%]}", right]
         ◩: ["{[%/_]}", left]
-  parallelogram:
+  rhomboid:
     ▰: ["{/%%/}", "", black]
     ▱: ["{/__/}", white]
   gon:

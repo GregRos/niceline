@@ -1,7 +1,8 @@
 math:
+  geo:
+    <-: [./geo.nice.yaml]
   <-:
     - ./entities.nice.yaml
-    - ./geometry.nice.yaml
     - ./order.nice.yaml
     - ./logic-set.nice.yaml
     - ./operators.nice.yaml
