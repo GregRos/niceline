@@ -1,4 +1,4 @@
-Write code that exports the current term definitions in the terms folder.
+Change the emitted YAML files by adding links to other files.
 
 DO NOT DO PERFORM OTHER TASKS
 
@@ -18,32 +18,11 @@ The file names should end in `.nice.yaml`.
 I have deleted merged files like 
 Now create the links between YAML files.
 
-In order to link files together, add a special key `"->"`. When a program reads this later, it will resolve it to importing the contents of the specified file(s) into the dictionary at this position.
+In order to link files together, add a special key `"->"`. When a program reads this later, it will resolve it to importing the contents of the specified file into the dictionary at this position.
 
-The value of `->` acts like `>>`. It needs to be a string or an array of strings. 
-
-Strings starts with "." to indicate the current folder and have an extension of `.nice.yaml`.
-
-# The links
+A value of -> must be a string that starts with "." to indicate the current folder and have an extension of `.nice.yaml`.
 
 
-## sans bold fonts
-link `sans.b` with `sans.bi` under the `italic` key:
-
-```yaml path=.../sans/sans.bi
-italic:
-    "->": ./sans.bi.nice.yaml
-```
-
-next link all the sans fonts:
-
-```yaml path=.../fonts/sans
-sans:
-    "->":
-        - ./sans/bi.nice.yaml
-        
-
-```
 
 The `->` key should work like `>>` in that contents are merged. It works equivalently to `...`. To see where you should add the `->` files 
 

@@ -16,6 +16,20 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "RUN umm",
+      "runtimeExecutable": "tsx",
+      "program": "${workspaceFolder}/tools/umm.ts",
+      "runtimeArgs": ["--tsconfig", "${workspaceFolder}/tools/tsconfig.json"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "TEST chars",
       "program": "${workspaceFolder}/../../node_modules/jest/bin/jest.js",
       "args": [

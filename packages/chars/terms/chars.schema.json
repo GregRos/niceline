@@ -3,6 +3,19 @@
   "title": "Namespaced terms dictionary",
   "description": "Recursive, namespaced dictionary of Unicode to ASCII codes.",
   "$defs": {
+    "FileReference": {
+      "title": "FileReference",
+      "type": "string",
+      "description": "A reference to another dictionary file.",
+      "pattern": "^(\\.|/).+\\.nice\\.(json|yaml|jsonc)$"
+    },
+    "FileReferences": {
+      "title": "FileReferences",
+      "type": "array",
+      "description": "An array of file references.",
+      "items": { "$ref": "#/$defs/FileReference" },
+      "minItems": 1
+    },
     "NamedAlias": {
       "title": "NamedAlias",
       "type": "string",
@@ -33,9 +46,7 @@
       "type": "object",
       "properties": {
         "->": {
-          "description": "Point to another dictionary file. . means current folder, / means dictionary root. Extension must be .json or .yaml.",
-          "type": "string",
-          "pattern": "^(\\.|/)\\/.+\\.(json|yaml|jsonc)$"
+          "$ref": "#/$defs/FileReferences"
         }
       },
       "patternProperties": {

@@ -53,15 +53,54 @@ export function shape<const X extends NamespaceShape>(
                 // Ensure directory exists
                 fs.mkdirSync(path.dirname(outPath), { recursive: true })
 
-                // Dump YAML with inline arrays for leaves
-                const yamlText = yaml.dump(
-                    shape as unknown as Record<string, unknown>,
-                    {
-                        flowLevel: 0, // render all sequences as flow (inline) style
-                        noRefs: true, // do not use anchors/aliases
-                        lineWidth: -1 // do not fold long lines
+                // Prepare: replace arrays with unique integer IDs; collect inline YAML for each array
+                let nextId = 900000000
+                const idToInline = new Map<number, string>()
+
+                const replaceArrays = (node: unknown): unknown => {
+                    if (Array.isArray(node)) {
+                        const id = nextId++
+                        const arrYaml = yaml
+                            .dump(node, {
+                                flowLevel: 0, // arrays inline
+                                noRefs: true,
+                                lineWidth: -1
+                            })
+                            .trimEnd()
+                        idToInline.set(id, arrYaml)
+                        return id
+                    } else if (node && typeof node === "object") {
+                        const out: Record<string, unknown> = {}
+                        for (const [k, v] of Object.entries(
+                            node as Record<string, unknown>
+                        )) {
+                            out[k] = replaceArrays(v)
+                        }
+                        return out
                     }
-                )
+                    return node
+                }
+
+                const withIds = replaceArrays(shape as unknown) as Record<
+                    string,
+                    unknown
+                >
+
+                // Dump YAML with normal block-style mappings (no flow for objects)
+                let yamlText = yaml.dump(withIds, {
+                    noRefs: true,
+                    lineWidth: -1
+                })
+
+                // Replace each standalone integer ID with its inline array YAML
+                for (const [id, inline] of idToInline) {
+                    const pattern = new RegExp(
+                        // Before: line start or whitespace/comma/colon/dash/[ then a space; after: whitespace/comma/]/EOL
+                        String.raw`(?<=^|[\s,:\-\[] ?)${id}(?=\s|$|,|\])`,
+                        "gm"
+                    )
+                    yamlText = yamlText.replace(pattern, inline)
+                }
 
                 fs.writeFileSync(outPath, yamlText, "utf8")
             }
