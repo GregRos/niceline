@@ -1,0 +1,8 @@
+alchemy:
+  <-: [./alchemy.nice.yaml]
+astro:
+  <-: [./astro.nice.yaml]
+religion:
+  <-: [./religion.nice.yaml]
+magic:
+  <-: [./magic.nice.yaml]

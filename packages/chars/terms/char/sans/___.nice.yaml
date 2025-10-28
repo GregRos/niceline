@@ -1,0 +1,7 @@
+bold:
+  <-: [./bold.nice.yaml]
+  italic:
+    <-: [./bold-italic.nice.yaml]
+italic:
+  <-: [./italic.nice.yaml]
+<-: [./regular.nice.yaml]

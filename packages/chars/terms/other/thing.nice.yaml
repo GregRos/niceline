@@ -1,0 +1,50 @@
+thing:
+  flag:
+    ⚑: [null, black]
+    ⚐: [null, white]
+  ⚖: [null, scales, justice, law]
+  ⚙: [null, gear, cog]
+  ⚒: [null, hammer-and-pick]
+  🕷: [null, spider]
+  ⛓: [null, chains]
+  ⛏: [null, pick]
+  🛏: [null, bed]
+  ⎈: [null, helm]
+  🛨: [null, plane]
+  🛰: [null, satellite]
+  🛱: [null, firetruck]
+  🛠: [null, hammer:wrench, tools]
+  scissors:
+    ✂: [null, black, ""]
+    ✀: [null, safety]
+    ✄: [null, white]
+  writing:
+    pen:
+      🖊: [null, ""]
+      fountain:
+        🖋: [null, ""]
+        ✒: [null, tip]
+    🖌: [null, paintbrush]
+    🖍: [null, crayon]
+    pencil:
+      🖉: [null, ""]
+      ✏: [null, tip]
+  🎖: [null, medal]
+  🎗: [null, ribbon, reminder]
+  🎞: [null, film]
+  🎟: [null, ticket]
+
+  ⚘: [null, flower:b]
+  key:
+    ⚿: [null, squared]
+  doc:
+    🖹: [null, text]
+    🖺: [null, rich]
+    🖻: [null, picture]
+  envelope:
+    ✉: [null, ""]
+    🖂: [null, back]
+    🖃: [null, stamped]
+    🖄: [null, lightning]
+    🖅: [null, flying]
+    🖆: [null, signed]

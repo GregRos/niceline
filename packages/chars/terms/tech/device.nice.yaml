@@ -1,0 +1,24 @@
+🖧: [null, network]
+🖩: [null, calculator]
+🖳: [null, laptop]
+🖵: [null, screen]
+🖶: [null, printer]
+🖷: [null, fax]
+🖰: [null, mouse]
+🖦: [null, kbm, KBM]
+⌨: [null, keyboard]
+horn:
+  🕫: [null, "off"]
+  🕬: [null, low]
+phone:
+  🕿: [null, black, ""]
+  🕾: [null, white]
+  ☎: [null, b]
+cd:
+  🖸: [null, ""]
+floppy:
+  🖪: [null, black, ""]
+  🖫: [null, white]
+tape:
+  🖭: [null, casette, ""]
+  ✇: [null, reel]

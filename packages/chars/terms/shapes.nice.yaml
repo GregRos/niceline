@@ -1,4 +1,14 @@
 shape:
+  florette:
+    ✿: [null, black, b]
+    ❀: [null, white, w]
+    ❁: [null, "8"]
+  snowflake:
+    ❄: [null, "6", ""]
+    ❅: [null, "3"]
+  sparkle:
+    ❇: [null, ""]
+    ❈: [null, big]
   ⛤: [null, pentacle, pentagram]
   ⛧: [null, pentagram:inverted, pentacle:inverted]
   ❂: ["{(=*=)}", sun]

@@ -1,0 +1,9 @@
+math:
+  <-:
+    - ./entities.nice.yaml
+    - ./geometry.nice.yaml
+    - ./order.nice.yaml
+    - ./logic-set.nice.yaml
+    - ./operators.nice.yaml
+    - ./punct.nice.yaml
+    - ./logic.nice.yaml

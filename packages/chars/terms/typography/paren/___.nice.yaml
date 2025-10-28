@@ -1,0 +1,6 @@
+bracket:
+  <-: ["./bracket.nice.yaml"]
+brace:
+  <-: ["./brace.nice.yaml"]
+paren:
+  <-: ["./paren.nice.yaml"]

@@ -1,0 +1,10 @@
+device:
+  <-: [./device.nice.yaml]
+key:
+  <-: [./key.nice.yaml]
+action:
+  <-: [./action.nice.yaml]
+progress:
+  <-: [./progress.nice.yaml]
+quality:
+  <-: [./quality.nice.yaml]

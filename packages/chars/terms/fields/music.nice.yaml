@@ -1,0 +1,39 @@
+𝅝: [null, "1", whole]
+♭: [null, flat]
+♯: [null, sharp]
+♮: [null, natural]
+♩: [null, quarter]
+♪: [null, eighth]
+♫: [null, eighth:2]
+♬: [null, sixteenth:2]
+bar:
+  𝄀: [null, single, "1"]
+  𝄁: [null, double, "2"]
+  𝄂: [null, final, end]
+  𝄃: [null, final:reverse]
+  𝄄: [null, dashed]
+  𝄅: [null, short]
+  repeat:
+    𝄆: [null, begin, S, B]
+    𝄇: [null, end, E]
+clef:
+  𝄞: [null, g, "", treble]
+  𝄢: [null, f, bass, cello, trombone]
+  𝄡: [null, c, alto, tenor]
+  𝄥: [null, drum, drum:a]
+  𝄦: [null, drum:b]
+  beam:
+    "\U0001D173": [null, "begin"]
+    "\U0001D174": [null, "end"]
+
+  tie:
+    "\U0001D175": [null, "begin"]
+    "\U0001D176": [null, "end"]
+
+  slur:
+    "\U0001D177": [null, "begin"]
+    "\U0001D178": [null, "end"]
+
+  phrase:
+    "\U0001D179": [null, "begin"]
+    "\U0001D17A": [null, "end"]

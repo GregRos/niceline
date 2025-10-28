@@ -1,0 +1,16 @@
+arrow:
+  <-: [./arrows.nice.yaml]
+dotted:
+  <-: [./dotted.nice.yaml]
+mark:
+  <-: [./mark.nice.yaml]
+numeral:
+  <-: [./numeral.nice.yaml]
+ornament:
+  <-: [./ornament.nice.yaml]
+punct:
+  <-: [./punct.nice.yaml]
+sub:
+  <-: [./sub.nice.yaml]
+sup:
+  <-: [./sup.nice.yaml]

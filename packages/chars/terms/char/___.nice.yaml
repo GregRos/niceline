@@ -1,0 +1,18 @@
+bold:
+  <-: [./bold.nice.yaml]
+cursive:
+  <-: [./cursive.nice.yaml]
+sans:
+  <-: [./sans/___.nice.yaml]
+italic:
+  <-: [./italic.nice.yaml]
+mono:
+  <-: [./mono.nice.yaml]
+double:
+  <-: [./bb.nice.yaml]
+fraktur:
+  <-: [./fraktur.nice.yaml]
+circled:
+  <-: [./circled.nice.yaml]
+squared:
+  <-: [./squared.nice.yaml]

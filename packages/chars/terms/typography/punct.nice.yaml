@@ -1,54 +1,58 @@
+¡: [null, exclamation:inverted]
+‼: ["{!!}", exclamation:2]
+⁉: ["{!?}", question-exclamation, eq]
+⁈: ["{?!}", exclamation-question, qe]
+❢: ["{<3!}", exclamation:heart]
+¿: ["{v?}", question:inverted]
+‽: ["{!?!}", interrobang]
+⁇: ["{??}", question:2]
+※: ["{*x*}", reference, ref]
+⁋: [null, paragraph, pilcrow]
+†: ["{*+}", dagger]
+‡: ["{*++}", double:dagger]
 space:
-  ​: ['{,}', zwsp, 0em, '0']
-   : ['{:}', 1/8em]
-   : ['{;}', 1/4em, 0.25em]
-   : ['{::}', en, 1/2em, 0.5em]
-   : ['{;;}', em, 1em]
-  ⁠: ['{-,-}', zwj, joiner:0, wj, joiner:1]
-   : ['{-:-}', nnbsp, nb:narrow]
-  "\_": ['{-::-}', nbsp, nb]
+  "\u200b": ["{,}", zwsp, 0em, "0"]
+  "\u200a": ["{:}", 1/8em]
+  "\u2005": ["{;}", 1/4em, 0.25em]
+  "\u2000": ["{::}", en, 1/2em, 0.5em]
+  "\u2001": ["{;;}", em, 1em]
+  "\u2060": ["{-,-}", zwj, joiner:0, wj, joiner:1]
+  "\u202f": ["{-:-}", nnbsp, nb:narrow]
+  "\u00a0": ["{-::-}", nbsp, nb]
 dots:
-  …: ['{...}', horizontal, hdots, dots]
-  ⋮: ['{...^}', vertical, vdots]
-  ⋯: ['{...-}', center, cdots]
-  ⋰: ['{.../}', diagonal:leftright, lrdots]
+  …: ["{...}", horizontal, hdots, dots]
+  ⋮: ["{...^}", vertical, vdots]
+  ⋯: ["{...-}", center, cdots]
+  ⋰: ["{.../}", diagonal:leftright, lrdots]
   ⋱: ['{...\}', diagonal:rightleft, rldots]
 dash:
   –: [null, en, dash:en]
   —: [null, em, dash:em]
   ‑: [null, nb, dash:nb]
-punct:
-  ¡: [null, exclamation:inverted]
-  ‼: [null, exclamation:2]
-  ⁉: [null, question-exclamation, eq]
-  ⁈: [null, exclamation-question, qe]
-  ❢: [null, exclamation:heart]
-  ¿: [null, question:inverted]
-  ‽: [null, interrobang]
-  ⁇: [null, question:2]
-  ampersand:
-    🙴: [null, '']
-    🙵: [null, swash]
+
+ampersand:
+  🙴: [null, ""]
+  🙵: [null, swash]
 quote:
   double:
     big:
       left:
-        🙸: ['{,,||}', german]
-        🙶: ['{"||}', '']
+        🙸: ["{,,||}", german]
+        🙶: ['{"||}', ""]
       right:
-        🙷: ['{|""}', '']
+        🙷: ['{|""}', ""]
     left:
-      “: ['{"|}', '']
+      “: ['{"|}', ""]
       «: ['{"<}', french, guillemets]
-      „: ['{,,|}', low, german]
+      „: ["{,,|}", low, german]
     right:
-      ”: ['{|"}', '']
+      ”: ['{|"}', ""]
       »: ['{>"}', french, guillemets]
   single:
     left:
-      ‘: ['{''|}', '']
-      ‹: ['{''<}', french, guillemets]
-      ‚: ['{,|}', low, german, czech]
+      ‘: ["{'|}", ""]
+      ‹: ["{'<}", french, guillemets]
+      ‚: ["{,|}", low, german, czech]
     right:
-      ’: ['{|''}', '']
-      ›: ['{>''}', french, guillemets]
+      ’: ["{|'}", ""]
+      ›: ["{>'}", french, guillemets]

@@ -1,3 +1,9 @@
+ceil:
+  ⌈: ["{[^}", left, l]
+  ⌉: ["{^]}", right, r]
+floor:
+  ⌊: ["{[_}", left, l]
+  ⌋: ["{_]}", right, r]
 circ:
   ⊕: ["{(+)}", plus, oplus]
   ⊖: ["{(-)}", minus, ominus]

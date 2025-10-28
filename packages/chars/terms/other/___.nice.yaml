@@ -1,0 +1,8 @@
+idea:
+  <-: [./idea.nice.yaml]
+place:
+  <-: [./place.nice.yaml]
+sign:
+  <-: [./sign.nice.yaml]
+thing:
+  <-: [./thing.nice.yaml]

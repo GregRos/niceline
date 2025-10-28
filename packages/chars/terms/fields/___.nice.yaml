@@ -1,0 +1,14 @@
+electric:
+  <-: [./electric.nice.yaml]
+sci:
+  <-: [./sci.nice.yaml]
+recycle:
+  <-: [./recycle.nice.yaml]
+music:
+  <-: [./music.nice.yaml]
+game:
+  <-: [./game.nice.yaml]
+$:
+  <-: [./curr.nice.yaml]
+weather:
+  <-: [./weather.nice.yaml]
