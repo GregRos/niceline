@@ -4,12 +4,14 @@
   "title": "",
   "description": "Recursive, namespaced dictionary of Unicode to ASCII codes.",
   "$defs": {
-    "NameAlias": {
-      "type": ["string"],
+    "NamedAlias": {
+      "title": "NamedAlias",
+      "type": "string",
       "description": "A named alias."
     },
     "AsciiAlias": {
-      "type": ["string"],
+      "title": "AsciiAlias",
+      "type": "string",
       "description": "A {string} ASCII alias.",
       "pattern": "^\\{.+\\}$"
     },
@@ -17,17 +19,14 @@
       "title": "AliasMapping",
       "type": "array",
       "description": "Unique aliases for a character. An AsciiAlias (or null) followed by one or more other aliases.",
-      "prefixItems": [
+      "items": [
         {
-          "if": { "type": "string" },
-          "then": { "$ref": "#/$defs/AsciiAlias" },
-          "else": { "type": "null" }
-        }
+          "anyOf": [{ "$ref": "#/$defs/AsciiAlias" }, { "type": "null" }]
+        },
+        { "$ref": "#/$defs/NamedAlias" }
       ],
-      "items": {
-        "$ref": "#/$defs/NameAlias"
-      },
-      "uniqueItems": true
+      "minItems": 2,
+      "additionalItems": { "$ref": "#/$defs/NamedAlias" }
     },
     "Namespace": {
       "title": "Namespace",

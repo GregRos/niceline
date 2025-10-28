@@ -72,7 +72,7 @@
         },
         "typescript.tsdk": "root\\node_modules\\typescript\\lib",
         "yaml.schemas": {
-            "https://raw.githubusercontent.com/GregRos/niceline/refs/heads/master/packages/chars/tools/chars.schema.json": "**/*.nice.yaml"
+            "file:///c:/codegr/niceline/packages/chars/tools/chars.schema.json": "**/*.nice.yaml"
         }
     }
 }
