@@ -75,3 +75,5 @@ jspm_packages
 .tmp
 .obsidian/workspace.json
 tools-dist/
+
+**/__pycache__/

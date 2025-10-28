@@ -1,12 +1,12 @@
 {
     "folders": [
         {
-            "path": "./packages/py-ui-replacer",
-            "name": "PyReplacer"
+            "path": "./packages/py-niceplace",
+            "name": "Py niceplace"
         },
         {
             "path": "./packages/unicode-dict",
-            "name": "Unicode dict"
+            "name": "YAML dict"
         },
         {
             "path": "./packages/ts-plugin",
@@ -31,7 +31,12 @@
         }
     ],
     "settings": {
-        "python.analysis.ignore": ["**/node_modules/**", "**/.git/**"],
+        "python.analysis.ignore": [
+            "**/node_modules/**",
+            "**/.git/**",
+            "**/.venv/**",
+            "**/dist/**"
+        ],
         "jest.disabledWorkspaceFolders": ["root"],
         "typescript.tsserver.log": "normal",
         "files.exclude": {
@@ -40,8 +45,8 @@
             "packages/ts-niceline": true,
             "packages/ts-plugin": true,
             "packages/ts-replacer": true,
-            "packages/py-ui-replacer": true,
-
+            "packages/py-niceplace": true,
+            "LICENSE.md": true,
             "**/imports-dist": true,
             "**/dist-imports": true,
             "**/.git": true,
