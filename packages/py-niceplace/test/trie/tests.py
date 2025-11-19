@@ -48,12 +48,7 @@ def test_empty_clone_set_does_not_mutate_original() -> None:
     # original remains unchanged
     assert empty.get(("x",)) == NOT_FOUND
 
-{fb: a}
-{fbi: c}
-{fbi c}
-{fbi d}
-{fsi d}
-{fsi {hello world}}
+
 def test_not_empty_length_and_emptiness() -> None:
     ro_trie = _get_ro_trie()
     assert ro_trie.length == 6
